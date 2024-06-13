@@ -1,0 +1,42 @@
+# https://docs.dapr.io/operations/resiliency/policies/
+apiVersion: dapr.io/v1alpha1
+kind: Resiliency
+metadata:
+  name: myresiliency
+
+spec:
+  policies:
+    retries:
+
+      DefaultStatestoreComponentOutboundRetryPolicy:
+        policy: exponential     # Determines the back-off and retry interval strategy. Valid values are constant and exponential.
+        maxInterval: 60s        # Determines the maximum interval between retries to which the exponential back-off policy can grow.
+        maxRetries: -1          # The maximum number of retries to attempt. -1 denotes an unlimited number of retries, while 0 means the request will not be retried.
+  
+      myRetryConstant:
+        policy: constant
+        duration: 3s
+        maxRetries: 5
+
+      myRetryExponential:
+        policy: exponential
+        maxInterval: 5m
+        maxRetries: -1
+
+      myRetryForever:
+        policy: constant
+        duration: 3s
+        maxRetries: -1 
+
+    # Circuit Breaker (CB) policies are used when other applications/services/components are experiencing elevated failure rates. CBs monitor the requests and shut off all traffic to the impacted service when a certain criteria is met (“open” state). By doing this, CBs give the service time to recover from their outage instead of flooding it with events. The CB can also allow partial traffic through to see if the system has healed (“half-open” state). Once requests resume being successful, the CB gets into “closed” state and allows traffic to completely resume.
+    circuitBreakers:
+      open30secAfter5fails:
+        maxRequests: 1                  # The maximum number of requests allowed to pass through when the CB is half-open (recovering from failure). Defaults to 1.
+        timeout: 30s                    # The period of the open state (directly after failure) until the CB switches to half-open.
+        trip: consecutiveFailures >= 5  # A Common Expression Language (CEL) statement that is evaluated by the CB. When the statement evaluates to true, the CB trips and becomes open.
+
+  targets:
+    apps:
+      resiliency-demo-app:
+        retry: myRetryConstant
+        circuitBreaker: open30secAfter5fails

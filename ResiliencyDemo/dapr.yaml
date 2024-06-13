@@ -2,10 +2,17 @@ version: 1
 common:
   resourcesPath: Resources
 apps:
-  - appID: resiliency-demo-app
-    appDirPath: ResiliencyDemoApp
+  - appID: app-a
+    appDirPath: AppA
     appPort: 5045
     daprHTTPPort: 3500
+    command: ["dotnet", "run"]
+    appLogDestination: console
+    daprdLogDestination: console
+  - appID: app-b
+    appDirPath: AppB
+    appPort: 5047
+    daprHTTPPort: 3502
     command: ["dotnet", "run"]
     appLogDestination: console
     daprdLogDestination: console

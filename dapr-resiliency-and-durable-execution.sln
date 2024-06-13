@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResiliencyDemo", "ResiliencyDemo", "{B403581B-2DB8-4A8D-B6C0-EAACA032C786}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResiliencyDemoApp", "ResiliencyDemo\ResiliencyDemoApp\ResiliencyDemoApp.csproj", "{9679CA28-3AA8-4E67-8FDF-208A8449E1F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppA", "ResiliencyDemo\AppA\AppA.csproj", "{9679CA28-3AA8-4E67-8FDF-208A8449E1F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

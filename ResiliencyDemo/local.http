@@ -1,7 +1,8 @@
-@url=http://localhost:5045
+@app-a-url=http://localhost:5045
+@app-b-url=http://localhost:5047
 
 ### POST SocialProfileDetails
-POST {{url}}/social
+POST {{app-a-url}}/social
 Content-Type: application/json
 
 {
@@ -11,4 +12,4 @@ Content-Type: application/json
 }
 
 ### GET SocialProfileDetails
-GET {{url}}/social/marcduiker
+GET {{app-b-url}}/profile/marcduiker

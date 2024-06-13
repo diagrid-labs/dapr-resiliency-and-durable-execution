@@ -6,7 +6,7 @@ var app = builder.Build();
 
 const string StateStoreName = "mystatestore";
 
-app.MapPost("/social", async (
+app.MapPost("/profile", async (
     SocialProfileDetails details,
     DaprClient daprClient) => {
     await daprClient.SaveStateAsync<SocialProfileDetails>(
@@ -17,7 +17,7 @@ app.MapPost("/social", async (
     return Results.Created();
 });
 
-app.MapGet("/social/{key}", async (
+app.MapGet("/profile/{key}", async (
     string key,
     DaprClient daprClient) => {
     var details =  await daprClient.GetStateAsync<SocialProfileDetails>(

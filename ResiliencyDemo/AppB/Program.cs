@@ -3,6 +3,7 @@ using Dapr.Client;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<DaprClient>(new DaprClientBuilder().Build());
 var app = builder.Build();
+app.UseCloudEvents();
 
 const string StateStoreName = "mystatestore";
 

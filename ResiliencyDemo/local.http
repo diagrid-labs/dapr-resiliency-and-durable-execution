@@ -2,7 +2,7 @@
 @app-b-url=http://localhost:5047
 
 ### POST SocialProfileDetails
-POST {{app-a-url}}/social
+POST {{app-a-url}}/post
 Content-Type: application/json
 
 {
@@ -13,3 +13,13 @@ Content-Type: application/json
 
 ### GET SocialProfileDetails
 GET {{app-b-url}}/profile/marcduiker
+
+### POST SocialProfileDetails via pubsub
+POST {{app-a-url}}/pubsub
+Content-Type: application/json
+
+{
+    "name": "Marc",
+    "twitterHandle": "marcduiker",
+    "githubHandle": "marcduiker"
+}

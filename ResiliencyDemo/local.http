@@ -1,0 +1,14 @@
+@url=http://localhost:5045
+
+### POST SocialProfileDetails
+POST {{url}}/social
+Content-Type: application/json
+
+{
+    "name": "Marc",
+    "twitterHandle": "marcduiker",
+    "githubHandle": "marcduiker"
+}
+
+### GET SocialProfileDetails
+GET {{url}}/social/marcduiker

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "0 - Session intro",
+  "nextTour": "1 - Dapr intro",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "# Failure is not an option: durable execution + Dapr = 🚀\r\n\r\n![Task failed successfully](./images/task-failed-succesfully.jpg)"
+    },
+    {
+      "title": "Marc Duiker",
+      "description": "# Marc Duiker\r\n\r\n- Sr Developer Advocate @ [Diagrid](https://www.diagrid.io/)\r\n- [Dapr](https://dapr.io/) Community Manager\r\n- Long time **developer supporter**\r\n\r\n[*marcduiker.dev*](https://marcduiker.dev)"
+    }
+  ]
+}

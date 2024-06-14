@@ -1,0 +1,35 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "1 - Dapr intro",
+  "nextTour": "2 - Failure & Resiliency",
+  "steps": [
+    {
+      "title": "Distributed apps",
+      "description": "![distributed systems](./images/distributed-apps1.PNG)"
+    },
+    {
+      "title": "Distributed apps with Dapr",
+      "description": "![distributed systems](./images/distributed-apps2.PNG)"
+    },
+    {
+      "title": "Dapr APIs",
+      "description": "![Dapr dev to hosting](./images/dev-to-hosting.PNG)"
+    },
+    {
+      "title": "Dapr components",
+      "description": "![components](./images/components.PNG)"
+    },
+    {
+      "title": "API example",
+      "description": "![Dapr API examples](./images/api-examples.PNG)"
+    },
+    {
+      "title": "Swappable components local",
+      "description": "![Swappable components local dev](./images/swappable-local.PNG)"
+    },
+    {
+      "title": "Swappable components Azure",
+      "description": "![Swappable components Azure](./images/swappable-azure.PNG)"
+    }
+  ]
+}

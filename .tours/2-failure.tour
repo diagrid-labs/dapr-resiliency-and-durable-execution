@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "2 - Failure & Resiliency",
+  "steps": [
+    {
+      "title": "Failure is inevitable",
+      "description": "# Failure is inevitable\r\n\r\n## Fallacies of distributed computing\r\n\r\n1. The network is reliable\r\n2. Latency is zero\r\n3. Bandwidth is infinite\r\n4. The network is secure\r\n5. Topology doesn't change\r\n6. There is one administrator\r\n7. Transport cost is zero\r\n8. The network is homogeneous\r\n\r\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\r\n- [Fallacies of Distributed Computing \r\nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)"
+    },
+    {
+      "title": "Resiliency service-to-service",
+      "description": "![Resiliency service to service](./images/resiliency-s2s.PNG)"
+    },
+    {
+      "title": "Resiliency outbound",
+      "description": "![outbound resiliency](./images/resiliency-outbound.PNG)"
+    },
+    {
+      "title": "Resiliency pubsub",
+      "description": "![Inbound and outbound resiliency](./images/resiliency-pubsub.PNG)"
+    }
+  ]
+}

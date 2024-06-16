@@ -12,23 +12,24 @@ app.MapPost("/profile", async (
     DaprClient daprClient) => {
     await daprClient.SaveStateAsync<SocialProfileDetails>(
         StateStoreName,
-        details.GitHubHandle,
+        details.Id,
         details);
     Console.WriteLine("Profile saved to state store.");
 
     return Results.Created();
 });
 
-app.MapGet("/profile/{key}", async (
-    string key,
+app.MapGet("/profile/{id}", async (
+    string id,
     DaprClient daprClient) => {
+    Console.WriteLine($"Getting profile with id {id} from state store.");
     var details =  await daprClient.GetStateAsync<SocialProfileDetails>(
         StateStoreName,
-        key);
+        id);
 
     return details is not null ? Results.Ok(details) : Results.NotFound();
 });
 
 app.Run();
 
-record SocialProfileDetails(string Name, string TwitterHandle, string GitHubHandle);
+record SocialProfileDetails(string Id, string Name, string TwitterHandle, string GitHubHandle);

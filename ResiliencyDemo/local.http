@@ -2,24 +2,33 @@
 @app-b-url=http://localhost:5047
 
 ### POST SocialProfileDetails
+# @name serviceInvocationResponse
 POST {{app-a-url}}/serviceinvocation
 Content-Type: application/json
 
 {
-    "name": "Test",
-    "twitterHandle": "marcduiker",
-    "githubHandle": "test6"
+    "id": "{{$guid}}",
+    "name": "Dapr",
+    "twitterHandle": "daprdev",
+    "githubHandle": "Dapr"
 }
 
 ### GET SocialProfileDetails
-GET {{app-b-url}}/profile/marcduiker
+@siProfileId={{serviceInvocationResponse.response.body.$}}
+GET {{app-b-url}}/profile/{{siProfileId}}
 
 ### POST SocialProfileDetails via pubsub
+# @name pubsubResponse
 POST {{app-a-url}}/pubsub
 Content-Type: application/json
 
 {
-    "name": "Marc",
-    "twitterHandle": "marcduiker",
-    "githubHandle": "marcduiker"
+    "id" : "{{$guid}}",
+    "name": "Diagrid",
+    "twitterHandle": "diagridio",
+    "githubHandle": "diagridio"
 }
+
+### GET SocialProfileDetails
+@pubsubProfileId={{pubsubResponse.response.body.$}}
+GET {{app-b-url}}/profile/{{pubsubProfileId}}

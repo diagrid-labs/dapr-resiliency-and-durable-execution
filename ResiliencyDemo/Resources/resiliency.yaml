@@ -23,23 +23,26 @@ spec:
         maxInterval: 30s
         maxRetries: 10
 
-      myRetryForever:
+      myPubSubRetryForever:
         policy: constant
         duration: 5s
         maxRetries: -1 
 
     # Circuit Breaker (CB) policies are used when other applications/services/components are experiencing elevated failure rates. CBs monitor the requests and shut off all traffic to the impacted service when a certain criteria is met (“open” state). By doing this, CBs give the service time to recover from their outage instead of flooding it with events. The CB can also allow partial traffic through to see if the system has healed (“half-open” state). Once requests resume being successful, the CB gets into “closed” state and allows traffic to completely resume.
     circuitBreakers:
-      open30secAfter5fails:
+      pubsubCircuitBreaker:
         maxRequests: 1                  # The maximum number of requests allowed to pass through when the CB is half-open (recovering from failure). Defaults to 1.
-        timeout: 30s                    # The period of the open state (directly after failure) until the CB switches to half-open.
+        timeout: 10s                    # The period of the open state (directly after failure) until the CB switches to half-open.
         trip: consecutiveFailures >= 5  # A Common Expression Language (CEL) statement that is evaluated by the CB. When the statement evaluates to true, the CB trips and becomes open.
 
   targets:
     apps:
       app-a:
         retry: myRetryExponential
-        #circuitBreaker: open30secAfter5fails
       app-b:
         retry: myRetryConstant
-        #circuitBreaker: open30secAfter5fails
+    components:
+      pubsub:
+        outbound:
+          retry: myPubSubRetryForever
+          circuitBreaker: pubsubCircuitBreaker

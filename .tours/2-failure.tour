@@ -38,7 +38,17 @@
     {
       "file": "ResiliencyDemo/dapr.yaml",
       "description": "## Dapr multi-app run file\n\nRun AppA and AppB using the Dapr CLI:\n>> dapr run -f .",
-      "line": 1
+      "line": 1,
+      "selection": {
+        "start": {
+          "line": 3,
+          "character": 1
+        },
+        "end": {
+          "line": 4,
+          "character": 17
+        }
+      }
     },
     {
       "file": "ResiliencyDemo/local.http",
@@ -51,15 +61,52 @@
     },
     {
       "title": "Simulate issue with AppB",
-      "description": "Navigate to AppA folder:\n\n>> cd AppA\n\nRun AppA with the Dapr CLI: \n>> dapr run --app-id app-a --app-port 5045 --dapr-http-port 3500 --resources-path \"../Resources\" -- dotnet run\n\nOpen a new terminal and navigate to AppB:\n\n`cd AppB`\n\nRun AppB with the Dapr CLI: \n\n`dapr run --app-id app-b --app-port 5047 --dapr-http-port 3502 --resources-path \"../Resources\" -- dotnet run`"
+      "description": "## Simulate issue with AppB\n\nLet's start AppA, but not AppB. Make a request to AppA, wait a couple of seconds and then start AppB.\n\nNavigate to AppA folder:\n\n>> cd AppA\n\nRun AppA with the Dapr CLI: \n>> dapr run --app-id app-a --app-port 5045 --dapr-http-port 3500 --resources-path \"../Resources\" -- dotnet run\n\nOpen a new terminal and navigate to AppB:\n\n`cd AppB`\n\nRun AppB with the Dapr CLI: \n\n`dapr run --app-id app-b --app-port 5047 --dapr-http-port 3502 --resources-path \"../Resources\" -- dotnet run`"
+    },
+    {
+      "file": "ResiliencyDemo/local.http",
+      "description": "## Service invocation from AppA to AppB",
+      "line": 3
     },
     {
       "title": "Resiliency outbound",
       "description": "![outbound resiliency](./images/resiliency-outbound.PNG)"
     },
     {
+      "title": "Simulate an issue with the state store",
+      "description": "## Simulate an issue with the state store\n\nNavigate to the ResiliencyDemo folder and run AppA and AppB with multi-app run:\n\n>> dapr run -f .\n\nOpen a new terminal and stop the `dapr_redis` container:\n\n`docker stop dapr_redis`\n\nWait a few seconds and start the `dapr_redis` container:\n\n`docker start dapr_redis`"
+    },
+    {
       "title": "Resiliency pubsub",
       "description": "![Inbound and outbound resiliency](./images/resiliency-pubsub.PNG)"
+    },
+    {
+      "file": "ResiliencyDemo/AppA/Program.cs",
+      "description": "## AppA Program.cs /pubsub",
+      "line": 16
+    },
+    {
+      "directory": "ResiliencyDemo/Resources",
+      "description": "## Rename pubsub and subscription YAML files\n\n1. Navigate to the Resources folder.\n2. Rename `pubsub.yaml.temp` to `pubsub.yaml`.\n3. Rename `subscription.yamp.temp` to `subscription.yaml`."
+    },
+    {
+      "file": "ResiliencyDemo/Resources/pubsub.yaml",
+      "description": "## Pubsub component",
+      "line": 1
+    },
+    {
+      "file": "ResiliencyDemo/Resources/subscription.yaml",
+      "description": "## Subscription file\n\nThis is a declarative subscription to a topic. You can also use a programmatic way in code.",
+      "line": 1
+    },
+    {
+      "title": "Run AppA and AppB",
+      "description": "Run AppA and AppB using the Dapr CLI:\n\n>> dapr run -f ."
+    },
+    {
+      "file": "ResiliencyDemo/local.http",
+      "description": "## Pubsub from AppA to AppB",
+      "line": 17
     }
   ]
 }

@@ -10,7 +10,7 @@ app.MapPost("/serviceinvocation", async (
     HttpClient httpClient) => {
         await httpClient.PostAsJsonAsync("/profile", profileDetails);
         Console.WriteLine("Profile sent to AppB via service invocation.");
-        return Results.Created();
+        return Results.Created(null as string, profileDetails.Id);
     }
 );
 
@@ -19,10 +19,10 @@ app.MapPost("/pubsub", async (
     DaprClient daprClient) => {
         await daprClient.PublishEventAsync("mypubsub", "profiles" , profileDetails);
         Console.WriteLine("Profile sent to AppB via pubsub.");
-        return Results.Created();
+        return Results.Created(null as string, profileDetails.Id);
     }
 );
 
 app.Run();
 
-record SocialProfileDetails(string Name, string TwitterHandle, string GitHubHandle);
+record SocialProfileDetails(string Id, string Name, string TwitterHandle, string GitHubHandle);

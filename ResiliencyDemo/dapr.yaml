@@ -8,11 +8,11 @@ apps:
     daprHTTPPort: 3500
     command: ["dotnet", "run"]
     appLogDestination: console
-    daprdLogDestination: file
+    daprdLogDestination: fileAndConsole
   - appID: app-b
     appDirPath: AppB
     appPort: 5047
     daprHTTPPort: 3502
     command: ["dotnet", "run"]
     appLogDestination: console
-    daprdLogDestination: file
+    daprdLogDestination: fileAndConsole

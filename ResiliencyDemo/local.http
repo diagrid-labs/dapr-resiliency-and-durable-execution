@@ -2,13 +2,13 @@
 @app-b-url=http://localhost:5047
 
 ### POST SocialProfileDetails
-POST {{app-a-url}}/post
+POST {{app-a-url}}/serviceinvocation
 Content-Type: application/json
 
 {
-    "name": "Marc",
+    "name": "Test",
     "twitterHandle": "marcduiker",
-    "githubHandle": "marcduiker"
+    "githubHandle": "test6"
 }
 
 ### GET SocialProfileDetails

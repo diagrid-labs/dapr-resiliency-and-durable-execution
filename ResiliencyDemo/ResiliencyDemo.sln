@@ -5,9 +5,9 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResiliencyDemo", "ResiliencyDemo", "{F11AB3FA-B29D-4CCF-B44F-F2A5D3E037B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppA", "ResiliencyDemo\AppA\AppA.csproj", "{9B1EB711-F3CF-4F4B-8CE8-8BB23FB1FD6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppA", "AppA\AppA.csproj", "{9B1EB711-F3CF-4F4B-8CE8-8BB23FB1FD6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppB", "ResiliencyDemo\AppB\AppB.csproj", "{6E5150DB-6BE6-4420-B5B1-13F8052F790F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppB", "AppB\AppB.csproj", "{6E5150DB-6BE6-4420-B5B1-13F8052F790F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

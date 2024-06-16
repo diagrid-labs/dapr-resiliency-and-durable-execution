@@ -14,6 +14,7 @@ app.MapPost("/profile", async (
         StateStoreName,
         details.GitHubHandle,
         details);
+    Console.WriteLine("Profile saved to state store.");
 
     return Results.Created();
 });

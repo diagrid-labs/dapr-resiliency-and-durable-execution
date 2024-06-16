@@ -5,10 +5,11 @@ builder.Services.AddSingleton<HttpClient>(DaprClient.CreateInvokeHttpClient(appI
 builder.Services.AddSingleton<DaprClient>(new DaprClientBuilder().Build());
 var app = builder.Build();
 
-app.MapPost("/post", async (
+app.MapPost("/serviceinvocation", async (
     SocialProfileDetails profileDetails,
     HttpClient httpClient) => {
         await httpClient.PostAsJsonAsync("/profile", profileDetails);
+        Console.WriteLine("Profile sent to AppB via service invocation.");
         return Results.Created();
     }
 );
@@ -17,6 +18,7 @@ app.MapPost("/pubsub", async (
     SocialProfileDetails profileDetails,
     DaprClient daprClient) => {
         await daprClient.PublishEventAsync("mypubsub", "profiles" , profileDetails);
+        Console.WriteLine("Profile sent to AppB via pubsub.");
         return Results.Created();
     }
 );

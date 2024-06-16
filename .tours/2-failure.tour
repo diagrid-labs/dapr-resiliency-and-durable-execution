@@ -7,8 +7,51 @@
       "description": "# Failure is inevitable\r\n\r\n## Fallacies of distributed computing\r\n\r\n1. The network is reliable\r\n2. Latency is zero\r\n3. Bandwidth is infinite\r\n4. The network is secure\r\n5. Topology doesn't change\r\n6. There is one administrator\r\n7. Transport cost is zero\r\n8. The network is homogeneous\r\n\r\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\r\n- [Fallacies of Distributed Computing \r\nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)"
     },
     {
+      "directory": "ResiliencyDemo",
+      "description": "# ResiliencyDemo\n\nNavigate to the ResiliencyDemo folder:\n>> cd ResiliencyDemo\n\nList the folder content:\n>> ls\n\nBuild the .NET solution with AppA and AppB:\n>> dotnet build"
+    },
+    {
+      "file": "ResiliencyDemo/AppA/AppA.csproj",
+      "description": "## AppA.csproj",
+      "line": 1
+    },
+    {
+      "file": "ResiliencyDemo/AppA/Program.cs",
+      "description": "# AppA Program.cs",
+      "line": 1
+    },
+    {
+      "file": "ResiliencyDemo/AppB/AppB.csproj",
+      "description": "## AppB.csproj",
+      "line": 1
+    },
+    {
+      "file": "ResiliencyDemo/AppB/Program.cs",
+      "description": "## AppB Program.cs",
+      "line": 1
+    },
+    {
+      "file": "ResiliencyDemo/Resources/statestore.yaml",
+      "description": "## Dapr state store component",
+      "line": 1
+    },
+    {
+      "file": "ResiliencyDemo/dapr.yaml",
+      "description": "## Dapr multi-app run file\n\nRun AppA and AppB using the Dapr CLI:\n>> dapr run -f .",
+      "line": 1
+    },
+    {
+      "file": "ResiliencyDemo/local.http",
+      "description": "## Service invocation from AppA to AppB",
+      "line": 3
+    },
+    {
       "title": "Resiliency service-to-service",
       "description": "![Resiliency service to service](./images/resiliency-s2s.PNG)"
+    },
+    {
+      "title": "Simulate issue with AppB",
+      "description": "Navigate to AppA folder:\n\n>> cd AppA\n\nRun AppA with the Dapr CLI: \n>> dapr run --app-id app-a --app-port 5045 --dapr-http-port 3500 --resources-path \"../Resources\" -- dotnet run\n\nOpen a new terminal and navigate to AppB:\n\n`cd AppB`\n\nRun AppB with the Dapr CLI: \n\n`dapr run --app-id app-b --app-port 5047 --dapr-http-port 3502 --resources-path \"../Resources\" -- dotnet run`"
     },
     {
       "title": "Resiliency outbound",

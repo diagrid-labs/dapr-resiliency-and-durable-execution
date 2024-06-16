@@ -15,17 +15,17 @@ spec:
   
       myRetryConstant:
         policy: constant
-        duration: 3s         
-        maxRetries: 5
+        duration: 2s
+        maxRetries: -1
 
       myRetryExponential:
         policy: exponential
-        maxInterval: 5m
-        maxRetries: -1
+        maxInterval: 30s
+        maxRetries: 10
 
       myRetryForever:
         policy: constant
-        duration: 3s
+        duration: 5s
         maxRetries: -1 
 
     # Circuit Breaker (CB) policies are used when other applications/services/components are experiencing elevated failure rates. CBs monitor the requests and shut off all traffic to the impacted service when a certain criteria is met (“open” state). By doing this, CBs give the service time to recover from their outage instead of flooding it with events. The CB can also allow partial traffic through to see if the system has healed (“half-open” state). Once requests resume being successful, the CB gets into “closed” state and allows traffic to completely resume.
@@ -38,8 +38,8 @@ spec:
   targets:
     apps:
       app-a:
-        retry: myRetryConstant
-        circuitBreaker: open30secAfter5fails
-      app-b:
         retry: myRetryExponential
-        circuitBreaker: open30secAfter5fails
+        #circuitBreaker: open30secAfter5fails
+      app-b:
+        retry: myRetryConstant
+        #circuitBreaker: open30secAfter5fails

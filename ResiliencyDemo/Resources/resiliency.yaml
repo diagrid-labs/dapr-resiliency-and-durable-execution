@@ -42,7 +42,10 @@ spec:
       app-b:
         retry: myRetryConstant
     components:
-      pubsub:
+      mypubsub:
         outbound:
+          retry: myPubSubRetryForever
+          circuitBreaker: pubsubCircuitBreaker
+        inbound:
           retry: myPubSubRetryForever
           circuitBreaker: pubsubCircuitBreaker

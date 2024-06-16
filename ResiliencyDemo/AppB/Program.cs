@@ -8,13 +8,13 @@ app.UseCloudEvents();
 const string StateStoreName = "mystatestore";
 
 app.MapPost("/profile", async (
-    SocialProfileDetails details,
+    SocialProfileDetails profileDetails,
     DaprClient daprClient) => {
     await daprClient.SaveStateAsync<SocialProfileDetails>(
         StateStoreName,
-        details.Id,
-        details);
-    Console.WriteLine("Profile saved to state store.");
+        profileDetails.Id,
+        profileDetails);
+    Console.WriteLine($"Profile {profileDetails.Id} saved to state store.");
 
     return Results.Created();
 });

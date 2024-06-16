@@ -37,7 +37,7 @@
     },
     {
       "file": "ResiliencyDemo/dapr.yaml",
-      "description": "## Dapr multi-app run file\n\nRun AppA and AppB using the Dapr CLI:\n>> dapr run -f .",
+      "description": "## Dapr multi-app run file\n\nRun AppA and AppB using the Dapr CLI:\n\n>> dapr run -f .",
       "line": 1,
       "selection": {
         "start": {
@@ -45,7 +45,7 @@
           "character": 1
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "character": 17
         }
       }
@@ -61,7 +61,7 @@
     },
     {
       "title": "Simulate issue with AppB",
-      "description": "## Simulate issue with AppB\n\nLet's start AppA, but not AppB. Make a request to AppA, wait a couple of seconds and then start AppB.\n\nNavigate to AppA folder:\n\n>> cd AppA\n\nRun AppA with the Dapr CLI: \n>> dapr run --app-id app-a --app-port 5045 --dapr-http-port 3500 --resources-path \"../Resources\" -- dotnet run\n\nOpen a new terminal and navigate to AppB:\n\n`cd AppB`\n\nRun AppB with the Dapr CLI: \n\n`dapr run --app-id app-b --app-port 5047 --dapr-http-port 3502 --resources-path \"../Resources\" -- dotnet run`"
+      "description": "## Simulate issue with AppB (Service invocation)\n\nLet's start AppA, but not AppB. Make a request to AppA, wait a couple of seconds and then start AppB.\n\nNavigate to AppA folder:\n\n>> cd AppA\n\nRun AppA with the Dapr CLI: \n>> dapr run --app-id app-a --app-port 5045 --dapr-http-port 3500 --resources-path \"../Resources\" -- dotnet run\n\nOpen a new terminal and navigate to AppB:\n\n`cd AppB`\n\nRun AppB with the Dapr CLI: \n\n`dapr run --app-id app-b --app-port 5047 --dapr-http-port 3502 --resources-path \"../Resources\" -- dotnet run`"
     },
     {
       "file": "ResiliencyDemo/local.http",
@@ -101,12 +101,12 @@
     },
     {
       "title": "Run AppA and AppB",
-      "description": "Run AppA and AppB using the Dapr CLI:\n\n>> dapr run -f ."
+      "description": "## Simulate an issue with the message broker\n\nEnsure you're in the ResilienceDemo folder and the dapr_redis container is running.\n\nRun AppA and AppB using the Dapr CLI with multi-app run:\n\n>> dapr run -f .\n\n\nOpen a new terminal and stop the `dapr_redis` container:\n\n`docker stop dapr_redis`\n\nAfter a few seconds start the `dapr_redis` container again:\n\n`docker start dapr_redis`\n"
     },
     {
       "file": "ResiliencyDemo/local.http",
       "description": "## Pubsub from AppA to AppB",
-      "line": 17
+      "line": 21
     }
   ]
 }

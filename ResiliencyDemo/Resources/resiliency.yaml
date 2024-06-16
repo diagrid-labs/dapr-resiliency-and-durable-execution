@@ -37,8 +37,6 @@ spec:
 
   targets:
     apps:
-      app-a:
-        retry: myRetryExponential
       app-b:
         retry: myRetryConstant
     components:

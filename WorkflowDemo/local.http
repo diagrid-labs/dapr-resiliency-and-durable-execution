@@ -1,0 +1,34 @@
+@workflow-appurl=http://localhost:5049
+@app-b-url=http://localhost:5051
+
+### POST SocialProfileDetails
+# @name serviceInvocationResponse
+POST {{workflow-app-url}}/serviceinvocation
+Content-Type: application/json
+
+{
+    "id": "{{$guid}}",
+    "name": "Dapr",
+    "twitterHandle": "daprdev",
+    "githubHandle": "Dapr"
+}
+
+### GET SocialProfileDetails
+@siProfileId={{serviceInvocationResponse.response.body.$}}
+GET {{app-b-url}}/profile/{{siProfileId}}
+
+### POST SocialProfileDetails via pubsub
+# @name pubsubResponse
+POST {{app-a-url}}/pubsub
+Content-Type: application/json
+
+{
+    "id" : "{{$guid}}",
+    "name": "Diagrid",
+    "twitterHandle": "diagridio",
+    "githubHandle": "diagridio"
+}
+
+### GET SocialProfileDetails
+@pubsubProfileId={{pubsubResponse.response.body.$}}
+GET {{app-b-url}}/profile/{{pubsubProfileId}}

@@ -1,5 +1,4 @@
-﻿using System.Net.Http.Json;
-using Dapr.Workflow;
+﻿using Dapr.Workflow;
 
 namespace WorkflowApp
 {
@@ -15,6 +14,7 @@ namespace WorkflowApp
         {
             var response = await _httpClient.PostAsJsonAsync("/calculatecost", shippingInfo);
             var result = await response.Content.ReadFromJsonAsync<ShippingResult>();
+
             return result;
         }
     }

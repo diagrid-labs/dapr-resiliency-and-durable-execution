@@ -2,15 +2,15 @@ version: 1
 common:
   resourcesPath: Resources
 apps:
-  - appID: workflow-app
+  - appID: workflow
     appDirPath: WorkflowApp
     appPort: 5049
     daprHTTPPort: 3500
     command: ["dotnet", "run"]
     appLogDestination: fileAndConsole
     daprdLogDestination: fileAndConsole
-  - appID: app-b
-    appDirPath: AppB
+  - appID: shipping
+    appDirPath: ShippingApp
     appPort: 5051
     daprHTTPPort: 3502
     command: ["dotnet", "run"]

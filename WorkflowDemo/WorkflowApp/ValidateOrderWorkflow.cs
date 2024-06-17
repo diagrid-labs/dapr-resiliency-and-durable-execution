@@ -6,7 +6,7 @@ using Dapr.Workflow;
 
 namespace WorkflowApp
 {
-    public class OrderWorkflow : Workflow<Order, OrderValidationResult>
+    public class ValidateOrderWorkflow : Workflow<Order, OrderValidationResult>
     {
         public override async Task<OrderValidationResult> RunAsync(WorkflowContext context, Order order)
         {

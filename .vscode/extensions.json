@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "humao.rest-client",
+        "vsls-contrib.codetour",
+        "ms-dotnettools.csharp"
+    ]
+}

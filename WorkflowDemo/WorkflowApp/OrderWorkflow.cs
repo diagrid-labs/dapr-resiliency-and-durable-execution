@@ -6,19 +6,19 @@ using Dapr.Workflow;
 
 namespace WorkflowApp
 {
-    public class OrderWorkflow : Workflow<OrderItem, OrderResult>
+    public class OrderWorkflow : Workflow<Order, OrderValidationResult>
     {
-        public override Task<string> RunAsync(WorkflowContext context, OrderItem orderItem)
+        public override async Task<OrderValidationResult> RunAsync(WorkflowContext context, Order order)
         {
-            throw new NotImplementedException();
+            var inventoryResult = await context.CallActivityAsync<InventoryResult>(
+                nameof(CheckInventory),
+                order.OrderItem);
+            
+            var shippingResult = await context.CallActivityAsync<ShippingResult>(
+                nameof(ShippingCalculator),
+                order.ShippingInfo);
+            
+            return new OrderValidationResult(inventoryResult, shippingResult);
         }
-    }
-
-    public class OrderResult
-    {
-    }
-
-    public class OrderItem
-    {
     }
 }

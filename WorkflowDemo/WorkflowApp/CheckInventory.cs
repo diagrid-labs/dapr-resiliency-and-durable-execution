@@ -1,16 +1,14 @@
 ﻿using Dapr.Workflow;
 
-namespace WorkflowApp;
-
-public class CheckInventory : WorkflowActivity<OrderItem, InventoryResult>
+namespace WorkflowApp
 {
-    public override Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem input)
+    public class CheckInventory : WorkflowActivity<OrderItem, InventoryResult>
     {
-        throw new NotImplementedException();
+        public override Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem input)
+        {
+            throw new NotImplementedException();
+        }
     }
-}
 
-public class InventoryResult
-{
-    public bool InStock { get; set; }
+
 }

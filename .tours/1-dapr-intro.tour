@@ -16,12 +16,12 @@
       "description": "![Dapr dev to hosting](./images/dev-to-hosting.PNG)"
     },
     {
-      "title": "Dapr components",
-      "description": "![components](./images/components.PNG)"
-    },
-    {
       "title": "API example",
       "description": "![Dapr API examples](./images/api-examples.PNG)"
+    },
+    {
+      "title": "Dapr components",
+      "description": "![components](./images/components.PNG)"
     },
     {
       "title": "Swappable components local",

@@ -39,8 +39,42 @@
       }
     },
     {
-      "title": "Dapr Workflow",
-      "description": ""
+      "title": "Dapr workflow",
+      "description": "![Dapr Workflow](./images/workflow.PNG)"
+    },
+    {
+      "title": "Dapr workflow engine",
+      "description": "![Dapr workflow engine](./images/workflow-engine.PNG)"
+    },
+    {
+      "title": "Task chaining",
+      "description": "![Task chaining](./images/workflow-task-chaining.PNG)",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 1,
+          "character": 54
+        }
+      }
+    },
+    {
+      "title": "Fan-out/fan-in",
+      "description": "![Fan-out/fan-in](./images/workflow-fanoutin.PNG)"
+    },
+    {
+      "title": "Monitor",
+      "description": "![Monitor](./images/workflow-monitor.PNG)"
+    },
+    {
+      "title": "External system",
+      "description": "![External System Interaction](./images/workflow-externalsystem.PNG)"
+    },
+    {
+      "title": "Workflow example",
+      "description": "![Workflow example](./images/workflow-example.PNG)"
     },
     {
       "title": "Challenges",

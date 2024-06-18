@@ -27,7 +27,7 @@ Content-Type: application/json
     "orderItem" : {
         "productId": "{{productId}}",
         "productName": "RubberDuck",
-        "quantity": 1,
+        "quantity": 2,
         "totalPrice": 5.00
     },
     "shippingInfo" : {
@@ -55,4 +55,13 @@ Content-Type: application/json
     "shippingInfo" : {
         "country" : "The Netherlands"
     }
+}
+
+### Calculate shipping cost
+
+POST {{shipping-url}}/calculateCost
+Content-Type: application/json
+
+{
+    "country": "The Netherlands"
 }

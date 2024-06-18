@@ -1,4 +1,5 @@
-﻿using Dapr.Workflow;
+﻿using System.Net;
+using Dapr.Workflow;
 
 namespace WorkflowApp
 {
@@ -14,7 +15,13 @@ namespace WorkflowApp
 
         public override async Task<ShippingResult> RunAsync(WorkflowActivityContext context, ShippingInfo shippingInfo)
         {
+            Thread.Sleep(5000);
             var response = await _httpClient.PostAsJsonAsync("/calculateCost", shippingInfo);
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                _logger.LogError("Failed to calculate shipping cost for country {Country} {Message}.", shippingInfo.Country, response.ReasonPhrase);
+                throw new Exception("Failed to calculate shipping cost.");
+            }
             var result = await response.Content.ReadFromJsonAsync<ShippingResult>();
 
             _logger.LogInformation("Calculated shipping cost for country {Country}.", shippingInfo.Country);

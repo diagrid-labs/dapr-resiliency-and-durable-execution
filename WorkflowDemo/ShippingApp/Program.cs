@@ -1,7 +1,5 @@
-using Dapr.Client;
-
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSingleton<DaprClient>(new DaprClientBuilder().Build());
+builder.Services.AddDaprClient();
 var app = builder.Build();
 
 app.MapPost("/calculateCost", (

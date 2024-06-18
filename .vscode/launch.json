@@ -2,19 +2,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Launch Workflow with Dapr",
+            "request": "launch",
+            "type": "dapr",
+            "runFile": "${workspaceFolder}/WorkflowDemo/dapr.yaml",
+            "preLaunchTask": "dapr"
+        },
+        {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/WorkflowDemo/WorkflowApp/bin/Debug/net8.0/WorkflowApp.dll",
             "args": [],
             "cwd": "${workspaceFolder}/WorkflowDemo/WorkflowApp",
             "stopAtEntry": false,
-            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
@@ -30,6 +32,18 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        },
+        {
+            "name": "Launch Workflow with Dapr with Dapr",
+            "request": "launch",
+            "type": "dapr",
+            "runFile": "${workspaceFolder}/WorkflowDemo/dapr.yaml",
+            "includeApps": [
+                "workflow",
+                "shipping"
+            ],
+            "preLaunchTask": "dapr-debug",
+            "postDebugTask": "daprd-down"
         }
     ]
 }

@@ -3,6 +3,50 @@
   "title": "3 - Durable Execution & Workflow",
   "steps": [
     {
+      "title": "What is the problem?",
+      "description": "## What are we solving with Durable Execution?\n\nMany organizations lose money when their IT systems fail. Organizations want theis systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to deal with failure, and recovery (ideally automatically)."
+    },
+    {
+      "title": "Durable Execution",
+      "description": "## Durable execution \n\nDurable execution is running code in a stateful way. In case the process, that runs the code, stops, a new process can be started, and runs the code to completion.\n\n[Source](https://temporal.io/blog/building-reliable-distributed-systems-in-node)",
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 1
+        },
+        "end": {
+          "line": 5,
+          "character": 81
+        }
+      }
+    },
+    {
+      "title": "Workflows",
+      "description": "## Workflows\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of tasks (activities) in a specific sequence."
+    },
+    {
+      "title": "Workflow as code",
+      "description": "## Workflow as Code\n\nA workflow system where the sequence of tasks (activities) is written in code by developers.\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)",
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 1
+        },
+        "end": {
+          "line": 5,
+          "character": 28
+        }
+      }
+    },
+    {
+      "title": "Dapr Workflow",
+      "description": ""
+    },
+    {
+      "title": "Challenges",
+      "description": "## Workflow as Code challenges\n\n- Deterministic code\n- Idempotency\n- Versioning\n- Payloads\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
+    },
+    {
       "title": "Simulate issue with the Shipping app",
       "description": "## Simulate issue with AppB (Service invocation)\n\nLet's start the WorkflowApp, but not the ShippingApp. Make a request to the workflow, wait a couple of seconds and then start the ShippingApp.\n\nNavigate to WorkflowApp folder:\n\n>> cd WorkflowApp\n\nRun the WorkflowApp with the Dapr CLI: \n>> dapr run --app-id workflow --app-port 5049 --dapr-http-port 3504 --resources-path \"../Resources\" -- dotnet run\n\nFirst make a request to the WorkflowApp, then open a new terminal and navigate to the ShippingApp folder:\n\n`cd ShippingApp`\n\nRun the ShippingApp with the Dapr CLI: \n\n`dapr run --app-id shipping --app-port 5051 --dapr-http-port 3506 --resources-path \"../Resources\" -- dotnet run`"
     }

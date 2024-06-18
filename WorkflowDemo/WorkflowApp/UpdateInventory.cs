@@ -3,13 +3,13 @@ using Dapr.Workflow;
 
 namespace WorkflowApp
 {
-    public class UndoUpdateInventory : WorkflowActivity<OrderItem, InventoryResult>
+    public class UpdateInventory : WorkflowActivity<OrderItem, InventoryResult>
     {
         private readonly DaprClient _daprClient;
         private readonly ILogger _logger;
         private const string StateStoreName = "inventory";
 
-        public UndoUpdateInventory(DaprClient daprClient, ILoggerFactory loggerFactory)
+        public UpdateInventory(DaprClient daprClient, ILoggerFactory loggerFactory)
         {
             _daprClient = daprClient;
             _logger = loggerFactory.CreateLogger<UndoUpdateInventory>();
@@ -31,7 +31,7 @@ namespace WorkflowApp
                         productInventory.ProductId,
                         updatedInventory);
 
-                    _logger.LogInformation("Updated inventory for product {ProductId} with quantity {ProductQuantity}", productInventory.ProductId, productInventory);
+                    _logger.LogInformation("Reduced inventory for product {ProductId} with quantity {ProductQuantity}", updatedInventory.ProductId, orderItem.Quantity);
 
                     return new InventoryResult(IsKnownProduct: true, IsSufficientStock: true);
                     

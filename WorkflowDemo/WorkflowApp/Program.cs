@@ -47,6 +47,11 @@ app.MapGet("/inventory/{productId}", async (
                 "inventory",
                 productId);
 
+        if (productInventory == null)
+        {
+            return Results.NotFound();
+        }
+
         return Results.Ok(productInventory);
 });
 

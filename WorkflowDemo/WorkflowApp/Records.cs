@@ -5,6 +5,6 @@ namespace WorkflowApp
     public record ShippingInfo(string Country);
     public record OrderValidationResult(InventoryResult InventoryResult, ShippingResult ShippingResult);
     public record ShippingResult(bool IsShippingAvailable, decimal Cost);
-    public record InventoryResult(bool IsKnownProduct, bool InStock);
+    public record InventoryResult(bool IsKnownProduct, bool IsSufficientStock);
     public record ProductInventory(string ProductId, int Quantity);
 }

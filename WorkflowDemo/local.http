@@ -1,34 +1,58 @@
-@workflow-appurl=http://localhost:5049
-@app-b-url=http://localhost:5051
+@workflow-url=http://localhost:5049
+@dapr-url=http://localhost:3504
+@shipping-url=http://localhost:5051
+@orderId={{$guid}}
+@productId=P123
 
-### POST SocialProfileDetails
-# @name serviceInvocationResponse
-POST {{workflow-app-url}}/serviceinvocation
+### Restock inventory
+POST {{workflow-url}}/inventory/restock
 Content-Type: application/json
 
 {
-    "id": "{{$guid}}",
-    "name": "Dapr",
-    "twitterHandle": "daprdev",
-    "githubHandle": "Dapr"
+    "productId": "{{productId}}",
+    "quantity": 5
 }
 
-### GET SocialProfileDetails
-@siProfileId={{serviceInvocationResponse.response.body.$}}
-GET {{app-b-url}}/profile/{{siProfileId}}
+### Get inventory
+GET {{workflow-url}}/inventory/{{productId}}
 
-### POST SocialProfileDetails via pubsub
-# @name pubsubResponse
-POST {{app-a-url}}/pubsub
+
+### Schedule a workflow via the application
+# @name validateOrderResponse
+POST {{workflow-url}}/validateOrder
 Content-Type: application/json
 
 {
-    "id" : "{{$guid}}",
-    "name": "Diagrid",
-    "twitterHandle": "diagridio",
-    "githubHandle": "diagridio"
+    "id": "{{orderId}}",
+    "orderItem" : {
+        "productId": "{{productId}}",
+        "productName": "RubberDuck",
+        "quantity": 1,
+        "totalPrice": 5.00
+    },
+    "shippingInfo" : {
+        "country" : "The Netherlands"
+    }
 }
 
-### GET SocialProfileDetails
-@pubsubProfileId={{pubsubResponse.response.body.$}}
-GET {{app-b-url}}/profile/{{pubsubProfileId}}
+### GET workflow status
+@instanceId={{validateOrderResponse.response.headers.Location}}
+GET {{dapr-url}}/v1.0-beta1/workflows/dapr/{{instanceId}}
+
+
+### Schedule a workflow instance directly via the Dapr HTTP API
+POST {{dapr-url}}/v1.0-beta1/workflows/dapr/ValidateOrderWorkflow/start?instanceID={{orderId}}
+Content-Type: application/json
+
+{
+    "id": "{{orderId}}",
+    "orderItem" : {
+        "productId": "P123",
+        "productName": "RubberDuck",
+        "quantity": 1,
+        "totalPrice": 5.00
+    },
+    "shippingInfo" : {
+        "country" : "The Netherlands"
+    }
+}

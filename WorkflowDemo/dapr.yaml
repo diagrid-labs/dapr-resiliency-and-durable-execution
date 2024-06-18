@@ -5,14 +5,14 @@ apps:
   - appID: workflow
     appDirPath: WorkflowApp
     appPort: 5049
-    daprHTTPPort: 3500
+    daprHTTPPort: 3504
     command: ["dotnet", "run"]
     appLogDestination: fileAndConsole
     daprdLogDestination: fileAndConsole
   - appID: shipping
     appDirPath: ShippingApp
     appPort: 5051
-    daprHTTPPort: 3502
+    daprHTTPPort: 3506
     command: ["dotnet", "run"]
     appLogDestination: fileAndConsole
     daprdLogDestination: fileAndConsole

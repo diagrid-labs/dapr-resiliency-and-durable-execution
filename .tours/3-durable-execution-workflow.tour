@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "What is the problem?",
-      "description": "## What are we solving with Durable Execution?\n\nMany organizations lose money when their IT systems fail. Organizations want theis systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to deal with failure, and recovery (ideally automatically)."
+      "description": "## What are we solving with Durable Execution?\n\nMany organizations lose money when their IT systems fail. Organizations want their systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to deal with failure, and recovery (ideally automatically)."
     },
     {
       "title": "Durable Execution",

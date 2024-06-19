@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "4 - Session closing",
+  "title": "5 - Session close",
   "steps": [
     {
       "title": "GitHub repo",

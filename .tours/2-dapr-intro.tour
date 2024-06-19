@@ -1,7 +1,7 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "1 - Dapr intro",
-  "nextTour": "2 - Failure & Resiliency",
+  "title": "2 - Dapr intro",
+  "nextTour": "3 - Dapr Resiliency",
   "steps": [
     {
       "title": "Distributed apps",

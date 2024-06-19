@@ -1,0 +1,19 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "1 - Failure",
+  "nextTour": "2 - Dapr intro",
+  "steps": [
+    {
+      "title": "Failure is inevitable",
+      "description": "# Failure is inevitable\n\n![Task failed successfully](./images/task-failed-succesfully.jpg)\n\n> ## \"Failure to plan, is planning to fail\"\n*Quote by someone famous*"
+    },
+    {
+      "title": "Distributed apps",
+      "description": "![distributed systems](./images/distributed-apps1.PNG)"
+    },
+    {
+      "title": "Fallacies of distributed computing",
+      "description": "## Fallacies of distributed computing\n\n1. The network is reliable\n2. Latency is zero\n3. Bandwidth is infinite\n4. The network is secure\n5. Topology doesn't change\n6. There is one administrator\n7. Transport cost is zero\n8. The network is homogeneous\n\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\n- [Fallacies of Distributed Computing \nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)"
+    }
+  ]
+}

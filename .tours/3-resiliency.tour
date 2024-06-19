@@ -1,15 +1,8 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "2 - Failure & Resiliency",
+  "title": "3 - Dapr Resiliency",
+  "nextTour": "4 - Durable Execution & Dapr Workflow",
   "steps": [
-    {
-      "title": "Failure is inevitable",
-      "description": "# Failure is inevitable\n\n![Task failed successfully](./images/task-failed-succesfully.jpg)\n\n> ## \"Failure to plan, is planning to fail\"\n*Quote by someone famous*"
-    },
-    {
-      "title": "Fallacies of distributed computing",
-      "description": "## Fallacies of distributed computing\n\n1. The network is reliable\n2. Latency is zero\n3. Bandwidth is infinite\n4. The network is secure\n5. Topology doesn't change\n6. There is one administrator\n7. Transport cost is zero\n8. The network is homogeneous\n\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\n- [Fallacies of Distributed Computing \nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)"
-    },
     {
       "directory": "ResiliencyDemo",
       "description": "# ResiliencyDemo\n\nNavigate to the ResiliencyDemo folder:\n>> cd ResiliencyDemo\n\nList the folder content:\n>> ls\n\nBuild the .NET solution with AppA and AppB:\n>> dotnet build"

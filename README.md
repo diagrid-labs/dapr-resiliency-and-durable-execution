@@ -107,7 +107,7 @@ graph LR
     A1 -- 1 --> KV
     Stock -- Yes --> A2
     Stock -- No --> End
-    A2 <-- 1 HTTP --> App
+    A2 -- 1 HTTP --> App
     A2 -- 2 --> ShipIssue
     ShipIssue -- Yes --> A3
     ShipIssue -- No --> End

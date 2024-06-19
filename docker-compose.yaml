@@ -1,0 +1,55 @@
+version: '3.4'
+services:
+  ############################
+  # BasicWorkflowSamples App + Dapr sidecar
+  ############################
+  workflow-app:
+    environment:
+      - DAPR_HTTP_PORT=3504
+      - DAPR_GRPC_PORT=4004
+    build:
+      context: .
+      dockerfile: WorkflowDemo/WorkflowApp/dockerfile
+    ports:
+      - "3504:3504" # only important so we can reach the sidecar from the host for testing purposes
+    depends_on:
+      - redis
+      - placement
+    networks:
+      - network
+  workflow-dapr:
+    image: "daprio/daprd:1.13.0"
+    command: ["./daprd",
+     "-app-id", "workflow",
+     "-app-port", "5049",
+     "-dapr-http-port", "3504",
+     "-placement-host-address", "placement:50006",
+     "-dapr-grpc-port", "4004",
+     "-resources-path", "/WorkflowDemo/ResourcesK8s",
+     "-log-level","debug"]
+    volumes:
+        - "./WorkflowDemo/ResourcesK8s/:/WorkflowDemo/ResourcesK8s"
+    depends_on:
+      - workflow-app
+    network_mode: "service:workflow-app"
+  ############################
+  # Dapr placement service
+  ############################
+  placement:
+    image: "daprio/dapr:1.13.0"
+    command: ["./placement", "-port", "50006"]
+    ports:
+      - "50006:50006"
+    networks:
+      - network
+  ############################
+  # Redis state store
+  ############################
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6380:6379"
+    networks:
+      - network
+networks:
+    network:

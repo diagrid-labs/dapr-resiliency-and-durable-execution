@@ -88,22 +88,20 @@ graph LR
     subgraph Data Store
         KV[(KV Store)]
     end
+    subgraph Shipping App
+        App{{ShippingApp}}
+    end
     subgraph ValidateOrderWorkflow
         A1(UpdateInventory)
         Stock{Sufficient\nStock?}
         A2(ShippingCalculator)
-        App{{ShippingApp}}
-        subgraph compensation
+        subgraph Compensation
             ShipIssue{ShippingCalculator\nissue?}
             A3(UndoUpdateInventory)
         end
     end
     End((End))
-    A2(ShippingCalculator)
-    App{{ShippingApp}}
-    A3(UndoUpdateInventory)
-    ShipIssue{ShippingCalculator\nissue?}
-    End((End))
+
     Start -- Order --> A1
     A1 -- 2 --> Stock
     A1 -- 1 --> KV

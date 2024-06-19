@@ -27,7 +27,36 @@ Using the CodeTour panel in the VSCode explorer, start the *2 - Failure & Resili
 
 ![CodeTour Failure & Resiliency](./images/codetour-failure-resiliency.png)
 
-### Running the ResiliencyDemo locally
+### ResiliencyDemo
+
+The ResiliencyDemo consists of two applications, AppA and AppB, and a state store.
+
+Communication between AppA and AppB can be done using HTTP or Pub/Sub.
+
+**Service invocation**
+
+```mermaid
+graph LR
+    A{{AppA}}
+    B{{AppB}}
+    State[(KV Store)]
+    A --HTTP--> B
+    B --> State
+```
+
+**Pub/sub**
+
+```mermaid
+graph LR
+    A{{AppA}}
+    B{{AppB}}
+    MB[Message Broker]
+    State[(KV Store)]
+    A .-> MB .-> B
+    B --> State
+```
+
+### Running the ResiliencyDemo apps locally
 
 1. Navigate to the ResiliencyDemo folder in the terminal:
 
@@ -48,6 +77,45 @@ Using the CodeTour panel in the VSCode explorer, start the *2 - Failure & Resili
 Using the CodeTour panel in the VSCode explorer, start the *3 - Durable Execution & Workflow* CodeTour:
 
 ![CodeTour Durable Execution & Workflow](./images/codetour-durable-execution.png)
+
+### WorkflowDemo
+
+**ValidateOrderWorkflow**
+
+```mermaid
+graph LR
+    Start((Start))
+    subgraph Data Store
+        KV[(KV Store)]
+    end
+    subgraph ValidateOrderWorkflow
+        A1(UpdateInventory)
+        Stock{Sufficient\nStock?}
+        A2(ShippingCalculator)
+        App{{ShippingApp}}
+        subgraph compensation
+            ShipIssue{ShippingCalculator\nissue?}
+            A3(UndoUpdateInventory)
+        end
+    end
+    End((End))
+    A2(ShippingCalculator)
+    App{{ShippingApp}}
+    A3(UndoUpdateInventory)
+    ShipIssue{ShippingCalculator\nissue?}
+    End((End))
+    Start -- Order --> A1
+    A1 -- 2 --> Stock
+    A1 -- 1 --> KV
+    Stock -- Yes --> A2
+    Stock -- No --> End
+    A2 <-- 1 HTTP --> App
+    A2 -- 2 --> ShipIssue
+    ShipIssue -- Yes --> A3
+    ShipIssue -- No --> End
+    A3 -- 1 --> KV
+    A3 -- 2 --> End
+```
 
 ### Running the WorkflowDemo locally
 

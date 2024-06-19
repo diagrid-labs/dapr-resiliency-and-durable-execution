@@ -4,11 +4,11 @@
   "steps": [
     {
       "title": "What is the problem?",
-      "description": "## What are we solving with Durable Execution?\n\nMany organizations lose money when their IT systems fail. Organizations want their systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to deal with failure, and recovery (ideally automatically)."
+      "description": "## What are we solving with Durable Execution?\n\nMany organizations lose money when their IT systems fail. Organizations want their systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to recover from failure (ideally automatically)."
     },
     {
       "title": "Durable Execution",
-      "description": "## Durable execution \n\nDurable execution is running code in a stateful way. In case the process, that runs the code, stops, a new process can be started, and runs the code to completion.\n\n[Source](https://temporal.io/blog/building-reliable-distributed-systems-in-node)",
+      "description": "## Durable execution \n\nDurable execution is running code in a stateful way. In case the process, that runs the code, stops, a new process is started, and continues to run the code to completion.",
       "selection": {
         "start": {
           "line": 5,
@@ -22,7 +22,7 @@
     },
     {
       "title": "Workflows",
-      "description": "## Workflows\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of tasks (activities) in a specific sequence."
+      "description": "## Workflow Engines\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of tasks (activities) in a specific sequence.\n\nSomeone is responsible for creating a workflow that defines the sequence of steps (*orchestration*)."
     },
     {
       "title": "Workflow as code",

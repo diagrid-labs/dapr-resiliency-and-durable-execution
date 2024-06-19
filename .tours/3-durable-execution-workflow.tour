@@ -81,6 +81,10 @@
       "description": "## Workflow as Code challenges\n\n- Deterministic code\n- Idempotency\n- Versioning\n- Payloads\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
     },
     {
+      "directory": "WorkflowDemo",
+      "description": "## Workflow Demo\r\n\r\n```mermaid\r\ngraph TD;\r\n    A-->B;\r\n    A-->C;\r\n    B-->D;\r\n    C-->D;\r\n```"
+    },
+    {
       "title": "Simulate issue with the Shipping app",
       "description": "## Simulate issue with AppB (Service invocation)\n\nLet's start the WorkflowApp, but not the ShippingApp. Make a request to the workflow, wait a couple of seconds and then start the ShippingApp.\n\nNavigate to WorkflowApp folder:\n\n>> cd WorkflowApp\n\nRun the WorkflowApp with the Dapr CLI: \n>> dapr run --app-id workflow --app-port 5049 --dapr-http-port 3504 --resources-path \"../Resources\" -- dotnet run\n\nFirst make a request to the WorkflowApp, then open a new terminal and navigate to the ShippingApp folder:\n\n`cd ShippingApp`\n\nRun the ShippingApp with the Dapr CLI: \n\n`dapr run --app-id shipping --app-port 5051 --dapr-http-port 3506 --resources-path \"../Resources\" -- dotnet run`"
     }

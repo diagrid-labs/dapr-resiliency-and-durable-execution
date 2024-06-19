@@ -1,0 +1,14 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "4 - Session closing",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "# Failure is not an option: durable execution + Dapr = 🚀\r\n\r\n![Task failed successfully](./images/task-failed-succesfully.jpg)"
+    },
+    {
+      "title": "Claim Dapr badges",
+      "description": "# Marc Duiker\r\n\r\n- Sr Developer Advocate @ [Diagrid](https://www.diagrid.io/)\r\n- [Dapr](https://dapr.io/) Community Manager\r\n- Long time **developer supporter**\r\n\r\n[*marcduiker.dev*](https://marcduiker.dev)"
+    }
+  ]
+}

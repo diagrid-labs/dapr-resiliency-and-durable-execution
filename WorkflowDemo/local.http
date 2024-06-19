@@ -17,7 +17,7 @@ Content-Type: application/json
 GET {{workflow-url}}/inventory/{{productId}}
 
 
-### Schedule a workflow via the application
+### Schedule a workflow instance via the .NET application
 # @name validateOrderResponse
 POST {{workflow-url}}/validateOrder
 Content-Type: application/json
@@ -35,7 +35,7 @@ Content-Type: application/json
     }
 }
 
-### GET workflow status
+### GET workflow status directly via the Dapr HTTP API
 @instanceId={{validateOrderResponse.response.headers.Location}}
 GET {{dapr-url}}/v1.0-beta1/workflows/dapr/{{instanceId}}
 

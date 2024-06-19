@@ -9,6 +9,13 @@ This repo contains Dapr applications to demonstrate Dapr resiliency policies and
 > - what durable execution is
 > - how the Dapr Workflow ensures durable execution
 
+**TOC**
+
+- [Running the Failure & Resiliency CodeTour](#running-the-failure--resiliency-codetour)
+- [ResiliencyDemo](#resiliencydemo)
+- [Running the Durable Execution & Workflow CodeTour](#running-the-durable-execution--workflow-codetour)
+- [WorkflowDemo](#workflowdemo)
+
 ## Prerequisites
 
 Ensure you have these installed on your machine:

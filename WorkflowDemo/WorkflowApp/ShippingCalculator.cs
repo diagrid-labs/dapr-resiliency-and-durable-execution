@@ -15,12 +15,11 @@ namespace WorkflowApp
 
         public override async Task<ShippingResult> RunAsync(WorkflowActivityContext context, ShippingInfo shippingInfo)
         {
-            Thread.Sleep(5000);
             var response = await _httpClient.PostAsJsonAsync("/calculateCost", shippingInfo);
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 _logger.LogError("Failed to calculate shipping cost for country {Country} {Message}.", shippingInfo.Country, response.ReasonPhrase);
-                throw new Exception("Failed to calculate shipping cost.");
+                throw new Exception($"Failed to calculate shipping cost. Reason: {response.ReasonPhrase}.");
             }
             var result = await response.Content.ReadFromJsonAsync<ShippingResult>();
 

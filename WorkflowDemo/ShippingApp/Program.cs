@@ -5,6 +5,7 @@ var app = builder.Build();
 app.MapPost("/calculateCost", (
     ShippingInfo shippingInfo) => {
     Console.WriteLine($"Getting shipping info for {shippingInfo.Country}.");
+    Thread.Sleep(8000); //😱
     ShippingResult shippingResult = new(
         IsShippingAvailable: true,
         Cost: Math.Round(Convert.ToDecimal(new Random().NextDouble()) * 100, 2));

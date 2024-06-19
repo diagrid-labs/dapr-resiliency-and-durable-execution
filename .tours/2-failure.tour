@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Failure is inevitable",
-      "description": "# Failure is inevitable\n\n> ## \"Failure to plan, is planning to fail\"\n*Quote by someone famous*"
+      "description": "# Failure is inevitable\n\n![Task failed successfully](./images/task-failed-succesfully.jpg)\n\n> ## \"Failure to plan, is planning to fail\"\n*Quote by someone famous*"
     },
     {
       "title": "Fallacies of distributed computing",

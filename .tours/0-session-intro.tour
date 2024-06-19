@@ -4,12 +4,16 @@
   "nextTour": "1 - Dapr intro",
   "steps": [
     {
-      "title": "Introduction",
-      "description": "# Failure is not an option: durable execution + Dapr = 🚀\r\n\r\n![Task failed successfully](./images/task-failed-succesfully.jpg)"
+      "title": "Title",
+      "description": "![opening1](./images/opening1.PNG)\r\n"
+    },
+    {
+      "title": "Organiser & sponsors",
+      "description": "![opening2](./images/opening2.PNG)\r\n"
     },
     {
       "title": "Marc Duiker",
-      "description": "# Marc Duiker\r\n\r\n- Sr Developer Advocate @ [Diagrid](https://www.diagrid.io/)\r\n- [Dapr](https://dapr.io/) Community Manager\r\n- Long time **developer supporter**\r\n\r\n[*marcduiker.dev*](https://marcduiker.dev)"
+      "description": "![name animation](./images/marcduiker_name_anim.gif)\r\n\r\n- Sr Developer Advocate @ [Diagrid](https://www.diagrid.io/)\r\n- [Dapr](https://dapr.io/) Community Manager\r\n- Long time **developer supporter**\r\n- [*marcduiker.dev*](https://marcduiker.dev)\r\n\r\n![profile](./images/marcduiker_dapr_rainbow_eyes.gif)"
     }
   ]
 }

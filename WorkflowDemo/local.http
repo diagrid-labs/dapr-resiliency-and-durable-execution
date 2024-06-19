@@ -40,6 +40,29 @@ Content-Type: application/json
 GET {{dapr-url}}/v1.0-beta1/workflows/dapr/{{instanceId}}
 
 
+### Schedule a workflow instance via the .NET application
+# @name validateOrderResponseWithRetry
+POST {{workflow-url}}/validateOrderWithRetry
+Content-Type: application/json
+
+{
+    "id": "{{orderId}}",
+    "orderItem" : {
+        "productId": "{{productId}}",
+        "productName": "RubberDuck",
+        "quantity": 2,
+        "totalPrice": 5.00
+    },
+    "shippingInfo" : {
+        "country" : "The Netherlands"
+    }
+}
+
+### GET workflow status directly via the Dapr HTTP API
+@instanceId={{validateOrderResponseWithRetry.response.headers.Location}}
+GET {{dapr-url}}/v1.0-beta1/workflows/dapr/{{instanceId}}
+
+
 ### Schedule a workflow instance directly via the Dapr HTTP API
 POST {{dapr-url}}/v1.0-beta1/workflows/dapr/ValidateOrderWorkflow/start?instanceID={{orderId}}
 Content-Type: application/json

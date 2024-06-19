@@ -1,5 +1,4 @@
 using Dapr.Workflow;
-using DurableTask.Core.Exceptions;
 
 namespace WorkflowApp
 {
@@ -18,12 +17,12 @@ namespace WorkflowApp
                 try
                 {
                     shippingResult = await context.CallActivityAsync<ShippingResult>(
-                    nameof(ShippingCalculator),
-                    order.ShippingInfo);
+                        nameof(ShippingCalculator),
+                        order.ShippingInfo);
                 }
-                catch (TaskFailedException ex)
+                catch (WorkflowTaskFailedException ex)
                 {
-                    Console.WriteLine($"Shipping calculator failed: {ex.Message}");
+                    Console.WriteLine($"Shipping calculator activity failed: {ex.Message}");
                     var undoResult = await context.CallActivityAsync<InventoryResult>(
                         nameof(UndoUpdateInventory),
                         order.OrderItem);

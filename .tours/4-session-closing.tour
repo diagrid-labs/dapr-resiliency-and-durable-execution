@@ -3,12 +3,26 @@
   "title": "4 - Session closing",
   "steps": [
     {
-      "title": "Introduction",
-      "description": "# Failure is not an option: durable execution + Dapr = 🚀\r\n\r\n![Task failed successfully](./images/task-failed-succesfully.jpg)"
+      "title": "GitHub repo",
+      "description": "![closing 1](./images/closing1.PNG)\r\n\r\n[diagrid.ws/dapr-durable](https://diagrid.ws/dapr-durable)\r\n",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 4,
+          "character": 1
+        }
+      }
     },
     {
       "title": "Claim Dapr badges",
-      "description": "# Marc Duiker\r\n\r\n- Sr Developer Advocate @ [Diagrid](https://www.diagrid.io/)\r\n- [Dapr](https://dapr.io/) Community Manager\r\n- Long time **developer supporter**\r\n\r\n[*marcduiker.dev*](https://marcduiker.dev)"
+      "description": "![closing 2](./images/closing2.PNG)\r\n\r\n[Get the Dapr supporter badge!](https://bit.ly/dapr-supporter)\r\n"
+    },
+    {
+      "title": "Thanks",
+      "description": "![closing 3](./images/closing3.PNG)\r\n"
     }
   ]
 }

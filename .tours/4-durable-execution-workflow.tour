@@ -5,7 +5,7 @@
   "steps": [
     {
       "title": "What problem are we solving?",
-      "description": "## What problem are we solving?\n\nMany organizations lose money when their IT systems fail. Organizations want their systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to recover from failure (ideally automatically)."
+      "description": "# Durable Execution & Dapr Workflow\n\n## What problem are we solving?\n\nMany organizations lose money when their IT systems fail. Organizations want their systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to recover from failure (ideally automatically)."
     },
     {
       "title": "Durable Execution",
@@ -23,7 +23,7 @@
     },
     {
       "title": "Workflows",
-      "description": "## Workflow Engines\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of tasks (activities) in a specific sequence.\n\nSomeone is responsible for creating a workflow that defines the sequence of steps (*orchestration*)."
+      "description": "## Workflow Engines\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of tasks (activities) in a specific sequence.\n\nSomeone is responsible for creating a workflow that defines the sequence of tasks (*orchestration*)."
     },
     {
       "title": "Workflow as code",
@@ -36,6 +36,20 @@
         "end": {
           "line": 5,
           "character": 28
+        }
+      }
+    },
+    {
+      "title": "Challenges",
+      "description": "## Workflow as Code challenges\n\n- **Deterministic**\n  - *Multiple executions with the same input must result in the same output.*\n- **Idempotent**\n  - *Multiple executions do not result in negative side effects.*\n- **Workflow Versioning**\n  - *Be careful of breaking changes in the workflow.*\n- **Workflow & Activity Payloads**\n  - *Keep payloads small due to frequent (de)serialization.*\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)",
+      "selection": {
+        "start": {
+          "line": 9,
+          "character": 3
+        },
+        "end": {
+          "line": 9,
+          "character": 15
         }
       }
     },
@@ -76,10 +90,6 @@
     {
       "title": "Dapr workflow engine",
       "description": "![Dapr workflow engine](./images/workflow-engine.PNG)"
-    },
-    {
-      "title": "Challenges",
-      "description": "## Workflow as Code challenges\n\n- Deterministic code\n- Idempotency\n- Versioning\n- Payloads\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
     },
     {
       "directory": "WorkflowDemo",

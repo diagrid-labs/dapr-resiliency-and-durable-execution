@@ -123,6 +123,14 @@
       "description": "## Pubsub from AppA to AppB",
       "line": 21,
       "title": "local.http"
+    },
+    {
+      "title": "Conductor Advisories",
+      "description": "![Conductor Advisories](./images/conductor1.png)\r\n\r\n[Conductor Free](https://diagrid.ws/conductor)"
+    },
+    {
+      "title": "Conductor Reliability",
+      "description": "![Conductor Reliability](./images/conductor2.png)\r\n\r\n[Conductor Free](https://diagrid.ws/conductor)"
     }
   ]
 }

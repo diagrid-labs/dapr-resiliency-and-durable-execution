@@ -2,7 +2,7 @@ using Dapr.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<HttpClient>(DaprClient.CreateInvokeHttpClient(appId: "app-b"));
-builder.Services.AddSingleton<DaprClient>(new DaprClientBuilder().Build());
+builder.Services.AddDaprClient();
 var app = builder.Build();
 
 app.MapPost("/serviceinvocation", async (

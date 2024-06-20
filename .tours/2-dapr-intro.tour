@@ -8,6 +8,10 @@
       "description": "![distributed systems](./images/distributed-apps1.PNG)"
     },
     {
+      "title": "Dapr OSS",
+      "description": "![dapr website](./images/dapr-website.PNG)\r\n\r\n[dapr.io](https://dapr.io)"
+    },
+    {
       "title": "Distributed apps with Dapr",
       "description": "![distributed systems](./images/distributed-apps2.PNG)"
     },

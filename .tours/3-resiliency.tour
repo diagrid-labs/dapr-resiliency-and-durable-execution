@@ -5,7 +5,7 @@
   "steps": [
     {
       "directory": "ResiliencyDemo",
-      "description": "# ResiliencyDemo\n\nNavigate to the ResiliencyDemo folder:\n>> cd ResiliencyDemo\n\nList the folder content:\n>> ls\n\nBuild the .NET solution with AppA and AppB:\n>> dotnet build"
+      "description": "# ResiliencyDemo\n\nBuild the .NET solution with all the apps:\n\n>> dotnet build\n\nNavigate to the ResiliencyDemo folder:\n\n>> cd ResiliencyDemo\n\nList the folder content:\n\n>> ls"
     },
     {
       "file": "ResiliencyDemo/AppA/AppA.csproj",
@@ -35,17 +35,7 @@
     {
       "file": "ResiliencyDemo/dapr.yaml",
       "description": "## Dapr multi-app run file\n\nRun AppA and AppB using the Dapr CLI:\n\n>> dapr run -f .",
-      "line": 1,
-      "selection": {
-        "start": {
-          "line": 3,
-          "character": 1
-        },
-        "end": {
-          "line": 5,
-          "character": 17
-        }
-      }
+      "line": 1
     },
     {
       "file": "ResiliencyDemo/local.http",
@@ -55,6 +45,11 @@
     {
       "title": "Resiliency service-to-service",
       "description": "![Resiliency service to service](./images/resiliency-s2s.PNG)"
+    },
+    {
+      "file": "ResiliencyDemo/Resources/resiliency.yaml",
+      "description": "## Dapr resiliency policy",
+      "line": 1
     },
     {
       "title": "Simulate issue with AppB",

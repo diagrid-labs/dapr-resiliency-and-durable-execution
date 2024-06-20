@@ -11,8 +11,9 @@ This repo contains Dapr applications to demonstrate Dapr resiliency policies and
 
 **TOC**
 
-- [Running the Failure & Resiliency CodeTour](#running-the-failure--resiliency-codetour)
+- [Running the Dapr Resiliency CodeTour](#running-the-dapr-resiliency-codetour)
 - [ResiliencyDemo](#resiliencydemo)
+- [Dapr Reliability Advisor in Conductor Free](#dapr-reliability-advisor-in-conductor-free)
 - [Running the Durable Execution & Workflow CodeTour](#running-the-durable-execution--workflow-codetour)
 - [WorkflowDemo](#workflowdemo)
 - [Resources](#resources)
@@ -80,6 +81,14 @@ graph LR
     ```
 
 3. Open the [local.http](./ResiliencyDemo/local.http) file in the VSCode editor and execute the HTTP requests to the ResiliencyDemo apps.
+
+### Dapr Reliability Advisor in Conductor Free
+
+[Diagrid Conductor Free](https://www.diagrid.io/conductor) is a free tool developers can use to visualize, troubleshoot, and optimize Dapr workloads on Kubernetes. It includes an Advisor that provides recommendations on how to improve the reliability of your Dapr applications.
+
+![Conductor Advisor](./images/conductor1.png)
+
+![Reliability details](./images/conductor2.png)
 
 ## Running the Durable Execution & Workflow CodeTour
 

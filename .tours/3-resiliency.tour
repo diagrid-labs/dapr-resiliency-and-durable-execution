@@ -5,7 +5,7 @@
   "steps": [
     {
       "directory": "ResiliencyDemo",
-      "description": "# ResiliencyDemo\n\nBuild the .NET solution with all the apps:\n\n>> dotnet build\n\nNavigate to the ResiliencyDemo folder:\n\n>> cd ResiliencyDemo\n\nList the folder content:\n\n>> ls"
+      "description": "# ResiliencyDemo\n\n[ResiliencyDemo diagrams in README](./README.md)\n\nNavigate to the ResiliencyDemo folder:\n\n>> cd ResiliencyDemo\n\nCheck the files and folders."
     },
     {
       "file": "ResiliencyDemo/AppA/AppA.csproj",

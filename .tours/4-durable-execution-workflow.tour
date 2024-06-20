@@ -93,7 +93,8 @@
     },
     {
       "directory": "WorkflowDemo",
-      "description": "## Workflow Demo\r\n\r\n[Workflow Diagriam](./README.md)"
+      "description": "## Workflow Demo\r\n\r\n[WorkflowDemo diagram in README](./README.md)\r\n\r\nNavigate to the WorkflowDemo folder:\r\n\r\n>> cd WorkflowDemo\r\n\r\nCheck the files and folders.",
+      "title": "WorkflowDemo"
     },
     {
       "file": "WorkflowDemo/WorkflowApp/WorkflowApp.csproj",
@@ -127,7 +128,7 @@
     },
     {
       "title": "Simulate an issue with the workflow process",
-      "description": "## Simulate an issue with the workflow process\r\n\r\n1. Ensure you're in the WorkflowDemo folder.\r\n\r\n2. Run the demo with Dapr multi-app run:\r\n\r\n>> dapr run -f .\r\n\r\n3. Use the [local.http](./WorkflowDemo/local.http) file to restock the in-memory inventory.\r\n4. Start an instance of the workflow. Once started, quickly stop the Dapr run process (CTRL+C in the terminal) which stops the Workflow and Shipping apps.\r\n5. Restar the Workflow and Shipping apps with the Dapr CLI:\r\n\r\n>> dapr run -f .\r\n\r\nThe workflow should complete now."
+      "description": "## Simulate an issue with the workflow process\r\n\r\n1. Ensure you're in the WorkflowDemo folder.\r\n\r\n2. Run the demo with Dapr multi-app run:\r\n\r\n>> dapr run -f .\r\n\r\n3. Use the [local.http](./WorkflowDemo/local.http) file to restock the in-memory inventory.\r\n4. Start an instance of the workflow. Once started, stop the Dapr run process (CTRL+C in the terminal) within a few seconds. This stops both Workflow and Shipping apps from running.\r\n5. Restart the Workflow and Shipping apps with the Dapr CLI:\r\n\r\n>> dapr run -f .\r\n\r\nThe workflow should pickup where it was and complete now."
     },
     {
       "file": "WorkflowDemo/local.http",

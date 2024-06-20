@@ -8,7 +8,6 @@ builder.Services.AddDaprClient();
 builder.Services.AddDaprWorkflowClient();
 builder.Services.AddDaprWorkflow(options =>{
     options.RegisterWorkflow<ValidateOrderWorkflow>();
-    options.RegisterWorkflow<ValidateOrderWorkflowWithRetry>();
     options.RegisterActivity<UpdateInventory>();
     options.RegisterActivity<UndoUpdateInventory>();
     options.RegisterActivity<ShippingCalculator>();
@@ -22,19 +21,6 @@ app.MapPost("/validateOrder", async (
         Console.WriteLine($"Validating order {order.Id} for.");
         var instanceId = await daprWorkflowClient.ScheduleNewWorkflowAsync(
             nameof(ValidateOrderWorkflow),
-            instanceId: order.Id,
-            input: order);
-
-        return Results.Accepted(instanceId);
-});
-
-app.MapPost("/validateOrderWithRetry", async (
-    Order order,
-    DaprWorkflowClient daprWorkflowClient
-    ) => {
-        Console.WriteLine($"Validating order {order.Id} for.");
-        var instanceId = await daprWorkflowClient.ScheduleNewWorkflowAsync(
-            nameof(ValidateOrderWorkflowWithRetry),
             instanceId: order.Id,
             input: order);
 

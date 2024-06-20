@@ -7,7 +7,7 @@ namespace WorkflowApp
     {
         private readonly DaprClient _daprClient;
         private readonly ILogger<UpdateInventory> _logger;
-        private const string StateStoreName = "inventory";
+        private const string StateStoreComponentName = "inventory";
 
         public UndoUpdateInventory(DaprClient daprClient, ILoggerFactory loggerFactory)
         {
@@ -17,7 +17,7 @@ namespace WorkflowApp
 
         public override async Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem orderItem)
         {
-            var productInventory = await _daprClient.GetStateAsync<ProductInventory>(StateStoreName, orderItem.ProductId);
+            var productInventory = await _daprClient.GetStateAsync<ProductInventory>(StateStoreComponentName, orderItem.ProductId);
             if (productInventory != null)
             {
                 var updatedInventory = new ProductInventory(
@@ -25,7 +25,7 @@ namespace WorkflowApp
                     productInventory.Quantity + orderItem.Quantity);
 
                 await _daprClient.SaveStateAsync(
-                    StateStoreName,
+                    StateStoreComponentName,
                     productInventory.ProductId,
                     updatedInventory);
 

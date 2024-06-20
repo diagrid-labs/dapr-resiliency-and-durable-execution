@@ -4,8 +4,8 @@
   "nextTour": "5 - Session close",
   "steps": [
     {
-      "title": "What is the problem?",
-      "description": "## What are we solving with Durable Execution?\n\nMany organizations lose money when their IT systems fail. Organizations want their systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to recover from failure (ideally automatically)."
+      "title": "What problem are we solving?",
+      "description": "## What problem are we solving?\n\nMany organizations lose money when their IT systems fail. Organizations want their systems to always work, 100% of the time. (= unrealistic!)\n\nWe know that systems fail, so we need to recover from failure (ideally automatically)."
     },
     {
       "title": "Durable Execution",
@@ -44,10 +44,6 @@
       "description": "![Dapr Workflow](./images/workflow.PNG)"
     },
     {
-      "title": "Dapr workflow engine",
-      "description": "![Dapr workflow engine](./images/workflow-engine.PNG)"
-    },
-    {
       "title": "Task chaining",
       "description": "![Task chaining](./images/workflow-task-chaining.PNG)",
       "selection": {
@@ -78,12 +74,26 @@
       "description": "![Workflow example](./images/workflow-example.PNG)"
     },
     {
+      "title": "Dapr workflow engine",
+      "description": "![Dapr workflow engine](./images/workflow-engine.PNG)"
+    },
+    {
       "title": "Challenges",
       "description": "## Workflow as Code challenges\n\n- Deterministic code\n- Idempotency\n- Versioning\n- Payloads\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
     },
     {
       "directory": "WorkflowDemo",
       "description": "## Workflow Demo\r\n\r\n[Workflow Diagriam](./README.md)"
+    },
+    {
+      "file": "WorkflowDemo/WorkflowApp/WorkflowApp.csproj",
+      "description": "## WorkflowApp.csproj",
+      "line": 1
+    },
+    {
+      "file": "WorkflowDemo/WorkflowApp/Program.cs",
+      "description": "## WorkflowApp Program.cs",
+      "line": 1
     },
     {
       "file": "WorkflowDemo/WorkflowApp/ValidateOrderWorkflow.cs",

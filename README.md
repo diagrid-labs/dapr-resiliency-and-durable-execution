@@ -15,6 +15,7 @@ This repo contains Dapr applications to demonstrate Dapr resiliency policies and
 - [ResiliencyDemo](#resiliencydemo)
 - [Running the Durable Execution & Workflow CodeTour](#running-the-durable-execution--workflow-codetour)
 - [WorkflowDemo](#workflowdemo)
+- [Resources](#resources)
 
 ## Prerequisites
 
@@ -23,16 +24,17 @@ Ensure you have these installed on your machine:
 - [.NET 8](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Dapr CLI](https://docs.dapr.io/getting-started/install-dapr-cli/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- Clone the [dapr-resiliency-and-durable-execution repo](https://github.com/diagrid-labs/dapr-resiliency-and-durable-execution) to your local machine.
-- [VSCode](https://code.visualstudio.com/) Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)) to help guide you through the codebase.
+- [VSCode](https://code.visualstudio.com/) - Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)) to help guide you through the codebase.
+
+Clone the [dapr-resiliency-and-durable-execution repo](https://github.com/diagrid-labs/dapr-resiliency-and-durable-execution) to your local machine.
 
 Open the cloned repo in VSCode and accept the suggested VSCode extensions.
 
-## Running the Failure & Resiliency CodeTour
+## Running the Dapr Resiliency CodeTour
 
-Using the CodeTour panel in the VSCode explorer, start the *2 - Failure & Resiliency* CodeTour:
+Using the CodeTour panel in the VSCode explorer, start the *3 - Dapr Resiliency* CodeTour:
 
-![CodeTour Failure & Resiliency](./images/codetour-failure-resiliency.png)
+![CodeTour Failure & Resiliency](./images/codetour-dapr-resiliency.png)
 
 ### ResiliencyDemo
 
@@ -81,7 +83,7 @@ graph LR
 
 ## Running the Durable Execution & Workflow CodeTour
 
-Using the CodeTour panel in the VSCode explorer, start the *3 - Durable Execution & Workflow* CodeTour:
+Using the CodeTour panel in the VSCode explorer, start the *4 - Durable Execution & Workflow* CodeTour:
 
 ![CodeTour Durable Execution & Workflow](./images/codetour-durable-execution.png)
 
@@ -137,3 +139,10 @@ graph LR
     ```
 
 3. Open the [local.http](./WorkflowDemo/local.http) file in the VSCode editor and execute the HTTP requests to the WorkflowDemo apps.
+
+## Resources
+
+- [Diagrid blog: An in-depth guide to Dapr workflow patterns in .NET](https://www.diagrid.io/blog/in-depth-guide-to-dapr-workflow-patterns)
+- [Diagrid Conductor Free](https://www.diagrid.io/conductor)
+- [Dapr Docs: Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)
+- [Dapr Docs: Resiliency](https://docs.dapr.io/operations/resiliency/)

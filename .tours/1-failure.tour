@@ -13,7 +13,7 @@
     },
     {
       "title": "Fallacies of distributed computing",
-      "description": "## Fallacies of distributed computing\n\n1. The network is reliable\n2. Latency is zero\n3. Bandwidth is infinite\n4. The network is secure\n5. Topology doesn't change\n6. There is one administrator\n7. Transport cost is zero\n8. The network is homogeneous\n\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\n- [Fallacies of Distributed Computing \nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)"
+      "description": "## Fallacies of distributed computing\n\n1. The network is reliable\n2. Latency is zero\n3. Bandwidth is infinite\n4. The network is secure\n5. Topology doesn't change\n6. There is one administrator\n7. Transport cost is zero\n8. The network is homogeneous\n\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\n- [Fallacies of Distributed Computing \nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)\n- [Fallacies of Distributed Computing on YouTube (Udi Dahan - Particular Software)](https://www.youtube.com/playlist?list=PL1DZqeVwRLnD3EjyciYAO82dT9Owiq8I5)"
     }
   ]
 }

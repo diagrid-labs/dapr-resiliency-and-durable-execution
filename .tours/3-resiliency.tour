@@ -4,6 +4,10 @@
   "nextTour": "4 - Durable Execution & Dapr Workflow",
   "steps": [
     {
+      "title": "Resiliency service-to-service",
+      "description": "![Resiliency service to service](./images/resiliency-s2s.PNG)"
+    },
+    {
       "directory": "ResiliencyDemo",
       "description": "# ResiliencyDemo\n\n[ResiliencyDemo diagrams in README](./README.md)\n\nNavigate to the ResiliencyDemo folder:\n\n>> cd ResiliencyDemo\n\nCheck the files and folders."
     },
@@ -42,10 +46,6 @@
       "description": "## Service invocation from AppA to AppB",
       "line": 3,
       "title": "local.http"
-    },
-    {
-      "title": "Resiliency service-to-service",
-      "description": "![Resiliency service to service](./images/resiliency-s2s.PNG)"
     },
     {
       "file": "ResiliencyDemo/Resources/resiliency.yaml",

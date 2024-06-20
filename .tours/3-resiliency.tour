@@ -40,7 +40,8 @@
     {
       "file": "ResiliencyDemo/local.http",
       "description": "## Service invocation from AppA to AppB",
-      "line": 3
+      "line": 3,
+      "title": "local.http"
     },
     {
       "title": "Resiliency service-to-service",
@@ -58,15 +59,37 @@
     {
       "file": "ResiliencyDemo/local.http",
       "description": "## Service invocation from AppA to AppB",
-      "line": 3
+      "line": 3,
+      "title": "local.http"
     },
     {
       "title": "Resiliency outbound",
       "description": "![outbound resiliency](./images/resiliency-outbound.PNG)"
     },
     {
+      "file": "ResiliencyDemo/Resources/resiliency.yaml",
+      "description": "## DefaultStatestoreComponentOutboundRetryPolicy",
+      "line": 11
+    },
+    {
       "title": "Simulate an issue with the state store",
-      "description": "## Simulate an issue with the state store\n\nNavigate to the ResiliencyDemo folder and run AppA and AppB with multi-app run:\n\n>> dapr run -f .\n\nOpen a new terminal and stop the `dapr_redis` container:\n\n`docker stop dapr_redis`\n\nWait a few seconds and start the `dapr_redis` container:\n\n`docker start dapr_redis`"
+      "description": "## Simulate an issue with the state store\n\n1. Navigate to the ResiliencyDemo folder and run AppA and AppB with multi-app run:\n\n>> dapr run -f .\n\n2. Open a new terminal and stop the `dapr_redis` container:\n\n`docker stop dapr_redis`\n\n\n3. Make a new request to AppA via the [`local.http`](./ResiliencyDemo/local.http) file.\n   \n4. Wait a few seconds and start the `dapr_redis` container:\n\n`docker start dapr_redis`",
+      "selection": {
+        "start": {
+          "line": 12,
+          "character": 1
+        },
+        "end": {
+          "line": 14,
+          "character": 60
+        }
+      }
+    },
+    {
+      "file": "ResiliencyDemo/local.http",
+      "description": "## Service invocation from AppA to AppB",
+      "line": 3,
+      "title": "local.http"
     },
     {
       "title": "Resiliency pubsub",
@@ -93,12 +116,13 @@
     },
     {
       "title": "Run AppA and AppB",
-      "description": "## Simulate an issue with the message broker\n\nEnsure you're in the ResilienceDemo folder and the dapr_redis container is running.\n\nRun AppA and AppB using the Dapr CLI with multi-app run:\n\n>> dapr run -f .\n\n\nOpen a new terminal and stop the `dapr_redis` container:\n\n`docker stop dapr_redis`\n\nAfter a few seconds start the `dapr_redis` container again:\n\n`docker start dapr_redis`\n"
+      "description": "## Simulate an issue with the message broker\n\n1. Ensure you're in the ResilienceDemo folder.\n\n2. Run AppA and AppB using the Dapr CLI with multi-app run:\n\n>> dapr run -f .\n\n\n3. Open a new terminal and stop the `dapr_redis` container:\n\n`docker stop dapr_redis`\n\n4. Make a new request to AppA via the [`local.http`](./ResiliencyDemo/local.http) file.\n   \n5. Wait a few seconds and start the `dapr_redis` container:\n\n`docker start dapr_redis`\n"
     },
     {
       "file": "ResiliencyDemo/local.http",
       "description": "## Pubsub from AppA to AppB",
-      "line": 21
+      "line": 21,
+      "title": "local.http"
     }
   ]
 }

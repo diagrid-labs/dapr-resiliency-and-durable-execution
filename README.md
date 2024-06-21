@@ -98,40 +98,52 @@ Using the CodeTour panel in the VSCode explorer, start the *4 - Durable Executio
 
 ### WorkflowDemo
 
-**ValidateOrderWorkflow**
-
 ```mermaid
 graph LR
-    Start((Start))
-    subgraph Data Store
-        KV[(KV Store)]
-    end
-    subgraph Shipping App
-        App{{ShippingApp}}
-    end
-    subgraph ValidateOrderWorkflow
-        A1(UpdateInventory)
-        Stock{Sufficient\nStock?}
-        A2(ShippingCalculator)
-        subgraph Compensation
-            ShipIssue{ShippingCalculator\nissue?}
-            A3(UndoUpdateInventory)
+    U[User]
+    KV[(KV Store)]
+    WApp{{WorkflowApp}}
+    SApp{{ShippingApp}}
+    U --> WApp
+    WApp --> SApp
+    WApp --> KV
+```
+
+```mermaid
+sequenceDiagram
+    actor U as User
+    participant DC as DaprClient
+    participant W as ValidateOrderWorkflow
+    participant UI as UpdateInventory
+    participant GSC as GetShippingCost
+    participant RS as RegisterShipment
+    participant UU as UndoUpdateInventory
+    participant KV as KV Store
+    U ->> DC: ScheduleNewWorkflowAsync
+    DC ->> W: Schedules instance
+    DC -->> U: Accepted
+    W ->> UI: CallActivity
+    UI ->> KV: GetState
+    KV -->> UI: Response
+    UI ->> KV: SaveState
+    UI -->> W: Response
+    alt IsSuffientStock
+        loop All Shipper Services
+            W ->> GSC: CallActivity
+            GSC -->> W: Response
+        end
+        W ->> W: GetCheapestShipper
+        W ->> RS: CallActivity
+        RS -->> W: Response
+        alt Exception from RegisterShipment
+            W ->> UU: CallActivity
+            UU ->> KV: GetState
+            UU ->> KV: UpdateState
+            UU ->> W: Response
         end
     end
-    End((End))
-
-    Start -- Order --> A1
-    A1 -- 2 --> Stock
-    A1 -- 1 --> KV
-    Stock -- Yes --> A2
-    Stock -- No --> End
-    A2 -- 1 HTTP --> App
-    A2 -- 2 --> ShipIssue
-    ShipIssue -- Yes --> A3
-    ShipIssue -- No --> End
-    A3 -- 1 --> KV
-    A3 -- 2 --> End
 ```
+
 
 ### Running the WorkflowDemo locally
 

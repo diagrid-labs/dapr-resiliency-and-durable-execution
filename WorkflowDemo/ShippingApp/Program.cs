@@ -3,17 +3,24 @@ builder.Services.AddDaprClient();
 var app = builder.Build();
 
 app.MapPost("/calculateCost", (
-    ShippingInfo shippingInfo) => {
-    Console.WriteLine($"Getting shipping info for {shippingInfo.Country}.");
-    Thread.Sleep(8000); //😱
-    ShippingResult shippingResult = new(
+    ShippingCostRequest shippingRequest) => {
+    Console.WriteLine($"{shippingRequest.ShippingService}: Getting shipping costs for order {shippingRequest.Order.Id}.");
+    Thread.Sleep(3000); //😱
+    ShippingCostResult shippingResult = new(
+        shippingRequest.ShippingService,
         IsShippingAvailable: true,
         Cost: Math.Round(Convert.ToDecimal(new Random().NextDouble()) * 100, 2));
 
     return Results.Ok(shippingResult);
 });
 
-app.Run();
+app.MapPost("/registerShipment", (
+    RegisterShipmentRequest shipmentRequest) => {
+    Console.WriteLine($"{shipmentRequest.ShippingService}: Registering shipment for order {shipmentRequest.Order.Id}.");
+    Thread.Sleep(4000); //😱
+    RegisterShipmentResult shipmentResult = new(shipmentRequest.ShippingService, Guid.NewGuid().ToString(), IsRegistered: true);
 
-public record ShippingInfo(string Country);
-public record ShippingResult(bool IsShippingAvailable, decimal Cost);
+    return Results.Ok(shipmentResult);
+});
+
+app.Run();

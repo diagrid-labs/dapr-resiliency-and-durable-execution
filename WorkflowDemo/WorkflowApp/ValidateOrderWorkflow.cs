@@ -6,30 +6,45 @@ namespace WorkflowApp
     {
         public override async Task<OrderValidationResult> RunAsync(WorkflowContext context, Order order)
         {
+            RegisterShipmentResult? registerShipmentResult = default;
+
             var inventoryResult = await context.CallActivityAsync<InventoryResult>(
                 nameof(UpdateInventory),
                 order.OrderItem);
 
-            ShippingResult shippingResult = new(IsShippingAvailable: false, 0);
-
             if (inventoryResult.IsSufficientStock)
             {
+                string[] shippingServices = ["Shipping Service A", "Shipping Service B", "Shipping Service C"];
+                List<Task<ShippingCostResult>> shippingCostResultTasks = [];
+
+                foreach (var shippingService in shippingServices)
+                {
+                    ShippingCostRequest shippingRequest = new(shippingService, order);
+                    shippingCostResultTasks.Add(context.CallActivityAsync<ShippingCostResult>(
+                        nameof(GetShippingCost),
+                        shippingRequest));
+                }
+
+                ShippingCostResult[] shippingCostResults = await Task.WhenAll(shippingCostResultTasks);
+                ShippingCostResult cheapestShippingService = shippingCostResults.MinBy(result => result.Cost);
+
                 try
                 {
-                    shippingResult = await context.CallActivityAsync<ShippingResult>(
-                        nameof(ShippingCalculator),
-                        order.ShippingInfo);
+                    RegisterShipmentRequest registerShipmentRequest = new(order, cheapestShippingService.ShippingService);
+                    registerShipmentResult = await context.CallActivityAsync<RegisterShipmentResult>(
+                        nameof(RegisterShipment),
+                        registerShipmentRequest);
                 }
                 catch (WorkflowTaskFailedException ex)
                 {
-                    Console.WriteLine($"Shipping calculator activity failed: {ex.Message}");
+                    Console.WriteLine($"RegisterShipment activity failed: {ex.Message}");
                     var undoResult = await context.CallActivityAsync<InventoryResult>(
                         nameof(UndoUpdateInventory),
                         order.OrderItem);
                 }
             }
 
-            return new OrderValidationResult(inventoryResult, shippingResult);
+            return new OrderValidationResult(inventoryResult, registerShipmentResult);
         }
     }
 }

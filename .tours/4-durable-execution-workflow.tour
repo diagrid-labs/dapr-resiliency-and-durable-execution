@@ -27,31 +27,11 @@
     },
     {
       "title": "Workflow as code",
-      "description": "## Workflow as Code\n\nA workflow system where the sequence of tasks (activities) is written in code by developers.\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)",
-      "selection": {
-        "start": {
-          "line": 5,
-          "character": 1
-        },
-        "end": {
-          "line": 5,
-          "character": 28
-        }
-      }
+      "description": "## Workflow as Code\n\nA workflow system where the sequence of tasks (activities) is written in code by developers.\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)"
     },
     {
       "title": "Challenges",
-      "description": "## Workflow as Code challenges\n\n- **Deterministic**\n  - *Multiple executions with the same input must result in the same output.*\n- **Idempotent**\n  - *Multiple executions do not result in negative side effects.*\n- **Workflow Versioning**\n  - *Be careful of breaking changes in the workflow.*\n- **Workflow & Activity Payloads**\n  - *Keep payloads small due to frequent (de)serialization.*\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)",
-      "selection": {
-        "start": {
-          "line": 9,
-          "character": 3
-        },
-        "end": {
-          "line": 9,
-          "character": 15
-        }
-      }
+      "description": "## Workflow as Code challenges\n\n- **Deterministic**\n  - *Multiple executions with the same input must result in the same output.*\n- **Idempotent**\n  - *Multiple executions do not result in negative side effects.*\n- **Workflow Versioning**\n  - *Be careful of breaking changes in the workflow.*\n- **Workflow & Activity Payloads**\n  - *Keep payloads small due to frequent (de)serialization.*\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
     },
     {
       "title": "Dapr workflow",
@@ -59,17 +39,7 @@
     },
     {
       "title": "Task chaining",
-      "description": "![Task chaining](./images/workflow-task-chaining.PNG)",
-      "selection": {
-        "start": {
-          "line": 1,
-          "character": 1
-        },
-        "end": {
-          "line": 1,
-          "character": 54
-        }
-      }
+      "description": "![Task chaining](./images/workflow-task-chaining.PNG)"
     },
     {
       "title": "Fan-out/fan-in",
@@ -117,14 +87,24 @@
       "line": 6
     },
     {
-      "file": "WorkflowDemo/WorkflowApp/ShippingCalculator.cs",
-      "description": "## ShippingCalculator Activity",
+      "file": "WorkflowDemo/WorkflowApp/GetShippingCost.cs",
+      "description": "## GetShipingCost Activity",
       "line": 6
     },
     {
       "file": "WorkflowDemo/ShippingApp/Program.cs",
       "description": "## ShippingApp calculateCost endpoint",
       "line": 5
+    },
+    {
+      "file": "WorkflowDemo/WorkflowApp/RegisterShipment.cs",
+      "description": "## RegisterShipment Activity",
+      "line": 6
+    },
+    {
+      "file": "WorkflowDemo/ShippingApp/Program.cs",
+      "description": "## ShippingApp registerShipment",
+      "line": 17
     },
     {
       "title": "Simulate an issue with the workflow process",

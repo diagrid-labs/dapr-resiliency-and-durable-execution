@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppB", "ResiliencyDemo\AppB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkflowDemo", "WorkflowDemo", "{F3C70B85-2697-4CCF-B549-4F24210183A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipping", "WorkflowDemo\ShippingApp\Shipping.csproj", "{D6575D8C-899C-455C-9D35-344946EC78D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShippingApp", "WorkflowDemo\ShippingApp\ShippingApp.csproj", "{D6575D8C-899C-455C-9D35-344946EC78D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowApp", "WorkflowDemo\WorkflowApp\WorkflowApp.csproj", "{556B972C-A581-4EA5-B669-2BA47B478467}"
 EndProject

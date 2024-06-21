@@ -2,7 +2,7 @@
 @dapr-url=http://localhost:3504
 @shipping-url=http://localhost:5051
 @orderId={{$guid}}
-@productId=P123
+@productId=RBD1000
 
 ### Restock inventory
 POST {{workflow-url}}/inventory/restock
@@ -27,10 +27,10 @@ Content-Type: application/json
     "orderItem" : {
         "productId": "{{productId}}",
         "productName": "RubberDuck",
-        "quantity": 2,
+        "quantity": 4,
         "totalPrice": 5.00
     },
-    "shippingInfo" : {
+    "contactInfo" : {
         "country" : "The Netherlands"
     }
 }
@@ -46,7 +46,7 @@ Content-Type: application/json
 {
     "id": "{{orderId}}",
     "orderItem" : {
-        "productId": "P123",
+        "productId": "{{productId}}",
         "productName": "RubberDuck",
         "quantity": 1,
         "totalPrice": 5.00

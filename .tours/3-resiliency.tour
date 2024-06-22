@@ -98,7 +98,7 @@
     {
       "file": "ResiliencyDemo/AppA/Program.cs",
       "description": "## AppA Program.cs /pubsub",
-      "line": 16
+      "line": 17
     },
     {
       "directory": "ResiliencyDemo/Resources",

@@ -27,7 +27,7 @@ Content-Type: application/json
     "orderItem" : {
         "productId": "{{productId}}",
         "productName": "RubberDuck",
-        "quantity": 4,
+        "quantity": 2,
         "totalPrice": 5.00
     },
     "contactInfo" : {

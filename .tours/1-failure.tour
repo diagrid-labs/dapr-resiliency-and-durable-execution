@@ -8,6 +8,20 @@
       "description": "# Failure is inevitable\n\n![Task failed successfully](./images/task-failed-succesfully.jpg)\n\n> ## \"Failure to plan, is planning to fail\"\n*Quote by someone famous*"
     },
     {
+      "title": "Lessons From a Decade of IT Failues",
+      "description": "## Lessons From a Decade of IT Failues\r\n\r\n[Lessons From a Decade of IT Failues](https://spectrum.ieee.org/lessons-from-a-decade-of-it-failures) (*IEEE Spectrum Blog, 2015*)\r\n\r\n![Lessons From a Decade of IT Failues](./images/ieee-spectrum.png)",
+      "selection": {
+        "start": {
+          "line": 3,
+          "character": 104
+        },
+        "end": {
+          "line": 3,
+          "character": 130
+        }
+      }
+    },
+    {
       "title": "Distributed apps",
       "description": "![distributed systems](./images/distributed-apps1.PNG)"
     },

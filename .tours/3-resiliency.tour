@@ -48,11 +48,6 @@
       "title": "local.http"
     },
     {
-      "file": "ResiliencyDemo/Resources/resiliency.yaml",
-      "description": "## Dapr resiliency policy",
-      "line": 1
-    },
-    {
       "title": "Simulate issue with AppB",
       "description": "## Simulate issue with AppB (Service invocation)\n\nLet's start AppA, but not AppB. Make a request to AppA, wait a couple of seconds and then start AppB.\n\nNavigate to AppA folder:\n\n>> cd AppA\n\nRun AppA with the Dapr CLI: \n>> dapr run --app-id app-a --app-port 5045 --dapr-http-port 3500 --resources-path \"../Resources\" -- dotnet run\n\nFirst make a request to AppA, then open a new terminal and navigate to AppB:\n\n`cd AppB`\n\nRun AppB with the Dapr CLI: \n\n`dapr run --app-id app-b --app-port 5047 --dapr-http-port 3502 --resources-path \"../Resources\" -- dotnet run`"
     },
@@ -61,6 +56,11 @@
       "description": "## Service invocation from AppA to AppB",
       "line": 3,
       "title": "local.http"
+    },
+    {
+      "file": "ResiliencyDemo/Resources/resiliency.yaml",
+      "description": "## Dapr resiliency policy",
+      "line": 1
     },
     {
       "title": "Resiliency outbound",
@@ -126,11 +126,7 @@
     },
     {
       "title": "Conductor Advisories",
-      "description": "![Conductor Advisories](./images/conductor1.png)\r\n\r\n- [Conductor Free Dashboard](https://conductor.diagrid.io)\r\n- [Conductor Free Info](https://diagrid.ws/conductor)"
-    },
-    {
-      "title": "Conductor Reliability",
-      "description": "![Conductor Reliability](./images/conductor2.png)\r\n\r\n[Conductor Free](https://diagrid.ws/conductor)"
+      "description": "## Check production readiness with Conductor Free\r\n\r\n- [Conductor Free Dashboard](https://conductor.diagrid.io)\r\n\r\n![Conductor Advisories](./images/conductor1.png)\r\n\r\n- [Conductor Free Info](https://diagrid.ws/conductor)"
     }
   ]
 }

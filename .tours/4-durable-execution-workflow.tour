@@ -23,7 +23,7 @@
     },
     {
       "title": "Workflows",
-      "description": "## Workflow Engines\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of tasks (activities) in a specific sequence.\n\nSomeone is responsible for creating a workflow that defines the sequence of tasks (*orchestration*)."
+      "description": "## Workflow Engines\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of activities in a specific sequence and persist the workflow state to storage."
     },
     {
       "title": "Workflow replay",
@@ -31,7 +31,7 @@
     },
     {
       "title": "Workflow as code",
-      "description": "## Workflow as Code\n\nA workflow system where the sequence of tasks (activities) is written in code by developers.\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)"
+      "description": "## Workflow as Code\n\nA workflow system where the sequence of activities is written in code by developers.\n\n- ✅ Part of the source code\n- ✅ Unit testing\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)"
     },
     {
       "title": "Challenges",

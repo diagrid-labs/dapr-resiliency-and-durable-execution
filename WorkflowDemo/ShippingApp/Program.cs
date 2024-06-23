@@ -17,7 +17,7 @@ app.MapPost("/calculateCost", (
 app.MapPost("/registerShipment", (
     RegisterShipmentRequest shipmentRequest) => {
     Console.WriteLine($"{shipmentRequest.ShippingService}: Registering shipment for order {shipmentRequest.Order.Id}.");
-    Thread.Sleep(4000); //😱
+    Thread.Sleep(2000); //😱
     RegisterShipmentResult shipmentResult = new(shipmentRequest.ShippingService, Guid.NewGuid().ToString(), IsRegistered: true);
 
     return Results.Ok(shipmentResult);

@@ -43,7 +43,7 @@
     },
     {
       "file": "ResiliencyDemo/local.http",
-      "description": "## Service invocation from AppA to AppB",
+      "description": "## Local.http\n\nThis file is used with the [VSCode REST extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to make HTTP requests to the applications and the Dapr sidecar.\n\n### Service invocation from AppA to AppB",
       "line": 3,
       "title": "local.http"
     },

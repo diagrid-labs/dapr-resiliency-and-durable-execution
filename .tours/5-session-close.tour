@@ -3,6 +3,10 @@
   "title": "5 - Session close",
   "steps": [
     {
+      "title": "Dapr OSS",
+      "description": "![dapr website](./images/dapr-website.PNG)\r\n\r\n[dapr.io](https://dapr.io)"
+    },
+    {
       "title": "QR Codes",
       "description": "![Diagrid QR codes](./images/diagrid-qr-codes.PNG)\r\n\r\n- [diagrid.ws/dapr-durable](https://diagrid.ws/dapr-durable)\r\n- [diagrid.ws/conductor](https://diagrid.ws/conductor)\r\n"
     },

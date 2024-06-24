@@ -4,12 +4,8 @@
   "nextTour": "2 - Dapr intro",
   "steps": [
     {
-      "title": "Failure is inevitable",
-      "description": "# Failure is inevitable\n\n![Task failed successfully](./images/task-failed-succesfully.jpg)\n\n> ## \"Failure to plan, is planning to fail\"\n*Quote by someone famous*"
-    },
-    {
       "title": "Lessons From a Decade of IT Failues",
-      "description": "## Lessons From a Decade of IT Failures\r\n\r\n[Lessons From a Decade of IT Failures](https://spectrum.ieee.org/lessons-from-a-decade-of-it-failures) (*IEEE Spectrum Blog, 2015*)\r\n\r\n![Lessons From a Decade of IT Failues](./images/ieee-spectrum.png)"
+      "description": "## Lessons From a Decade of IT Failures\r\n\r\n[Lessons From a Decade of IT Failures](https://spectrum.ieee.org/lessons-from-a-decade-of-it-failures) (*IEEE Spectrum Blog, 2015*)\r\n\r\n![Lessons From a Decade of IT Failues](./images/ieee-spectrum.png)\r\n\r\n### \"...while a rogue algorithm led the Knight Capital Group to lose US $440 million in errant trades in about 45 minutes in 2012.\""
     },
     {
       "title": "Distributed apps",
@@ -17,7 +13,7 @@
     },
     {
       "title": "Fallacies of distributed computing",
-      "description": "## Fallacies of distributed computing\n\n1. The network is reliable\n2. Latency is zero\n3. Bandwidth is infinite\n4. The network is secure\n5. Topology doesn't change\n6. There is one administrator\n7. Transport cost is zero\n8. The network is homogeneous\n\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\n- [Fallacies of Distributed Computing \nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)\n- [Fallacies of Distributed Computing on YouTube (Udi Dahan - Particular Software)](https://www.youtube.com/playlist?list=PL1DZqeVwRLnD3EjyciYAO82dT9Owiq8I5)"
+      "description": "## Fallacies of distributed computing\n\n*L. Peter Deutsch and James Gosling (1994)*\n\n1. The network is reliable\n2. Latency is zero\n3. Bandwidth is infinite\n4. The network is secure\n5. Topology doesn't change\n6. There is one administrator\n7. Transport cost is zero\n8. The network is homogeneous\n\n- [en.wikipedia.org/wiki/Fallacies_of_distributed_computing](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)\n- [Fallacies of Distributed Computing \nExplained](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf) (pdf)\n- [Fallacies of Distributed Computing on YouTube (Udi Dahan - Particular Software)](https://www.youtube.com/playlist?list=PL1DZqeVwRLnD3EjyciYAO82dT9Owiq8I5)"
     }
   ]
 }

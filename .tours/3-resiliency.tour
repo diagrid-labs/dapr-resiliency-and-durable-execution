@@ -9,7 +9,7 @@
     },
     {
       "directory": "ResiliencyDemo",
-      "description": "# ResiliencyDemo\n\n[ResiliencyDemo diagrams in README](./README.md)\n\nNavigate to the ResiliencyDemo folder:\n\n>> cd ResiliencyDemo\n\nCheck the files and folders."
+      "description": "# ResiliencyDemo\n\n![ResiliencyDemo](./images/s2s-resiliency-v1.png)\n\nNavigate to the ResiliencyDemo folder:\n\n>> cd ResiliencyDemo\n\nCheck the files and folders."
     },
     {
       "file": "ResiliencyDemo/AppA/AppA.csproj",

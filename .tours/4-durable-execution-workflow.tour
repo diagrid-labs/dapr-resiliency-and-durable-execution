@@ -22,7 +22,7 @@
       }
     },
     {
-      "title": "Workflows",
+      "title": "Workflow Engines",
       "description": "## Workflow Engines\n\n### Durable execution == Workflow engine\n\nA workflow engine executes a set of activities in a specific sequence and persist the workflow state to storage."
     },
     {
@@ -36,10 +36,6 @@
     {
       "title": "Challenges",
       "description": "## Workflow as Code challenges\n\n- **Deterministic**\n  - *Multiple executions with the same input must result in the same output.*\n- **Idempotent**\n  - *Multiple executions do not result in negative side effects.*\n- **Workflow Versioning**\n  - *Be careful of breaking changes in the workflow.*\n- **Workflow & Activity Payloads**\n  - *Keep payloads small due to frequent (de)serialization.*\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
-    },
-    {
-      "title": "Dapr workflow",
-      "description": "![Dapr Workflow](./images/workflow.PNG)"
     },
     {
       "title": "Task chaining",
@@ -67,7 +63,7 @@
     },
     {
       "directory": "WorkflowDemo",
-      "description": "## Workflow Demo\r\n\r\n[WorkflowDemo diagram in README](./README.md)\r\n\r\nNavigate to the WorkflowDemo folder:\r\n\r\n>> cd WorkflowDemo\r\n\r\nCheck the files and folders.",
+      "description": "## Workflow Demo\r\n\r\n![WorkflowDemo](./images/workflow-shipping-v1.png)\r\n\r\nNavigate to the WorkflowDemo folder:\r\n\r\n>> cd WorkflowDemo\r\n\r\nCheck the files and folders.",
       "title": "WorkflowDemo"
     },
     {

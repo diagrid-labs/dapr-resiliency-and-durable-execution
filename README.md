@@ -7,10 +7,11 @@ This repo contains Dapr applications to demonstrate Dapr resiliency policies and
 > - failure and distributed computing challenges
 > - the way Dapr provides resiliency
 > - what durable execution is
-> - how the Dapr Workflow ensures durable execution
+> - how the Dapr Workflow implements durable execution
 
-**TOC**
+## Table of Contents
 
+- [Prequisites](#prerequisites)
 - [Running the Dapr Resiliency CodeTour](#running-the-dapr-resiliency-codetour)
 - [ResiliencyDemo](#resiliencydemo)
 - [Dapr Reliability Advisor in Conductor Free](#dapr-reliability-advisor-in-conductor-free)

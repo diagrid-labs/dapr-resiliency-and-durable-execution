@@ -4,7 +4,7 @@ This repo contains Dapr applications to demonstrate Dapr resiliency policies and
 
 > Running the CodeTours in this repo is recommended since this gives more context about:
 >
-> - failure and resiliency in general
+> - failure and distributed computing challenges
 > - the way Dapr provides resiliency
 > - what durable execution is
 > - how the Dapr Workflow ensures durable execution
@@ -100,11 +100,9 @@ Using the CodeTour panel in the VSCode explorer, start the *4 - Durable Executio
 
 ```mermaid
 graph LR
-    U[User]
-    KV[(KV Store)]
+    KV[(Inventory)]
     WApp{{WorkflowApp}}
     SApp{{ShippingApp}}
-    U --> WApp
     WApp --> SApp
     WApp --> KV
 ```

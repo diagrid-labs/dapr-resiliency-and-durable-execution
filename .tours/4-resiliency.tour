@@ -1,7 +1,7 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "3 - Dapr Resiliency",
-  "nextTour": "4 - Durable Execution & Dapr Workflow",
+  "title": "4 - Dapr Resiliency",
+  "nextTour": "5 - Session close",
   "steps": [
     {
       "title": "Resiliency service-to-service",

@@ -12,7 +12,7 @@ namespace WorkflowApp
         public UpdateInventory(DaprClient daprClient, ILoggerFactory loggerFactory)
         {
             _daprClient = daprClient;
-            _logger = loggerFactory.CreateLogger<UndoUpdateInventory>();
+            _logger = loggerFactory.CreateLogger<UpdateInventory>();
         }
         
         public override async Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem orderItem)

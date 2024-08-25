@@ -6,13 +6,13 @@ namespace WorkflowApp
     public class UndoUpdateInventory : WorkflowActivity<OrderItem, InventoryResult>
     {
         private readonly DaprClient _daprClient;
-        private readonly ILogger<UpdateInventory> _logger;
+        private readonly ILogger _logger;
         private const string StateStoreComponentName = "inventory";
 
         public UndoUpdateInventory(DaprClient daprClient, ILoggerFactory loggerFactory)
         {
             _daprClient = daprClient;
-            _logger = loggerFactory.CreateLogger<UpdateInventory>();
+            _logger = loggerFactory.CreateLogger<UndoUpdateInventory>();
         }
 
         public override async Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem orderItem)

@@ -14,7 +14,10 @@ namespace WorkflowApp
 
             if (inventoryResult.IsSufficientStock)
             {
-                string[] shippingServices = ["Shipping Service A", "Shipping Service B", "Shipping Service C"];
+                string[] shippingServices = [
+                    "Shipping Service A",
+                    "Shipping Service B",
+                    "Shipping Service C"];
                 List<Task<ShippingCostResult>> shippingCostResultTasks = [];
 
                 foreach (var shippingService in shippingServices)

@@ -17,7 +17,9 @@ namespace WorkflowApp
         
         public override async Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem orderItem)
         {
-            var productInventory = await _daprClient.GetStateAsync<ProductInventory>(StateStoreComponentName, orderItem.ProductId);
+            var productInventory = await _daprClient.GetStateAsync<ProductInventory>(
+                StateStoreComponentName,
+                orderItem.ProductId);
             if (productInventory != null)
             {
                 if (productInventory.Quantity >= orderItem.Quantity)

@@ -34,10 +34,6 @@
       "description": "## Workflow as Code\n\nA workflow system where the sequence of activities is written in code by developers.\n\n- ✅ Part of the source code\n- ✅ Unit testing\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)"
     },
     {
-      "title": "Challenges",
-      "description": "## Workflow as Code challenges\n\n- **Deterministic**\n  - *Multiple executions with the same input must result in the same output.*\n- **Idempotent**\n  - *Multiple executions do not result in negative side effects.*\n- **Workflow Versioning**\n  - *Be careful of breaking changes in the workflow.*\n- **Workflow & Activity Payloads**\n  - *Keep payloads small due to frequent (de)serialization.*\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
-    },
-    {
       "title": "Task chaining",
       "description": "![Task chaining](./images/workflow-task-chaining.PNG)"
     },
@@ -114,6 +110,20 @@
       "file": "WorkflowDemo/local.http",
       "description": "## Local.http\r\n\r\nThis file is used with the [VSCode REST extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to make HTTP requests to the applications and the Dapr sidecar.",
       "line": 1
+    },
+    {
+      "file": "WorkflowDemo/ShippingApp/Program.cs",
+      "description": "## Simulate an issue with the registerShipment endpoint\n\nComment out the `return Results.Ok(shipmentResult)` line.\n\nUncomment the `return Results.StatisCode(500)` line.\n\nEnsure that you're in the WorkflowDemo folder and run the applications via de Dapr CLI:\n\n>> dapr run -f .",
+      "line": 23
+    },
+    {
+      "file": "WorkflowDemo/local.http",
+      "description": "## Local.http\r\n\r\nThis file is used with the [VSCode REST extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to make HTTP requests to the applications and the Dapr sidecar.",
+      "line": 1
+    },
+    {
+      "title": "Challenges",
+      "description": "## Workflow as Code challenges\n\n- **Deterministic**\n  - *Multiple executions with the same input must result in the same output.*\n- **Idempotent**\n  - *Multiple executions do not result in negative side effects.*\n- **Workflow Versioning**\n  - *Be careful of breaking changes in the workflow.*\n- **Workflow & Activity Payloads**\n  - *Keep payloads small due to frequent (de)serialization.*\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
     }
   ]
 }

@@ -21,6 +21,7 @@ app.MapPost("/registerShipment", (
     RegisterShipmentResult shipmentResult = new(shipmentRequest.ShippingService, Guid.NewGuid().ToString(), IsRegistered: true);
 
     return Results.Ok(shipmentResult);
+    // return Results.StatusCode(500);
 });
 
 app.Run();

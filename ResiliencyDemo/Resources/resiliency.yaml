@@ -38,7 +38,7 @@ spec:
   targets:
     apps:
       app-b:
-        retry: myRetryConstant
+        retry: myConstantPolicy
     components:
       mypubsub:
         outbound:

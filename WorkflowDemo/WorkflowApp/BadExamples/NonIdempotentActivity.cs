@@ -3,12 +3,12 @@ using Dapr.Workflow;
 
 namespace WorkflowApp
 {
-    public class SaveOrderActivity : WorkflowActivity<OrderItem, InventoryResult>
+    public class NonIdempotentActivity : WorkflowActivity<OrderItem, InventoryResult>
     {
         private readonly DaprClient _daprClient;
         private const string StateStoreComponentName = "inventory";
 
-        public SaveOrderActivity(DaprClient daprClient)
+        public NonIdempotentActivity(DaprClient daprClient)
         {
             _daprClient = daprClient;
         }

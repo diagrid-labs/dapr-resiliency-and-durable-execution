@@ -124,6 +124,26 @@
     {
       "title": "Challenges",
       "description": "## Workflow as Code challenges\n\n- **Deterministic**\n  - *Multiple executions with the same input must result in the same output.*\n- **Idempotent**\n  - *Multiple executions do not result in negative side effects.*\n- **Workflow Versioning**\n  - *Be careful of breaking changes in the workflow.*\n- **Workflow & Activity Payloads**\n  - *Keep payloads small due to frequent (de)serialization.*\n\n[Source](https://medium.com/@cgillum/common-pitfalls-with-durable-execution-frameworks-like-durable-functions-or-temporal-eaf635d4a8bb)"
+    },
+    {
+      "file": "WorkflowDemo/WorkflowApp/BadExamples/NonDeterministicWorkflow.cs",
+      "description": "## Determinic workflows\n\nWorkflows need to be deterministic. Every time a workflow is replayed it should result in the exact same outcome.\n\nThis means that non-deterministic operations in a workflow must be avoided. This includes:\n\n- Creating random values (Guids)\n- DateTime.Now\n- Calling other services/endpoints directly from the workflow ",
+      "line": 6
+    },
+    {
+      "file": "WorkflowDemo/WorkflowApp/BadExamples/NonIdempotentActivity.cs",
+      "description": "## Idempotent workflows\n\nWorkflows and their activities should be idempotent. If they run more than once with the exact input it should not result in any side effects.\n\nDapr Workflow guarantees _at least once delivery_, this means the activities could be executed more than once. Ensure that the activity code can handle this.",
+      "line": 6
+    },
+    {
+      "file": "WorkflowDemo/WorkflowApp/BadExamples/VersioningWorkflow.cs",
+      "description": "## Versioning workflows\n\nBe careful with breaking changes to workflows. If old workflow instances are still in-flight (not completed their execution) and a new version of the workflow is running, the old workflow data in the state store might be incompatible with the new version of the workflow.",
+      "line": 5
+    },
+    {
+      "file": "WorkflowDemo/WorkflowApp/BadExamples/PayloadSizeWorkflow.cs",
+      "description": "## Workflow & Activity Payload\n\nKeep the input and outputs of workflows and activities small since these are serialized & deserialized each time they are stored and retrieved to/from the state store. Use ID's as inputs, get data in an activity, process it in the same activity and return ID's or small records as outputs.",
+      "line": 5
     }
   ]
 }

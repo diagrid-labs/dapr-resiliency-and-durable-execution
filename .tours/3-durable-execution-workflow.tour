@@ -30,54 +30,6 @@
       "description": "![Workflow replay](./images/workflow-replay.gif)"
     },
     {
-      "title": "Workflow replay",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-1.png)"
-    },
-    {
-      "title": "Workflow scheduled",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-2.png)"
-    },
-    {
-      "title": "Activity 1 scheduled",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-3.png)"
-    },
-    {
-      "title": "Activity 1 completed",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-4.png)"
-    },
-    {
-      "title": "Workflow replay",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-5.png)"
-    },
-    {
-      "title": "Activity 2 scheduled",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-6.png)"
-    },
-    {
-      "title": "Activity 2 completed",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-7.png)"
-    },
-    {
-      "title": "Workflow replay",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-8.png)"
-    },
-    {
-      "title": "Activity 3 scheduled",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-9.png)"
-    },
-    {
-      "title": "Activity 1 completed",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-10.png)"
-    },
-    {
-      "title": "Workflow replay",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-11.png)"
-    },
-    {
-      "title": "Workflow completed",
-      "description": "![Workflow replay](./images/workflow-animation/workflow-anim-12.png)"
-    },
-    {
       "title": "Workflow as code",
       "description": "## Workflow as Code\n\nA workflow system where the sequence of activities is written in code by developers.\n\n- ✅ Part of the source code\n- ✅ Unit testing\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)"
     },

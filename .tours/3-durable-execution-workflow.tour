@@ -107,6 +107,11 @@
       "description": "## Simulate an issue with the workflow process\r\n\r\n1. Ensure you're in the WorkflowDemo folder.\r\n\r\n2. Run the demo with Dapr multi-app run:\r\n\r\n>> dapr run -f .\r\n\r\n3. Use the [local.http](./WorkflowDemo/local.http) file to restock the in-memory inventory.\r\n4. Start an instance of the workflow. Once started, stop the Dapr run process (CTRL+C in the terminal) within a few seconds. This stops both Workflow and Shipping apps from running.\r\n5. Restart the Workflow and Shipping apps with the Dapr CLI:\r\n\r\n>> dapr run -f .\r\n\r\nThe workflow should pickup where it was and complete now."
     },
     {
+      "file": "WorkflowDemo/dapr.yaml",
+      "description": "## Dapr run file",
+      "line": 1
+    },
+    {
       "file": "WorkflowDemo/local.http",
       "description": "## Local.http\r\n\r\nThis file is used with the [VSCode REST extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to make HTTP requests to the applications and the Dapr sidecar.",
       "line": 1
@@ -114,7 +119,7 @@
     {
       "file": "WorkflowDemo/ShippingApp/Program.cs",
       "description": "## Simulate an issue with the registerShipment endpoint\n\nComment out the `return Results.Ok(shipmentResult)` line.\n\nUncomment the `return Results.StatisCode(500)` line.\n\nEnsure that you're in the WorkflowDemo folder and run the applications via de Dapr CLI:\n\n>> dapr run -f .",
-      "line": 23
+      "line": 24
     },
     {
       "file": "WorkflowDemo/local.http",

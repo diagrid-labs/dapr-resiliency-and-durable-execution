@@ -6,6 +6,5 @@ spec:
   type: state.sqlite
   version: v1
   metadata:
-  # Connection string
   - name: connectionString
     value: "data.db"

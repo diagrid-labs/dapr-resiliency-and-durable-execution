@@ -31,7 +31,7 @@
     },
     {
       "title": "Workflow as code",
-      "description": "## Workflow as Code\n\nA workflow system where the sequence of activities is written in code by developers.\n\n- ✅ Part of the source code\n- ✅ Unit testing\n\n**Workflow as Code tools:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)"
+      "description": "## Workflow as Code\n\nA workflow system where the sequence of activities is written in code by developers.\n\n- ✅ Part of the source code\n- ✅ Unit testing\n\n**Workflow as Code solutions:**\n\n- [Temporal](https://temporal.io/)\n- [Restate](https://restate.dev/)\n- [Azure Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)\n- [Dapr Workflow](https://docs.dapr.io/developing-applications/building-blocks/workflow/workflow-overview/)"
     },
     {
       "title": "Task chaining",

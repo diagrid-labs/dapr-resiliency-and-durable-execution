@@ -40,6 +40,7 @@ namespace WorkflowApp
                 }
                 catch (WorkflowTaskFailedException ex)
                 {
+                    // Compensation action
                     Console.WriteLine($"RegisterShipment activity failed: {ex.Message}");
                     var undoResult = await context.CallActivityAsync<InventoryResult>(
                         nameof(UndoUpdateInventory),

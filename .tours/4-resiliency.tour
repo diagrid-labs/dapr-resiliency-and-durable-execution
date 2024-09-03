@@ -102,7 +102,7 @@
     },
     {
       "directory": "ResiliencyDemo/Resources",
-      "description": "## Rename pubsub and subscription YAML files\n\n1. Navigate to the Resources folder.\n2. Rename `pubsub.yaml.temp` to `pubsub.yaml`.\n3. Rename `subscription.yamp.temp` to `subscription.yaml`."
+      "description": "## Rename pubsub and subscription YAML files\n\n1. Navigate to the Resources folder.\n2. Rename `pubsub.yaml.temp` to `pubsub.yaml`.\n3. Rename `subscription.yaml.temp` to `subscription.yaml`."
     },
     {
       "file": "ResiliencyDemo/Resources/pubsub.yaml",

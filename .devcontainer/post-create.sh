@@ -1,0 +1,2 @@
+dapr uninstall
+dapr init

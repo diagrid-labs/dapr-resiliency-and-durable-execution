@@ -21,6 +21,10 @@ This repo contains Dapr applications to demonstrate Dapr resiliency policies and
 
 ## Prerequisites
 
+You can choose to run the demos locally, which requires that you install the required dependencies yourself. Or you use the provided devcontainer that contains all required dependencies.
+
+### Run locally without the devcontainer
+
 Ensure you have these installed on your machine:
 
 - [.NET 8](https://dotnet.microsoft.com/download/dotnet/8.0)
@@ -28,9 +32,21 @@ Ensure you have these installed on your machine:
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [VSCode](https://code.visualstudio.com/) - Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)) to help guide you through the codebase.
 
+### Run with the devcontainer
+
+Ensure you have these installed on your machine:
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [VSCode](https://code.visualstudio.com/) - Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)) to help guide you through the codebase.
+- [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) to run the devcontainer in VS Code.
+
+The devcontainer configuration is using a .NET 8 image and includes the Dapr CLI and the required VS Code extensions.
+
+### Clone the repo
+
 Clone the [dapr-resiliency-and-durable-execution repo](https://github.com/diagrid-labs/dapr-resiliency-and-durable-execution) to your local machine.
 
-Open the cloned repo in VSCode and accept the suggested VSCode extensions.
+Open the cloned repo in VSCode and accept the suggested VSCode extensions or choose to open the repo in the devcontainer.
 
 ## Running the Dapr Resiliency CodeTour
 

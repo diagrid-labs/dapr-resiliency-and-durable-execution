@@ -1,5 +1,5 @@
-using Dapr.Workflow;
 using System;
+using Dapr.Workflow;
 
 namespace WorkflowApp
 {

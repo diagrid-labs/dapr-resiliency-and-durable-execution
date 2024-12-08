@@ -2,10 +2,21 @@
   "$schema": "https://elio.dev/demo-time.schema.json",
   "title": "0 - Intro",
   "description": "",
+  "demoTime.showClock": true,
+  "demoTime.timer": 55,
+  "demoTime.highlightBorderColor": "#feae34",
   "demos": [
     {
       "title": "Title",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
+        },
         {
           "action": "markdownPreview",
           "path": ".demo/0-intro/01-title.md"
@@ -14,6 +25,10 @@
     },
     {
       "title": "Failure is inevitable",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -23,6 +38,10 @@
     },
     {
       "title": "Marc Duiker",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",

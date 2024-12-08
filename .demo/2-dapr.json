@@ -5,6 +5,10 @@
   "demos": [
     {
       "title": "Distributed apps",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -14,6 +18,10 @@
     },
     {
       "title": "Dapr OSS",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -23,6 +31,10 @@
     },
     {
       "title": "Distributed apps with Dapr",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -31,6 +43,10 @@
       ]
     },{
       "title": "Dapr APIs",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -40,6 +56,10 @@
     },
     {
       "title": "Dapr Components",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -49,6 +69,10 @@
     },
     {
       "title": "Dapr Component Local",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -58,6 +82,10 @@
     },
     {
       "title": "Dapr Components Azure",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",

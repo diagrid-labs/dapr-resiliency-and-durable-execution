@@ -4,7 +4,11 @@
   "description": "",
   "demos": [
     {
-      "title": "Lessons From a Decade of IT Failues",
+      "title": "Lessons From a Decade of IT Failures",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -14,6 +18,10 @@
     },
     {
       "title": "Distributed Apps",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",
@@ -23,6 +31,10 @@
     },
     {
       "title": "Fallacies of Distributed Computing",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
       "steps": [
         {
           "action": "markdownPreview",

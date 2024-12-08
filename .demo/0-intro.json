@@ -1,0 +1,34 @@
+{
+  "$schema": "https://elio.dev/demo-time.schema.json",
+  "title": "0 - Intro",
+  "description": "",
+  "demos": [
+    {
+      "title": "Title",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/0-intro/01-title.md"
+        }
+      ]
+    },
+    {
+      "title": "Failure is inevitable",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/0-intro/02-failure.md"
+        }
+      ]
+    },
+    {
+      "title": "Marc Duiker",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/0-intro/03-marc.md"
+        }
+      ]
+    }
+  ]
+}

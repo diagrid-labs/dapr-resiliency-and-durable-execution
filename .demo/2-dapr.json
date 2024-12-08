@@ -1,0 +1,69 @@
+{
+  "$schema": "https://elio.dev/demo-time.schema.json",
+  "title": "2 - Dapr",
+  "description": "",
+  "demos": [
+    {
+      "title": "Distributed apps",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/01-distributed-apps1.md"
+        }
+      ]
+    },
+    {
+      "title": "Dapr OSS",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/02-dapr-website.md"
+        }
+      ]
+    },
+    {
+      "title": "Distributed apps with Dapr",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/03-distributed-apps2.md"
+        }
+      ]
+    },{
+      "title": "Dapr APIs",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/04-apis.md"
+        }
+      ]
+    },
+    {
+      "title": "Dapr Components",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/05-components.md"
+        }
+      ]
+    },
+    {
+      "title": "Dapr Component Local",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/06-components-local.md"
+        }
+      ]
+    },
+    {
+      "title": "Dapr Components Azure",
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/07-components-azure.md"
+        }
+      ]
+    }
+  ]
+}

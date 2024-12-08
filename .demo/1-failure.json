@@ -1,32 +1,32 @@
 {
   "$schema": "https://elio.dev/demo-time.schema.json",
-  "title": "0 - Intro",
+  "title": "1 - Failure",
   "description": "",
   "demos": [
     {
-      "title": "Title",
+      "title": "Lessons From a Decade of IT Failues",
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/01-title.md"
+          "path": ".demo/1-failure/01-lessons.md"
         }
       ]
     },
     {
-      "title": "Failure",
+      "title": "Distributed Apps",
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/02-failure.md"
+          "path": ".demo/1-failure/02-distributed-apps.md"
         }
       ]
     },
     {
-      "title": "Title",
+      "title": "Fallacies of Distributed Computing",
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/03-marc.md"
+          "path": ".demo/1-failure/03-fallacies.md"
         }
       ]
     }

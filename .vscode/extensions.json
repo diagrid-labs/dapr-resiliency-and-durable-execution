@@ -1,7 +1,7 @@
 {
     "recommendations": [
         "humao.rest-client",
-        "vsls-contrib.codetour",
+        "eliostruyf.vscode-demo-time",
         "ms-dotnettools.csharp"
     ]
 }

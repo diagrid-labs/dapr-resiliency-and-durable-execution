@@ -4,6 +4,6 @@
 
 Navigate to the WorkflowDemo folder:
 
->> cd WorkflowDemo
+`cd WorkflowDemo`
 
 Check the files and folders.

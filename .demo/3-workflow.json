@@ -183,7 +183,7 @@
         {
           "action": "highlight",
           "path": "WorkflowDemo/WorkflowApp/ValidateOrderWorkflow.cs",
-          "position": "1"
+          "position": "5"
         }
       ]
     },
@@ -197,7 +197,7 @@
         {
           "action": "highlight",
           "path": "WorkflowDemo/WorkflowApp/UpdateInventory.cs",
-          "position": "1"
+          "position": "6"
         }
       ]
     },
@@ -211,7 +211,7 @@
         {
           "action": "highlight",
           "path": "WorkflowDemo/WorkflowApp/GetShippingCost.cs",
-          "position": "1"
+          "position": "5"
         }
       ]
     },
@@ -239,7 +239,7 @@
         {
           "action": "highlight",
           "path": "WorkflowDemo/WorkflowApp/RegisterShipment.cs",
-          "position": "1"
+          "position": "6"
         }
       ]
     },

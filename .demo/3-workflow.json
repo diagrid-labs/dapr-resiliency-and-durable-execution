@@ -322,7 +322,7 @@
     {
       "title": "Stop the apps",
       "icons": {
-        "start": "info",
+        "start": "person",
         "end": "pass-filled"
       },
       "steps": [
@@ -464,6 +464,10 @@
         {
           "action": "markdownPreview",
           "path": ".demo/3-workflow/15-challenges.md"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
         }
       ]
     },

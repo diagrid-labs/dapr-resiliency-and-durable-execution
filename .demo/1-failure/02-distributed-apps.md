@@ -1,0 +1,1 @@
+![distributed systems](../../images/distributed-apps1.PNG)

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://elio.dev/demo-time.schema.json",
+  "title": "0 - Intro",
+  "description": "",
+  "demos": [
+    {
+      "title": "Title",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
+        {
+          "action": "markdownPreview",
+          "path": ".demo/0-intro/01-title.md"
+        }
+      ]
+    },
+    {
+      "title": "Failure is inevitable",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/0-intro/02-failure.md"
+        }
+      ]
+    },
+    {
+      "title": "Marc Duiker",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.toggleSidebarVisibility"
+        },
+        {
+          "action": "markdownPreview",
+          "path": ".demo/0-intro/03-marc.md"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+![External System Interaction](../../images/workflow-externalsystem.PNG)

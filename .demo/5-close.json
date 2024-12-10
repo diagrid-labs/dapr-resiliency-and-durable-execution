@@ -1,0 +1,50 @@
+{
+  "$schema": "https://elio.dev/demo-time.schema.json",
+  "title": "5 - Close",
+  "description": "",
+  "demos": [
+    {
+      "title": "Dapr website",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
+        },
+        {
+          "action": "markdownPreview",
+          "path": ".demo/5-close/01-dapr-website.md"
+        }
+      ]
+    },
+    {
+      "title": "QR codes",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/5-close/02-qr-codes.md"
+        }
+      ]
+    },
+    {
+      "title": "Supporter badge",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/5-close/03-supporter-badge.md"
+        }
+      ]
+    }
+  ]
+}

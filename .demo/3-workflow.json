@@ -1,0 +1,567 @@
+{
+  "$schema": "https://elio.dev/demo-time.schema.json",
+  "title": "3 - Durable Execution & Dapr Workflow",
+  "description": "",
+  "demos": [
+    {
+      "title": "What problem are we solving?",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/01-problem.md"
+        }
+      ]
+    },
+    {
+      "title": "Durable Execution",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/02-durable-execution.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflow Engines",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/03-workflow-engines.md"
+        }
+      ]
+    },{
+      "title": "Workflow replay",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/04-workflow-replay.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflow as code",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/05-workflow-as-code.md"
+        }
+      ]
+    },
+    {
+      "title": "Task chaining",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/06-task-chaining.md"
+        }
+      ]
+    },
+    {
+      "title": "Fan-out/fan-in",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/07-fanout-fanin.md"
+        }
+      ]
+    },
+    {
+      "title": "Monitor",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/08-monitor.md"
+        }
+      ]
+    },
+    {
+      "title": "External system",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/09-external-system.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflow example",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/10-workflow-example.md"
+        }
+      ]
+    },
+    {
+      "title": "Dapr workflow engine",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/11-dapr-workflow-engine.md"
+        }
+      ]
+    },
+    {
+      "title": "WorkflowDemo",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.focusSideBar"
+        },
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/12-workflow-demo.md"
+        }
+      ]
+    },
+    {
+      "title": "WorkflowApp.csproj",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/WorkflowApp.csproj",
+          "position": "10"
+        }
+      ]
+    },
+    {
+      "title": "ValidateOrder Workflow",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/ValidateOrderWorkflow.cs",
+          "position": "5"
+        }
+      ]
+    },
+    {
+      "title": "UpdateInventory Activity",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/UpdateInventory.cs",
+          "position": "6"
+        }
+      ]
+    },
+    {
+      "title": "GetShipingCost Activity",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/GetShippingCost.cs",
+          "position": "5"
+        }
+      ]
+    },
+    {
+      "title": "ShippingApp calculateCost endpoint",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/ShippingApp/Program.cs",
+          "position": "5"
+        }
+      ]
+    },
+    {
+      "title": "RegisterShipment Activity",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/RegisterShipment.cs",
+          "position": "6"
+        }
+      ]
+    },
+    {
+      "title": "ShippingApp registerShipment",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/ShippingApp/Program.cs",
+          "position": "17"
+        }
+      ]
+    },
+    {
+      "title": "Workflow process issue",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/13-workflow-issue.md"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.focus"
+        }
+      ]
+    },
+    {
+      "title": "Run the apps",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd WorkflowDemo"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "dapr run -f ."
+        }
+      ]
+    },
+    {
+      "title": "Restock inventory",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": "8"
+        }
+      ]
+    },
+    {
+      "title": "Start workflow",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": "22"
+        }
+      ]
+    },
+    {
+      "title": "Stop the apps",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
+        },
+        {
+          "action": "showInfoMessage",
+          "message": "Apps have been stopped to simulate a failure!"
+        }
+      ]
+    },
+    {
+      "title": "Restart the apps",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "dapr run -f ."
+        }
+      ]
+    },
+    {
+      "title": "Restart workflow",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": "22"
+        }
+      ]
+    },
+    {
+      "title": "Get workflow status",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": "40"
+        }
+      ]
+    },
+    {
+      "title": "Register shipment issue",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/14-register-issue.md"
+        }
+      ]
+    },
+    {
+      "title": "Simulate issue in Program.cs",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/ShippingApp/Program.cs",
+          "position": "23"
+        }
+      ]
+    },
+    {
+      "title": "Insert exception",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "replace",
+          "path": "WorkflowDemo/ShippingApp/Program.cs",
+          "position": "23",
+          "content": "    return Results.StatusCode(500);"
+        }
+      ]
+    },
+    {
+      "title": "Run the apps",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "dapr run -f ."
+        }
+      ]
+    },
+    {
+      "title": "Restock inventory",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": 8
+        }
+      ]
+    },
+    {
+      "title": "Start workflow",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": 22
+        }
+      ]
+    },
+    {
+      "title": "Stop the apps again",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
+        },
+        {
+          "action": "showInfoMessage",
+          "message": "Apps have been stopped."
+        }
+      ]
+    },
+    {
+      "title": "Challenges",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/15-challenges.md"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
+        }
+      ]
+    },
+    {
+      "title": "NonDeterministicWorkflow.cs",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/BadExamples/NonDeterministicWorkflow.cs",
+          "position": "6"
+        }
+      ]
+    },
+    {
+      "title": "NonIdempotentActivity.cs",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/BadExamples/NonIdempotentActivity.cs",
+          "position": "6"
+        }
+      ]
+    },
+    {
+      "title": "VersioningWorkflow.cs",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/BadExamples/VersioningWorkflow.cs",
+          "position": "5"
+        }
+      ]
+    },
+    {
+      "title": "PayloadSizeWorkflow.cs",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/BadExamples/PayloadSizeWorkflow.cs",
+          "position": "5"
+        }
+      ]
+    }
+  ]
+}

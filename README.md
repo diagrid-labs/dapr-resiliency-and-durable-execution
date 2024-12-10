@@ -2,7 +2,7 @@
 
 This repo contains Dapr applications to demonstrate Dapr resiliency policies and durable execution with Dapr workflow.
 
-> Running the CodeTours in this repo is recommended since this gives more context about:
+> Running the demos with Demo Time in this repo is recommended since this gives more context about:
 >
 > - failure and distributed computing challenges
 > - the way Dapr provides resiliency
@@ -12,10 +12,10 @@ This repo contains Dapr applications to demonstrate Dapr resiliency policies and
 ## Table of Contents
 
 - [Prequisites](#prerequisites)
-- [Running the Dapr Resiliency CodeTour](#running-the-dapr-resiliency-codetour)
+- [Run the Resiliency demo with Demo Time](#run-the-resiliency-demo-with-demo-time)
 - [ResiliencyDemo](#resiliencydemo)
 - [Dapr Reliability Advisor in Conductor Free](#dapr-reliability-advisor-in-conductor-free)
-- [Running the Durable Execution & Workflow CodeTour](#running-the-durable-execution--workflow-codetour)
+- [Run the Durable Execution & Workflow demo with Demo Time](#Run-the-durable-execution--workflow-demo-with-demo-time)
 - [WorkflowDemo](#workflowdemo)
 - [Resources](#resources)
 
@@ -30,14 +30,14 @@ Ensure you have these installed on your machine:
 - [.NET 8](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Dapr CLI](https://docs.dapr.io/getting-started/install-dapr-cli/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- [VSCode](https://code.visualstudio.com/) - Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)) to help guide you through the codebase.
+- [VSCode](https://code.visualstudio.com/) - Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [DemoTime](https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-demo-time)) to help guide you through the codebase.
 
 ### Run with the devcontainer
 
 Ensure you have these installed on your machine:
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- [VSCode](https://code.visualstudio.com/) - Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)) to help guide you through the codebase.
+- [VSCode](https://code.visualstudio.com/) - Although other IDEs can be used to view the code, some VSCode specific extensions are used (such as [Demo Time](https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-demo-time)) to help guide you through the codebase.
 - [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) to run the devcontainer in VS Code.
 
 The devcontainer configuration is using a .NET 8 image and includes the Dapr CLI and the required VS Code extensions.
@@ -48,11 +48,11 @@ Clone the [dapr-resiliency-and-durable-execution repo](https://github.com/diagri
 
 Open the cloned repo in VSCode and accept the suggested VSCode extensions or choose to open the repo in the devcontainer.
 
-## Running the Dapr Resiliency CodeTour
+### Run the Resiliency demo with Demo Time
 
-Using the CodeTour panel in the VSCode explorer, start the *3 - Dapr Resiliency* CodeTour:
+Using the Demo Time panel in the VSCode explorer, start the *4 - Dapr Resiliency* demo:
 
-![CodeTour Failure & Resiliency](./images/codetour-dapr-resiliency.png)
+![Demo Time](./images/demo-time.png)
 
 ### ResiliencyDemo
 
@@ -107,11 +107,11 @@ graph LR
 
 ![Reliability details](./images/conductor2.png)
 
-## Running the Durable Execution & Workflow CodeTour
+## Run the Durable Execution & Workflow demo with Demo Time
 
-Using the CodeTour panel in the VSCode explorer, start the *4 - Durable Execution & Workflow* CodeTour:
+Using the Demo Time panel in the VSCode explorer, start the *3 - Durable Execution & Workflow* demo:
 
-![CodeTour Durable Execution & Workflow](./images/codetour-durable-execution.png)
+![Demo Time](./images/demo-time.png)
 
 ### WorkflowDemo
 

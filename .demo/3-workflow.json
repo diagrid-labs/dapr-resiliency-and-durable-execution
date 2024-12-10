@@ -2,7 +2,6 @@
   "$schema": "https://elio.dev/demo-time.schema.json",
   "title": "3 - Durable Execution & Dapr Workflow",
   "description": "",
-  "highlightBorderColor": "rgba(254,174,52,1)",
   "demos": [
     {
       "title": "What problem are we solving?",
@@ -11,6 +10,10 @@
         "end": "pass-filled"
       },
       "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
         {
           "action": "markdownPreview",
           "path": ".demo/3-workflow/01-problem.md"
@@ -153,6 +156,10 @@
         "end": "pass-filled"
       },
       "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.focusSideBar"
+        },
         {
           "action": "markdownPreview",
           "path": ".demo/3-workflow/12-workflow-demo.md"
@@ -322,13 +329,20 @@
     {
       "title": "Stop the apps",
       "icons": {
-        "start": "person",
+        "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
+        },
+        {
           "action": "showInfoMessage",
-          "message": "Stop the apps to simulate a failure!"
+          "message": "Apps have been stopped to simulate a failure!"
         }
       ]
     },
@@ -387,7 +401,7 @@
       ]
     },
     {
-      "title": "ShippingApp/Program.cs",
+      "title": "Simulate issue in Program.cs",
       "icons": {
         "start": "code",
         "end": "pass-filled"
@@ -397,6 +411,21 @@
           "action": "highlight",
           "path": "WorkflowDemo/ShippingApp/Program.cs",
           "position": "23"
+        }
+      ]
+    },
+    {
+      "title": "Insert exception",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "replace",
+          "path": "WorkflowDemo/ShippingApp/Program.cs",
+          "position": "23",
+          "content": "    return Results.StatusCode(500);"
         }
       ]
     },
@@ -442,15 +471,22 @@
       ]
     },
     {
-      "title": "Stop the apps",
+      "title": "Stop the apps again",
       "icons": {
-        "start": "info",
+        "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
+        },
+        {
           "action": "showInfoMessage",
-          "message": "Stop running the apps."
+          "message": "Apps have been stopped."
         }
       ]
     },

@@ -2,7 +2,6 @@
   "$schema": "https://elio.dev/demo-time.schema.json",
   "title": "4 - Dapr Resiliency",
   "description": "",
-  "highlightBorderColor": "rgba(254,174,52,1)",
   "demos": [
     {
       "title": "Dapr Resiliency",
@@ -167,15 +166,18 @@
       ]
     },
     {
-      "title": "Stop the apps",
+      "title": "Stop the ResiliencyDemo",
       "icons": {
-        "start": "person",
+        "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "showInfoMessage",
-          "message": "Stop the apps."
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
         }
       ]
     },
@@ -251,7 +253,23 @@
       ]
     },
     {
-      "title": "Stop the apps",
+      "title": "Stop AppA",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Stop AppB",
       "icons": {
         "start": "person",
         "end": "pass-filled"
@@ -259,7 +277,7 @@
       "steps": [
         {
           "action": "showInfoMessage",
-          "message": "Stop AppA and AppB."
+          "message": "Stop AppB."
         }
       ]
     },

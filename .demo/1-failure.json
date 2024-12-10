@@ -11,6 +11,10 @@
       },
       "steps": [
         {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
+        {
           "action": "markdownPreview",
           "path": ".demo/1-failure/01-lessons.md"
         }

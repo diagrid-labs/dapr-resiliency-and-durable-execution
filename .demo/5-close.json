@@ -1,10 +1,10 @@
 {
   "$schema": "https://elio.dev/demo-time.schema.json",
-  "title": "0 - Intro",
+  "title": "5 - Close",
   "description": "",
   "demos": [
     {
-      "title": "Title",
+      "title": "Dapr website",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -15,17 +15,13 @@
           "command": "workbench.action.terminal.killAll"
         },
         {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.closeSidebar"
-        },
-        {
           "action": "markdownPreview",
-          "path": ".demo/0-intro/01-title.md"
+          "path": ".demo/5-close/01-dapr-website.md"
         }
       ]
     },
     {
-      "title": "Failure is inevitable",
+      "title": "QR codes",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -33,24 +29,20 @@
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/0-intro/02-failure.md"
+          "path": ".demo/5-close/02-qr-codes.md"
         }
       ]
     },
     {
-      "title": "Marc Duiker",
+      "title": "Supporter badge",
       "icons": {
         "start": "note",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.toggleSidebarVisibility"
-        },
-        {
           "action": "markdownPreview",
-          "path": ".demo/0-intro/03-marc.md"
+          "path": ".demo/5-close/03-supporter-badge.md"
         }
       ]
     }

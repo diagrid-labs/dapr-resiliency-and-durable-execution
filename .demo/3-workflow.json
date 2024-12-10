@@ -161,6 +161,10 @@
           "command": "workbench.action.focusSideBar"
         },
         {
+          "action": "executeTerminalCommand",
+          "command": "cd WorkflowDemo"
+        },
+        {
           "action": "markdownPreview",
           "path": ".demo/3-workflow/12-workflow-demo.md"
         }
@@ -265,6 +269,20 @@
       ]
     },
     {
+      "title": "Workflow Program.cs",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/WorkflowApp/Program.cs",
+          "position": "1"
+        }
+      ]
+    },
+    {
       "title": "Workflow process issue",
       "icons": {
         "start": "note",
@@ -288,10 +306,6 @@
         "end": "pass-filled"
       },
       "steps": [
-        {
-          "action": "executeTerminalCommand",
-          "command": "cd WorkflowDemo"
-        },
         {
           "action": "executeTerminalCommand",
           "command": "dapr run -f ."

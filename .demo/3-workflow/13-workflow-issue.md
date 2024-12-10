@@ -1,6 +1,6 @@
-# Workflow issue
+# Simulate issue
 
-Simulate an issue with the workflow process
+Simulate an issue during the execution of the workflow process.
 
 1. Ensure you're in the WorkflowDemo folder.
 2. Run the demo with Dapr multi-app run:

@@ -4,6 +4,28 @@
   "description": "",
   "demos": [
     {
+      "title": "p5js sketch",
+      "icons": {
+        "start": "vm",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "simpleBrowser.show",
+          "args": "https://editor.p5js.org/marcduiker/full/aAuUfcs9-"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
+        }
+      ]
+    },
+    {
       "title": "Title",
       "icons": {
         "start": "note",

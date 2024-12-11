@@ -283,6 +283,34 @@
       ]
     },
     {
+      "title": "State Store Component",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/Resources/statestore.yaml",
+          "position": "13"
+        }
+      ]
+    },
+    {
+      "title": "Dapr Multi-app Run",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/dapr.yaml",
+          "position": "1"
+        }
+      ]
+    },
+    {
       "title": "Workflow process issue",
       "icons": {
         "start": "note",
@@ -341,7 +369,7 @@
       ]
     },
     {
-      "title": "Stop the apps",
+      "title": "Stop the apps 1",
       "icons": {
         "start": "terminal-cmd",
         "end": "pass-filled"
@@ -374,30 +402,22 @@
       ]
     },
     {
-      "title": "Restart workflow",
+      "title": "Stop the apps 2",
       "icons": {
-        "start": "symbol-event",
+        "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "highlight",
-          "path": "WorkflowDemo/local.http",
-          "position": "22"
-        }
-      ]
-    },
-    {
-      "title": "Get workflow status",
-      "icons": {
-        "start": "symbol-event",
-        "end": "pass-filled"
-      },
-      "steps": [
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
+        },
         {
-          "action": "highlight",
-          "path": "WorkflowDemo/local.http",
-          "position": "40"
+          "action": "showInfoMessage",
+          "message": "Apps have been stopped."
         }
       ]
     },
@@ -444,7 +464,7 @@
       ]
     },
     {
-      "title": "Run the apps",
+      "title": "Run the apps again",
       "icons": {
         "start": "terminal-cmd",
         "end": "pass-filled"
@@ -485,7 +505,7 @@
       ]
     },
     {
-      "title": "Stop the apps again",
+      "title": "Stop the apps 3",
       "icons": {
         "start": "terminal-cmd",
         "end": "pass-filled"

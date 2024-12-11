@@ -1,4 +1,4 @@
-# Simulate an issue with the state store 
+# Simulate an issue with the state store
 
 Let's start both apps, but make the state store temporarily unavailable.
 

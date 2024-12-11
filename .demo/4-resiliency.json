@@ -98,7 +98,7 @@
         {
           "action": "highlight",
           "path": "ResiliencyDemo/AppB/Program.cs",
-          "position": "1"
+          "position": "8"
         }
       ]
     },
@@ -131,53 +131,10 @@
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.focus"
-        }
-      ]
-    },
-    {
-      "title": "Run Apps",
-      "icons": {
-        "start": "terminal-cmd",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "executeTerminalCommand",
-          "command": "cd ResiliencyDemo"
         },
         {
           "action": "executeTerminalCommand",
-          "command": "dapr run -f ."
-        }
-      ]
-    },
-    {
-      "title": "Call AppA",
-      "icons": {
-        "start": "symbol-event",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/local.http",
-          "position": "6"
-        }
-      ]
-    },
-    {
-      "title": "Stop the ResiliencyDemo",
-      "icons": {
-        "start": "terminal-cmd",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.sendSequence",
-          "args": {
-            "text": "\u0003"
-          }
+          "command": "cd ResiliencyDemo"
         }
       ]
     },
@@ -271,13 +228,16 @@
     {
       "title": "Stop AppB",
       "icons": {
-        "start": "person",
+        "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "showInfoMessage",
-          "message": "Stop AppB."
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
         }
       ]
     },
@@ -292,6 +252,14 @@
           "action": "highlight",
           "path": "ResiliencyDemo/Resources/resiliency.yaml",
           "position": "3"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
         }
       ]
     },
@@ -347,11 +315,19 @@
           "action": "markdownPreview",
           "path": ".demo/4-resiliency/06-simulate-issue2.md",
           "position": "3"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.focus"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd ResiliencyDemo"
         }
       ]
     },
     {
-      "title": "Run Apps",
+      "title": "Run ResiliencyDemo 2",
       "icons": {
         "start": "terminal-cmd",
         "end": "pass-filled"
@@ -391,15 +367,22 @@
       ]
     },
     {
-      "title": "Stop the apps",
+      "title": "Stop ResiliencyDemo 2",
       "icons": {
-        "start": "person",
+        "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "\u0003"
+          }
+        },
+        {
           "action": "showInfoMessage",
-          "message": "Stop AppA and AppB."
+          "message": "Stopped AppA and AppB."
         }
       ]
     }

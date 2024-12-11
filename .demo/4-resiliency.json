@@ -323,7 +323,7 @@
       ]
     },
     {
-      "title": "resiliency.yaml",
+      "title": "Default StateStore policy",
       "icons": {
         "start": "code",
         "end": "pass-filled"

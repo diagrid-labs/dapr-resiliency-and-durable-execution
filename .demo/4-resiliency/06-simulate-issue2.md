@@ -5,7 +5,7 @@ Let's start both apps, but make the state store temporarily unavailable.
 1. Navigate to the ResiliencyDemo folder and run AppA and AppB with multi-app run:
 
    ```bash
-   dapr run -f
+   dapr run -f .
    ```
 
 2. Open a new terminal and stop the `dapr_redis` container:

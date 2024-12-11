@@ -323,6 +323,10 @@
         {
           "action": "executeTerminalCommand",
           "command": "cd ResiliencyDemo"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.split"
         }
       ]
     },

@@ -15,6 +15,10 @@
           "command": "workbench.action.terminal.killAll"
         },
         {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
+        {
           "action": "markdownPreview",
           "path": ".demo/5-close/01-dapr-website.md"
         }

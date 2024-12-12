@@ -17,6 +17,10 @@
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.killAll"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
         }
       ]
     },
@@ -43,6 +47,10 @@
         {
           "action": "markdownPreview",
           "path": ".demo/4-resiliency/03-resiliency-demo.md"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.focusSideBar"
         }
       ]
     },

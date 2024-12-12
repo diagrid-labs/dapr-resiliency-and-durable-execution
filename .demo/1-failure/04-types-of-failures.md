@@ -10,5 +10,5 @@ Permanent failures are the opposite of transient failures and they do require hu
 
 ## We need different approaches to handle different types of failures
 
-- Retries are useful to handle transient failures.
-- Circuit breakers are useful to handle permanent failures.
+- [Retries](https://learn.microsoft.com/azure/architecture/patterns/retry) are useful to handle transient failures.
+- [Circuit breakers](https://learn.microsoft.com/azure/architecture/patterns/circuit-breaker) are useful to handle permanent failures.

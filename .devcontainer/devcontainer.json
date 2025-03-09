@@ -4,9 +4,8 @@
 	"name": "C# (.NET)",
 	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
-		// The Dapr feature is broken atm, install via post-create script for now.
-		// "ghcr.io/dapr/cli/dapr-cli:0": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/dapr/cli/dapr-cli:0": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

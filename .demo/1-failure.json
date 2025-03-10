@@ -58,6 +58,19 @@
           "path": ".demo/1-failure/04-types-of-failures.md"
         }
       ]
+    },
+    {
+      "title": "Failure approaches",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/1-failure/05-failure-approaches.md"
+        }
+      ]
     }
   ]
 }

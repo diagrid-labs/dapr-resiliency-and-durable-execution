@@ -14,13 +14,13 @@ namespace WorkflowApp
 
             if (inventoryResult.IsSufficientStock)
             {
-                string[] shippingServices = [
-                    "Shipping Service A",
-                    "Shipping Service B",
-                    "Shipping Service C"];
+                var getShippingServicesResult = await context.CallActivityAsync<GetShippingServicesResult>(
+                    nameof(GetShippingServices),
+                    new GetShippingServicesRequest(order));
+
                 List<Task<ShippingCostResult>> shippingCostResultTasks = [];
 
-                foreach (var shippingService in shippingServices)
+                foreach (var shippingService in getShippingServicesResult.ShippingServices)
                 {
                     ShippingCostRequest shippingRequest = new(shippingService, order);
                     shippingCostResultTasks.Add(context.CallActivityAsync<ShippingCostResult>(

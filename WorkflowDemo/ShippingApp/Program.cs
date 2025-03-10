@@ -5,7 +5,7 @@ var app = builder.Build();
 app.MapPost("/calculateCost", (
     ShippingCostRequest shippingRequest) => {
     Console.WriteLine($"{shippingRequest.ShippingService}: Getting shipping costs for order {shippingRequest.Order.Id}.");
-    Thread.Sleep(3000); //😱
+    Thread.Sleep(5000); //😱
     ShippingCostResult shippingResult = new(
         shippingRequest.ShippingService,
         IsShippingAvailable: true,

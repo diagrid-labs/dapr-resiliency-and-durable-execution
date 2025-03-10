@@ -207,7 +207,7 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/UpdateInventory.cs",
+          "path": "WorkflowDemo/WorkflowApp/Activities/UpdateInventory.cs",
           "position": "6"
         }
       ]
@@ -221,7 +221,7 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/GetShippingCost.cs",
+          "path": "WorkflowDemo/WorkflowApp/Activities/GetShippingCost.cs",
           "position": "5"
         }
       ]
@@ -249,7 +249,7 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/RegisterShipment.cs",
+          "path": "WorkflowDemo/WorkflowApp/Activities/RegisterShipment.cs",
           "position": "6"
         }
       ]

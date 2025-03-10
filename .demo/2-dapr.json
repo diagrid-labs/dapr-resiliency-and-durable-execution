@@ -21,19 +21,6 @@
       ]
     },
     {
-      "title": "Distributed apps with Dapr",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "markdownPreview",
-          "path": ".demo/2-dapr/03-distributed-apps2.md"
-        }
-      ]
-    },
-    {
       "title": "Dapr APIs",
       "icons": {
         "start": "note",
@@ -43,6 +30,19 @@
         {
           "action": "markdownPreview",
           "path": ".demo/2-dapr/04-apis.md"
+        }
+      ]
+    },
+    {
+      "title": "Dapr University",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/2-dapr/05-dapr-university.md"
         }
       ]
     }

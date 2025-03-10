@@ -1,1 +1,1 @@
-![spreaview](../../images/spreaview-bitbash-marcduiker.png)
+![spreaview](../../images/spreaview-futuretech-marcduiker.png)

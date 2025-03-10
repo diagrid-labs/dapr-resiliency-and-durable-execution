@@ -55,20 +55,6 @@
       ]
     },
     {
-      "title": "AppA.csproj",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/AppA/AppA.csproj",
-          "position": "10"
-        }
-      ]
-    },
-    {
       "title": "AppA Program.cs",
       "icons": {
         "start": "code",
@@ -79,20 +65,6 @@
           "action": "highlight",
           "path": "ResiliencyDemo/AppA/Program.cs",
           "position": "1"
-        }
-      ]
-    },
-    {
-      "title": "AppB.csproj",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/AppB/AppB.csproj",
-          "position": "10"
         }
       ]
     },

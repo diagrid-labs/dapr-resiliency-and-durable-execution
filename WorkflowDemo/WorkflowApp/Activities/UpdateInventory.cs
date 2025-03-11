@@ -36,7 +36,6 @@ namespace WorkflowApp
                     _logger.LogInformation("Reduced inventory for product {ProductId} with quantity {ProductQuantity}", updatedInventory.ProductId, orderItem.Quantity);
 
                     return new InventoryResult(IsKnownProduct: true, IsSufficientStock: true);
-                    
                 }
                 else
                 {
@@ -44,7 +43,6 @@ namespace WorkflowApp
 
                     return new InventoryResult(IsKnownProduct: true, IsSufficientStock: false);
                 }
-                
             }
 
             _logger.LogInformation("Unknown inventory productId {ProductId}.", orderItem.ProductId);

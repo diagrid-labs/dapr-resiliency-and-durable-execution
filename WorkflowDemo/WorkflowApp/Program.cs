@@ -11,7 +11,7 @@ builder.Services.AddDaprWorkflow(options =>{
     options.RegisterActivity<UpdateInventory>();
     options.RegisterActivity<UndoUpdateInventory>();
     options.RegisterActivity<GetShippingCost>();
-    options.RegisterActivity<GetShippingServices>();
+    options.RegisterActivity<GetShippingProviders>();
     options.RegisterActivity<RegisterShipment>();
 });
 var app = builder.Build();

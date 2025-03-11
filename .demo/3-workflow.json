@@ -161,10 +161,6 @@
           "command": "workbench.action.focusSideBar"
         },
         {
-          "action": "executeTerminalCommand",
-          "command": "cd WorkflowDemo"
-        },
-        {
           "action": "markdownPreview",
           "path": ".demo/3-workflow/12-workflow-demo.md"
         }
@@ -324,6 +320,10 @@
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.focus"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd WorkflowDemo"
         }
       ]
     },

@@ -16,7 +16,11 @@ namespace WorkflowApp
             {
                 var getShippingProvidersResult = await context.CallActivityAsync<GetShippingProvidersResult>(
                     nameof(GetShippingProviders),
-                    new GetShippingProvidersRequest(order));
+                    new GetShippingProvidersRequest(order),
+                    new WorkflowTaskOptions(
+                        new WorkflowRetryPolicy(
+                            maxNumberOfAttempts: 3,
+                            firstRetryInterval: TimeSpan.FromSeconds(2))));
 
                 List<Task<ShippingCostResult>> shippingCostResultTasks = [];
 

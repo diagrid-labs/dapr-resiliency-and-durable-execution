@@ -37,10 +37,10 @@ Content-Type: application/json
 
 ### GET workflow status directly via the Dapr HTTP API
 @instanceId={{validateOrderResponse.response.headers.Location}}
-GET {{dapr-url}}/v1.0-beta1/workflows/dapr/{{instanceId}}
+GET {{dapr-url}}/v1.0/workflows/dapr/{{instanceId}}
 
 ### Schedule a workflow instance directly via the Dapr HTTP API
-POST {{dapr-url}}/v1.0-beta1/workflows/dapr/ValidateOrderWorkflow/start?instanceID={{orderId}}
+POST {{dapr-url}}/v1.0/workflows/dapr/ValidateOrderWorkflow/start?instanceID={{orderId}}
 Content-Type: application/json
 
 {

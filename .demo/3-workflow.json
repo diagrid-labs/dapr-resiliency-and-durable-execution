@@ -167,6 +167,19 @@
       ]
     },
     {
+      "title": "ValidateOrder Workflow",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/12b-workflow-diagram.md"
+        }
+      ]
+    },
+    {
       "title": "WorkflowApp.csproj",
       "icons": {
         "start": "code",

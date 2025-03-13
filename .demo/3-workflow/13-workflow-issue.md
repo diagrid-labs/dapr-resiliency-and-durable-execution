@@ -1,6 +1,6 @@
-# Simulate issue
+# Simulate process outage
 
-Simulate an issue during the execution of the workflow process.
+Simulate a process outage during the execution of the workflow process.
 
 1. Ensure you're in the WorkflowDemo folder.
 2. Run the demo with Dapr multi-app run:

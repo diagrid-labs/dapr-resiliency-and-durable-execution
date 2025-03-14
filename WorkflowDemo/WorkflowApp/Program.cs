@@ -5,21 +5,25 @@ using WorkflowApp;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<HttpClient>(DaprClient.CreateInvokeHttpClient(appId: "shipping"));
 builder.Services.AddDaprClient();
-builder.Services.AddDaprWorkflowClient();
+
 builder.Services.AddDaprWorkflow(options =>{
     options.RegisterWorkflow<ValidateOrderWorkflow>();
     options.RegisterActivity<UpdateInventory>();
     options.RegisterActivity<UndoUpdateInventory>();
     options.RegisterActivity<GetShippingCost>();
+    options.RegisterActivity<GetShippingProviders>();
     options.RegisterActivity<RegisterShipment>();
 });
 var app = builder.Build();
 
 app.MapPost("/validateOrder", async (
-    Order order,
-    DaprWorkflowClient daprWorkflowClient
+    Order order
     ) => {
         Console.WriteLine($"Validating order {order.Id} for.");
+        
+        await using var scope = app.Services.CreateAsyncScope();
+        var daprWorkflowClient = scope.ServiceProvider.GetRequiredService<DaprWorkflowClient>();
+
         var instanceId = await daprWorkflowClient.ScheduleNewWorkflowAsync(
             nameof(ValidateOrderWorkflow),
             instanceId: order.Id,

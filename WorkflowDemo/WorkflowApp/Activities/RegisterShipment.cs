@@ -22,7 +22,7 @@ namespace WorkflowApp
                 throw new Exception($"Failed to register shipment. Reason: {response.ReasonPhrase}.");
             }
             var result = await response.Content.ReadFromJsonAsync<RegisterShipmentResult>();
-            
+
             _logger.LogInformation("{ShippingService}: Registered shipment for order {Order}.", request.ShippingService, request.Order.Id);
 
             return result;

@@ -38,25 +38,16 @@
       ]
     },
     {
-      "title": "Supporter badge",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "markdownPreview",
-          "path": ".demo/5-close/03-supporter-badge.md"
-        }
-      ]
-    },
-    {
       "title": "Review my session",
       "icons": {
         "start": "note",
         "end": "pass-filled"
       },
       "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.focusSideBar"
+        },
         {
           "action": "markdownPreview",
           "path": ".demo/5-close/04-review-session.md"

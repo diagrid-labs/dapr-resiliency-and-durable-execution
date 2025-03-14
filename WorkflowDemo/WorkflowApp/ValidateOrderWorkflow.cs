@@ -14,15 +14,19 @@ namespace WorkflowApp
 
             if (inventoryResult.IsSufficientStock)
             {
-                string[] shippingServices = [
-                    "Shipping Service A",
-                    "Shipping Service B",
-                    "Shipping Service C"];
+                var getShippingProvidersResult = await context.CallActivityAsync<GetShippingProvidersResult>(
+                    nameof(GetShippingProviders),
+                    new GetShippingProvidersRequest(order),
+                    new WorkflowTaskOptions(
+                        new WorkflowRetryPolicy(
+                            maxNumberOfAttempts: 3,
+                            firstRetryInterval: TimeSpan.FromSeconds(2))));
+
                 List<Task<ShippingCostResult>> shippingCostResultTasks = [];
 
-                foreach (var shippingService in shippingServices)
+                foreach (var shippingProvider in getShippingProvidersResult.ShippingProviders)
                 {
-                    ShippingCostRequest shippingRequest = new(shippingService, order);
+                    ShippingCostRequest shippingRequest = new(shippingProvider, order);
                     shippingCostResultTasks.Add(context.CallActivityAsync<ShippingCostResult>(
                         nameof(GetShippingCost),
                         shippingRequest));
@@ -40,6 +44,7 @@ namespace WorkflowApp
                 }
                 catch (WorkflowTaskFailedException ex)
                 {
+                    // You can check the ex.InnerException if needed
                     // Compensation action
                     Console.WriteLine($"RegisterShipment activity failed: {ex.Message}");
                     var undoResult = await context.CallActivityAsync<InventoryResult>(

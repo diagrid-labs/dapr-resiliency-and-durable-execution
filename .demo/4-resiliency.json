@@ -4,16 +4,12 @@
   "description": "",
   "demos": [
     {
-      "title": "Dapr Resiliency",
+      "title": "Types of failures",
       "icons": {
         "start": "note",
         "end": "pass-filled"
       },
       "steps": [
-        {
-          "action": "markdownPreview",
-          "path": ".demo/4-resiliency/01-dapr-resiliency.md"
-        },
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.killAll"
@@ -21,6 +17,23 @@
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.closeSidebar"
+        },
+        {
+          "action": "markdownPreview",
+          "path": ".demo/1-failure/04-types-of-failures.md"
+        }
+      ]
+    },
+    {
+      "title": "Failure approaches",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/1-failure/05-failure-approaches.md"
         }
       ]
     },
@@ -55,20 +68,6 @@
       ]
     },
     {
-      "title": "AppA.csproj",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/AppA/AppA.csproj",
-          "position": "10"
-        }
-      ]
-    },
-    {
       "title": "AppA Program.cs",
       "icons": {
         "start": "code",
@@ -79,20 +78,6 @@
           "action": "highlight",
           "path": "ResiliencyDemo/AppA/Program.cs",
           "position": "1"
-        }
-      ]
-    },
-    {
-      "title": "AppB.csproj",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/AppB/AppB.csproj",
-          "position": "10"
         }
       ]
     },

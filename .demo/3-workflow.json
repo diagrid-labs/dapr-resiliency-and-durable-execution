@@ -161,12 +161,21 @@
           "command": "workbench.action.focusSideBar"
         },
         {
-          "action": "executeTerminalCommand",
-          "command": "cd WorkflowDemo"
-        },
-        {
           "action": "markdownPreview",
           "path": ".demo/3-workflow/12-workflow-demo.md"
+        }
+      ]
+    },
+    {
+      "title": "ValidateOrder Workflow",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "markdownPreview",
+          "path": ".demo/3-workflow/12b-workflow-diagram.md"
         }
       ]
     },
@@ -207,7 +216,7 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/UpdateInventory.cs",
+          "path": "WorkflowDemo/WorkflowApp/Activities/UpdateInventory.cs",
           "position": "6"
         }
       ]
@@ -221,7 +230,7 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/GetShippingCost.cs",
+          "path": "WorkflowDemo/WorkflowApp/Activities/GetShippingCost.cs",
           "position": "5"
         }
       ]
@@ -249,7 +258,7 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/RegisterShipment.cs",
+          "path": "WorkflowDemo/WorkflowApp/Activities/RegisterShipment.cs",
           "position": "6"
         }
       ]
@@ -324,6 +333,10 @@
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.focus"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd WorkflowDemo"
         }
       ]
     },

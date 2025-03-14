@@ -15,4 +15,4 @@ apps:
     daprHTTPPort: 3506
     command: ["dotnet", "run"]
     appLogDestination: fileAndConsole
-    daprdLogDestination: fileAndConsole
+    #daprdLogDestination: fileAndConsole

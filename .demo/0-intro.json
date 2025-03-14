@@ -13,7 +13,7 @@
         {
           "action": "executeVSCodeCommand",
           "command": "simpleBrowser.show",
-          "args": "https://editor.p5js.org/marcduiker/full/Bvjm3HNC3"
+          "args": "https://editor.p5js.org/marcduiker/full/4OFNUMKHV"
         },
         {
           "action": "executeVSCodeCommand",
@@ -68,7 +68,7 @@
       "steps": [
         {
           "action": "executeVSCodeCommand",
-          "command": "workbench.action.toggleSidebarVisibility"
+          "command": "workbench.action.focusSideBar"
         },
         {
           "action": "markdownPreview",

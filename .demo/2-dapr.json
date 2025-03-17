@@ -15,7 +15,7 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/2-dapr/02-dapr-website.md"
         }
       ]
@@ -28,7 +28,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/2-dapr/04-apis.md"
         }
       ]
@@ -41,7 +41,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/2-dapr/05-dapr-university.md"
         }
       ]

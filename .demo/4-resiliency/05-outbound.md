@@ -1,3 +1,3 @@
 # Outbound Resiliency 
 
-![outbound resiliency](../../images/resiliency-outbound.PNG)
+![outbound resiliency](images/resiliency-outbound.PNG)

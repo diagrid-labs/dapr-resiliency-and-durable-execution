@@ -1,1 +1,4 @@
-![opening1](../../images/title.PNG)
+---
+layout: image
+image: images/title.PNG
+---

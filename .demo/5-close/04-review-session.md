@@ -1,1 +1,1 @@
-![spreaview](../../images/spreaview-futuretech-marcduiker.png)
+![spreaview](images/spreaview-futuretech-marcduiker.png)

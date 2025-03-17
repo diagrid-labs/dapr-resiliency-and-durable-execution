@@ -1,1 +1,1 @@
-![components](../../images/components.PNG)
+![components](images/components.PNG)

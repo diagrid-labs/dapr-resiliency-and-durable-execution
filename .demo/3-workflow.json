@@ -15,7 +15,7 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/01-problem.md"
         }
       ]
@@ -28,7 +28,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/02-durable-execution.md"
         }
       ]
@@ -53,7 +53,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/04-workflow-replay.md"
         }
       ]
@@ -66,7 +66,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/05-workflow-as-code.md"
         }
       ]
@@ -79,7 +79,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/06-task-chaining.md"
         }
       ]
@@ -92,7 +92,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/07-fanout-fanin.md"
         }
       ]
@@ -105,7 +105,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/08-monitor.md"
         }
       ]
@@ -118,7 +118,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/09-external-system.md"
         }
       ]
@@ -131,7 +131,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/10-workflow-example.md"
         }
       ]
@@ -144,7 +144,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/11-dapr-workflow-engine.md"
         }
       ]
@@ -327,7 +327,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/13-workflow-issue.md"
         },
         {
@@ -442,7 +442,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/14-register-issue.md"
         }
       ]
@@ -545,7 +545,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/15-challenges.md"
         },
         {

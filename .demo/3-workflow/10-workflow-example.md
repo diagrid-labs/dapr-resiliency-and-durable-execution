@@ -1,1 +1,1 @@
-![Workflow example](../../images/workflow-example.PNG)
+![Workflow example](images/workflow-example.PNG)

@@ -19,7 +19,7 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/1-failure/04-types-of-failures.md"
         }
       ]
@@ -32,7 +32,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/1-failure/05-failure-approaches.md"
         }
       ]
@@ -45,7 +45,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/4-resiliency/02-s2s-resiliency.md"
         }
       ]
@@ -139,7 +139,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/4-resiliency/04-simulate-issue1.md",
           "position": "6"
         }
@@ -264,7 +264,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/4-resiliency/08-resiliency-builder.md"
         }
       ]
@@ -277,7 +277,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/4-resiliency/05-outbound.md",
           "position": "3"
         }
@@ -305,7 +305,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/4-resiliency/06-simulate-issue2.md",
           "position": "3"
         },

@@ -1,3 +1,6 @@
 {
-    "comments.maxHeight": false
+    "comments.maxHeight": false,
+    "workbench.statusBar.visible": true,
+    "workbench.editor.showTabs": "single",
+    "workbench.activityBar.location": "default"
 }

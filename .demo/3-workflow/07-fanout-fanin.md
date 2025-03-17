@@ -1,1 +1,1 @@
-![Fan-out/fan-in](../../images/workflow-fanoutin.PNG)
+![Fan-out/fan-in](images/workflow-fanoutin.PNG)

@@ -19,7 +19,7 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/5-close/01-dapr-website.md"
         }
       ]
@@ -32,25 +32,8 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/5-close/02-qr-codes.md"
-        }
-      ]
-    },
-    {
-      "title": "Review my session",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.focusSideBar"
-        },
-        {
-          "action": "markdownPreview",
-          "path": ".demo/5-close/04-review-session.md"
         }
       ]
     }

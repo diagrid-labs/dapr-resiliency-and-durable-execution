@@ -1,1 +1,1 @@
-![Task chaining](../../images/workflow-task-chaining.PNG)
+![Task chaining](images/workflow-task-chaining.PNG)

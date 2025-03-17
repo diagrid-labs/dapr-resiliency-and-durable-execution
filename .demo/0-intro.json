@@ -4,28 +4,6 @@
   "description": "",
   "demos": [
     {
-      "title": "p5js sketch",
-      "icons": {
-        "start": "vm",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "executeVSCodeCommand",
-          "command": "simpleBrowser.show",
-          "args": "https://editor.p5js.org/marcduiker/full/4OFNUMKHV"
-        },
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.closeSidebar"
-        },
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.killAll"
-        }
-      ]
-    },
-    {
       "title": "Title",
       "icons": {
         "start": "note",
@@ -41,7 +19,7 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/0-intro/01-title.md"
         }
       ]
@@ -54,7 +32,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/0-intro/02-failure.md"
         }
       ]
@@ -67,11 +45,7 @@
       },
       "steps": [
         {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.focusSideBar"
-        },
-        {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/0-intro/03-marc.md"
         }
       ]

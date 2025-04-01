@@ -53,7 +53,7 @@
       },
       "steps": [
         {
-          "action": "openSlide",
+          "action": "markdownPreview",
           "path": ".demo/3-workflow/04-workflow-replay.md"
         }
       ]
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "title": "ValidateOrder Workflow",
+      "title": "ValidateOrder Workflow Code",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -176,20 +176,6 @@
         {
           "action": "markdownPreview",
           "path": ".demo/3-workflow/12b-workflow-diagram.md"
-        }
-      ]
-    },
-    {
-      "title": "WorkflowApp.csproj",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/WorkflowApp.csproj",
-          "position": "10"
         }
       ]
     },
@@ -222,63 +208,7 @@
       ]
     },
     {
-      "title": "GetShipingCost Activity",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/Activities/GetShippingCost.cs",
-          "position": "5"
-        }
-      ]
-    },
-    {
-      "title": "ShippingApp calculateCost endpoint",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "WorkflowDemo/ShippingApp/Program.cs",
-          "position": "5"
-        }
-      ]
-    },
-    {
-      "title": "RegisterShipment Activity",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "WorkflowDemo/WorkflowApp/Activities/RegisterShipment.cs",
-          "position": "6"
-        }
-      ]
-    },
-    {
-      "title": "ShippingApp registerShipment",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "WorkflowDemo/ShippingApp/Program.cs",
-          "position": "17"
-        }
-      ]
-    },
-    {
-      "title": "Workflow Program.cs",
+      "title": "Entry point",
       "icons": {
         "start": "code",
         "end": "pass-filled"
@@ -287,7 +217,7 @@
         {
           "action": "highlight",
           "path": "WorkflowDemo/WorkflowApp/Program.cs",
-          "position": "1"
+          "position": "9"
         }
       ]
     },
@@ -327,7 +257,7 @@
       },
       "steps": [
         {
-          "action": "openSlide",
+          "action": "markdownPreview",
           "path": ".demo/3-workflow/13-workflow-issue.md"
         },
         {

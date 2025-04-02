@@ -1,17 +1,9 @@
-﻿using Dapr.Client;
-using Dapr.Workflow;
+﻿using Dapr.Workflow;
 
 namespace WorkflowApp
 {
     public class NonIdempotentActivity : WorkflowActivity<OrderItem, InventoryResult>
     {
-        private readonly DaprClient _daprClient;
-        private const string StateStoreComponentName = "inventory";
-
-        public NonIdempotentActivity(DaprClient daprClient)
-        {
-            _daprClient = daprClient;
-        }
 
         public override async Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem orderItem)
         {
@@ -19,28 +11,11 @@ namespace WorkflowApp
             // For instance, can you save a record to a database twice without side effects?
             // Dapr Workflow guarantees at-least-once execution of activities.
             // So activities might be executed more than once.
-            await _daprClient.SaveStateAsync(
-                StateStoreComponentName,
-                orderItem.ProductId,
-                orderItem.Quantity);
+
+            // Do a read operation to check if a record exists, before inserting it again.
+            // Maybe the API you use in the activity natively supports idempotent operations.
 
             return new InventoryResult(IsKnownProduct: true, IsSufficientStock: true);
         }
-
-        // public override async Task<InventoryResult> RunAsync(WorkflowActivityContext context, OrderItem orderItem)
-        // {
-        //     var inventory = await _daprClient.GetStateAsync<ProductInventory>(
-        //         StateStoreComponentName,
-        //         orderItem.ProductId);
-        //     if (inventory == null)
-        //     {
-        //         await _daprClient.SaveStateAsync(
-        //             StateStoreComponentName,
-        //             orderItem.ProductId,
-        //             orderItem.Quantity);
-        //     }
-
-        //     return new InventoryResult(IsKnownProduct: true, IsSufficientStock: true);
-        // }
     }
 }

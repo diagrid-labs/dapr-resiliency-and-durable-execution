@@ -45,7 +45,8 @@
           "path": ".demo/3-workflow/03-workflow-engines.md"
         }
       ]
-    },{
+    },
+    {
       "title": "Workflow replay",
       "icons": {
         "start": "note",

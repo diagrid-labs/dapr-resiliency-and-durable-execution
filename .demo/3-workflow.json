@@ -550,6 +550,20 @@
       ]
     },
     {
+      "title": "Check workflow status",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": "40"
+        }
+      ]
+    },
+    {
       "title": "Register shipment issue",
       "icons": {
         "start": "note",

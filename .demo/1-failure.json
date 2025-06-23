@@ -45,6 +45,19 @@
           "path": ".demo/1-failure/03-fallacies.md"
         }
       ]
+    },
+    {
+      "title": "Types of failures",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/1-failure/04-types-of-failures.md"
+        }
+      ]
     }
   ]
 }

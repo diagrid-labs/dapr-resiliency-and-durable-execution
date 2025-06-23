@@ -1,3 +1,3 @@
 # Workflow replay
 
-![Workflow replay](../../images/workflow-replay.gif)
+![Workflow replay](/images/workflow-replay.gif)

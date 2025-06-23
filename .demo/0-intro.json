@@ -41,7 +41,7 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/0-intro/01-title.md"
         }
       ]
@@ -54,7 +54,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/0-intro/02-failure.md"
         }
       ]
@@ -71,7 +71,7 @@
           "command": "workbench.action.focusSideBar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/0-intro/03-marc.md"
         }
       ]

@@ -1,0 +1,1 @@
+![Child Workflows](/images/pattern-child-workflow.png)

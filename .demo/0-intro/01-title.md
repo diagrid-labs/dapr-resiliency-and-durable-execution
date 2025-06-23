@@ -1,1 +1,1 @@
-![opening1](../../images/title.PNG)
+![opening1](/images/title.PNG)

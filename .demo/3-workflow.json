@@ -15,7 +15,7 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/01-problem.md"
         }
       ]
@@ -28,7 +28,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/02-durable-execution.md"
         }
       ]
@@ -41,7 +41,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/03-workflow-engines.md"
         }
       ]
@@ -60,14 +60,27 @@
       ]
     },
     {
-      "title": "Workflow as code",
+      "title": "Workflow as code solutions",
       "icons": {
         "start": "note",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
+          "path": ".demo/3-workflow/05-workflow-as-code-solutions.md"
+        }
+      ]
+    },
+    {
+      "title": "Dapr workflow as code",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
           "path": ".demo/3-workflow/05-workflow-as-code.md"
         }
       ]
@@ -80,7 +93,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/06-task-chaining.md"
         }
       ]
@@ -93,7 +106,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/07-fanout-fanin.md"
         }
       ]
@@ -106,7 +119,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/08-monitor.md"
         }
       ]
@@ -119,8 +132,21 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/09-external-system.md"
+        }
+      ]
+    },
+    {
+      "title": "Child workflows",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/10-child-workflow.md"
         }
       ]
     },
@@ -132,7 +158,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/10-workflow-example.md"
         }
       ]
@@ -145,7 +171,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/11-dapr-workflow-engine.md"
         }
       ]

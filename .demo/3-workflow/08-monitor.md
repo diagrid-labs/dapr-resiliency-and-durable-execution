@@ -1,1 +1,1 @@
-![Monitor](../../images/workflow-monitor.PNG)
+![Monitor](/images/pattern-monitor.png)

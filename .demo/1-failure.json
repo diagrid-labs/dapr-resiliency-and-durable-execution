@@ -28,7 +28,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/1-failure/02-distributed-apps.md"
         }
       ]
@@ -41,7 +41,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/1-failure/03-fallacies.md"
         }
       ]

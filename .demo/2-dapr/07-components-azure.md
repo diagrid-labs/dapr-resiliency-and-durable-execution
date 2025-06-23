@@ -1,1 +1,1 @@
-![Swappable components Azure](../../images/swappable-azure.PNG)
+![Swappable components Azure](/images/swappable-azure.PNG)

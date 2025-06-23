@@ -1,1 +1,1 @@
-![Swappable components local dev](../../images/swappable-local.PNG)
+![Swappable components local dev](/images/swappable-local.PNG)

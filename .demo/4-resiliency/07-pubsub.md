@@ -1,3 +1,3 @@
 # Resiliency with Pub/Sub
 
-![Inbound and outbound resiliency](../../images/resiliency-pubsub.PNG)
+![Inbound and outbound resiliency](/images/resiliency-pubsub.PNG)

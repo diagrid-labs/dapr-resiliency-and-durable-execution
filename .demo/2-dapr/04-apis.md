@@ -1,1 +1,1 @@
-![Dapr dev to hosting](../../images/dev-to-hosting.PNG)
+![Dapr dev to hosting](/images/dapr-app-developer-platform.png)

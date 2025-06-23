@@ -1,1 +1,1 @@
-![Dapr workflow engine](../../images/workflow-engine.PNG)
+![Dapr workflow engine](/images/dapr-workflow-engine.png)

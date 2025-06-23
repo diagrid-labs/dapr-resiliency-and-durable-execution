@@ -1,1 +1,1 @@
-![External System Interaction](../../images/workflow-externalsystem.PNG)
+![External System Interaction](/images/pattern-external-system-interaction.png)

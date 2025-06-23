@@ -1,0 +1,1 @@
+![Durable Execution](/images/durable-execution-section.png)

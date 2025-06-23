@@ -4,7 +4,7 @@
   "description": "",
   "demos": [
     {
-      "title": "Dapr website",
+      "title": "Dapr Website",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -19,38 +19,47 @@
           "command": "workbench.action.closeSidebar"
         },
         {
-          "action": "markdownPreview",
-          "path": ".demo/5-close/01-dapr-website.md"
+          "action": "openSlide",
+          "path": ".demo/5-close/dapr-website.md"
         }
       ]
     },
     {
-      "title": "QR codes",
+      "title": "Dapr University",
       "icons": {
         "start": "note",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "markdownPreview",
-          "path": ".demo/5-close/02-qr-codes.md"
+          "action": "openSlide",
+          "path": ".demo/5-close/dapr-university.md"
         }
       ]
     },
     {
-      "title": "Review my session",
+      "title": "Dapr Resources",
       "icons": {
         "start": "note",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.focusSideBar"
-        },
+          "action": "openSlide",
+          "path": ".demo/5-close/dapr-resources.md"
+        }
+      ]
+    },
+    {
+      "title": "Claim the supporter badge",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
         {
-          "action": "markdownPreview",
-          "path": ".demo/5-close/04-review-session.md"
+          "action": "openSlide",
+          "path": ".demo/5-close/supporter-badge.md"
         }
       ]
     }

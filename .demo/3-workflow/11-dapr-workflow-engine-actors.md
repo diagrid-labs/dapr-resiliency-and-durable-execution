@@ -1,0 +1,1 @@
+![Dapr workflow actors](/images/workflow-actors.png)

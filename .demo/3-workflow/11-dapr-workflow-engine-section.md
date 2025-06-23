@@ -1,0 +1,1 @@
+![Dapr workflow engine section](/images/workflow-engine-section.png)

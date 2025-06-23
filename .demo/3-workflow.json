@@ -21,7 +21,20 @@
       ]
     },
     {
-      "title": "Durable Execution",
+      "title": "Durable Execution & Workflow Systems",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/02-durable-execution-section.md"
+        }
+      ]
+    },
+    {
+      "title": "What is Durable Execution",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -34,7 +47,7 @@
       ]
     },
     {
-      "title": "Workflow Engines",
+      "title": "Workflow Systems",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -73,6 +86,32 @@
       ]
     },
     {
+      "title": "Dapr workflow intro",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/04-dapr-workflow-intro.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflow example",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/10-workflow-example.md"
+        }
+      ]
+    },
+    {
       "title": "Dapr workflow as code",
       "icons": {
         "start": "note",
@@ -82,6 +121,19 @@
         {
           "action": "openSlide",
           "path": ".demo/3-workflow/05-workflow-as-code.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflow patterns",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/06-patterns.md"
         }
       ]
     },
@@ -151,7 +203,7 @@
       ]
     },
     {
-      "title": "Workflow example",
+      "title": "Dapr workflow engine section",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -159,7 +211,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/10-workflow-example.md"
+          "path": ".demo/3-workflow/11-dapr-workflow-engine-section.md"
         }
       ]
     },
@@ -177,7 +229,20 @@
       ]
     },
     {
-      "title": "WorkflowDemo",
+      "title": "Dapr Workflow Actors",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/11-dapr-workflow-engine-actors.md"
+        }
+      ]
+    },
+    {
+      "title": "WorkflowDemo section",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -354,7 +419,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/13-workflow-issue.md"
         },
         {
@@ -363,7 +428,27 @@
         },
         {
           "action": "executeTerminalCommand",
-          "command": "cd WorkflowDemo"
+          "command": "cd WorkflowDemo",
+          "terminalId": "dapr-run"
+        }
+      ]
+    },
+    {
+      "title": "Build the apps",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "dotnet build ./ShippingApp",
+          "terminalId": "dapr-run"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "dotnet build ./WorkflowApp",
+          "terminalId": "dapr-run"
         }
       ]
     },
@@ -376,7 +461,8 @@
       "steps": [
         {
           "action": "executeTerminalCommand",
-          "command": "dapr run -f ."
+          "command": "dapr run -f .",
+          "terminalId": "dapr-run"
         }
       ]
     },
@@ -418,6 +504,7 @@
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.sendSequence",
+          "terminalId": "dapr-run",
           "args": {
             "text": "\u0003"
           }
@@ -437,7 +524,8 @@
       "steps": [
         {
           "action": "executeTerminalCommand",
-          "command": "dapr run -f ."
+          "command": "dapr run -f .",
+          "terminalId": "dapr-run"
         }
       ]
     },
@@ -469,7 +557,7 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
+          "action": "openSlide",
           "path": ".demo/3-workflow/14-register-issue.md"
         }
       ]
@@ -504,6 +592,20 @@
       ]
     },
     {
+      "title": "Rebuild the ShippingApp",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "dotnet build ./ShippingApp",
+          "terminalId": "dapr-run"
+        }
+      ]
+    },
+    {
       "title": "Run the apps again",
       "icons": {
         "start": "terminal-cmd",
@@ -512,7 +614,8 @@
       "steps": [
         {
           "action": "executeTerminalCommand",
-          "command": "dapr run -f ."
+          "command": "dapr run -f .",
+          "terminalId": "dapr-run"
         }
       ]
     },
@@ -565,19 +668,75 @@
       ]
     },
     {
-      "title": "Challenges",
+      "title": "Workflow Management Section",
       "icons": {
         "start": "note",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "markdownPreview",
-          "path": ".demo/3-workflow/15-challenges.md"
+          "action": "openSlide",
+          "path": ".demo/3-workflow/15-workflow-management-section.md"
         },
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.killAll"
+        }
+      ]
+    },
+    {
+      "title": "Workflow Management Overview",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/15-workflow-management.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflow Management APIs",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/15-workflow-management-apis.md"
+        }
+      ]
+    },
+    {
+      "title": "Challenges & Tips Section",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/16-challenges-tips-section.md"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.terminal.killAll"
+        }
+      ]
+    },
+    {
+      "title": "Deterministic Workflows",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/16-challenges-deterministic.md"
         }
       ]
     },
@@ -596,6 +755,19 @@
       ]
     },
     {
+      "title": "Idempotent Activities",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/16-challenges-idempotent.md"
+        }
+      ]
+    },
+    {
       "title": "NonIdempotentActivity.cs",
       "icons": {
         "start": "code",
@@ -610,6 +782,32 @@
       ]
     },
     {
+      "title": "Workflow Versioning",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/16-challenges-versioning.md"
+        }
+      ]
+    },
+    {
+      "title": "Workflow Versioning Alternatives",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/16-challenges-versioning-alternatives.md"
+        }
+      ]
+    },
+    {
       "title": "VersioningWorkflow.cs",
       "icons": {
         "start": "code",
@@ -620,6 +818,19 @@
           "action": "highlight",
           "path": "WorkflowDemo/WorkflowApp/BadExamples/VersioningWorkflow.cs",
           "position": "5"
+        }
+      ]
+    },
+    {
+      "title": "Workflow Payloads",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/16-challenges-payloads.md"
         }
       ]
     },

@@ -1,0 +1,1 @@
+![Dapr Workflow](/images/dapr-workflow-intro.png)

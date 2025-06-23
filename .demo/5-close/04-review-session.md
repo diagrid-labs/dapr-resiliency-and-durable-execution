@@ -1,1 +1,0 @@
-![spreaview](/images/spreaview-futuretech-marcduiker.png)

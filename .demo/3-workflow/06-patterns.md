@@ -1,0 +1,1 @@
+![Workflow patterns](/images/workflow-pattens-section.png)

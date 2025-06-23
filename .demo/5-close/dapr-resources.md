@@ -1,0 +1,1 @@
+![Dapr Resources](/images/dapr-resources.png)

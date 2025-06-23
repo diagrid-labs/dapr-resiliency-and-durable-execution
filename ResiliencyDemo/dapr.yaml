@@ -1,18 +1,16 @@
 version: 1
 common:
   resourcesPath: Resources
+  appLogDestination: console
+  daprdLogDestination: fileAndConsole
 apps:
-  - appID: app-a
-    appDirPath: AppA
+  - appID: validation
+    appDirPath: ValidationService
     appPort: 5045
     daprHTTPPort: 3500
     command: ["dotnet", "run"]
-    appLogDestination: console
-    daprdLogDestination: fileAndConsole
-  - appID: app-b
-    appDirPath: AppB
+  - appID: profile
+    appDirPath: ProfileService
     appPort: 5047
     daprHTTPPort: 3502
     command: ["dotnet", "run"]
-    appLogDestination: console
-    daprdLogDestination: fileAndConsole

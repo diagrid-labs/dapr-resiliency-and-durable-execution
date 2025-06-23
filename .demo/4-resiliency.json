@@ -38,7 +38,7 @@
       ]
     },
     {
-      "title": "Service to Service Resiliency",
+      "title": "Outbound Resiliency",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -46,29 +46,12 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/4-resiliency/02-s2s-resiliency.md"
+          "path": ".demo/4-resiliency/05-outbound.md"
         }
       ]
     },
     {
-      "title": "ResiliencyDemo",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "markdownPreview",
-          "path": ".demo/4-resiliency/03-resiliency-demo.md"
-        },
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.focusSideBar"
-        }
-      ]
-    },
-    {
-      "title": "AppA Program.cs",
+      "title": "ValidationService",
       "icons": {
         "start": "code",
         "end": "pass-filled"
@@ -76,13 +59,13 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "ResiliencyDemo/AppA/Program.cs",
-          "position": "1"
+          "path": "/ResiliencyDemo/ValidationService/Program.cs",
+          "position": 9
         }
       ]
     },
     {
-      "title": "AppB Program.cs",
+      "title": "ProfileService",
       "icons": {
         "start": "code",
         "end": "pass-filled"
@@ -90,22 +73,8 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "ResiliencyDemo/AppB/Program.cs",
-          "position": "8"
-        }
-      ]
-    },
-    {
-      "title": "statestore.yaml",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/Resources/statestore.yaml",
-          "position": "4"
+          "path": "/ResiliencyDemo/ProfileService/Program.cs",
+          "position": 9
         }
       ]
     },
@@ -117,22 +86,34 @@
       },
       "steps": [
         {
-          "action": "highlight",
-          "path": "ResiliencyDemo/dapr.yaml",
-          "position": "1"
-        },
-        {
           "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.focus"
+          "command": "workbench.action.focusSideBar"
         },
         {
-          "action": "executeTerminalCommand",
-          "command": "cd ResiliencyDemo"
+          "action": "open",
+          "path": "/ResiliencyDemo/dapr.yaml"
         }
       ]
     },
     {
-      "title": "Simulate issue with AppB",
+      "title": "statestore.yaml",
+      "icons": {
+        "start": "code",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.focusSideBar"
+        },
+        {
+          "action": "open",
+          "path": "/ResiliencyDemo/Resources/statestore.yaml"
+        }
+      ]
+    },
+    {
+      "title": "Simulate Transient Error with State Store",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -140,56 +121,84 @@
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/4-resiliency/04-simulate-issue1.md",
-          "position": "6"
-        }
-      ]
-    },
-    {
-      "title": "Run AppA",
-      "icons": {
-        "start": "terminal-cmd",
-        "end": "pass-filled"
-      },
-      "steps": [
+          "path": ".demo/4-resiliency/06-simulate-issue2.md"
+        },
         {
-          "action": "executeTerminalCommand",
-          "command": "cd AppA"
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.focusSideBar"
         },
         {
           "action": "executeTerminalCommand",
-          "command": "dapr run --app-id app-a --app-port 5045 --dapr-http-port 3500 --resources-path \"../Resources\" -- dotnet run"
+          "command": "cd ResiliencyDemo",
+          "terminalId": "dapr-run"
         }
       ]
     },
     {
-      "title": "Split terminal",
+      "title": "Build the Apps",
       "icons": {
         "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.split"
+          "action": "executeTerminalCommand",
+          "command": "dotnet build ./ProfileService",
+          "terminalId": "dapr-run"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "dotnet build ./ValidationService",
+          "terminalId": "dapr-run"
         }
       ]
     },
     {
-      "title": "Prepare AppB",
+      "title": "Run the Apps",
       "icons": {
-        "start": "person",
+        "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "showInfoMessage",
-          "message": "Copy command to run AppB to the terminal."
+          "action": "executeTerminalCommand",
+          "command": "dapr run -f .",
+          "terminalId": "dapr-run"
         }
       ]
     },
     {
-      "title": "Call AppA",
+      "title": "List Docker Containers",
+      "description": "",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "docker ps --format '{{.Names}} {{.Status}}'",
+          "terminalId": "docker"
+        }
+      ]
+    },
+    {
+      "title": "Stop Redis Container",
+      "description": "",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "docker stop dapr_redis",
+          "terminalId": "docker"
+        }
+      ]
+    },
+    {
+      "title": "Call endpoint",
       "icons": {
         "start": "symbol-event",
         "end": "pass-filled"
@@ -197,40 +206,77 @@
       "steps": [
         {
           "action": "highlight",
-          "path": "ResiliencyDemo/local.http",
-          "position": "6"
+          "path": "/ResiliencyDemo/local.http",
+          "position": 6
         }
       ]
     },
     {
-      "title": "Stop AppA",
+      "title": "Check dapr log",
       "icons": {
         "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.sendSequence",
-          "args": {
-            "text": "\u0003"
-          }
+          "action": "executeTerminalCommand",
+          "command": " ",
+          "terminalId": "dapr-run"
         }
       ]
     },
     {
-      "title": "Stop AppB",
+      "title": "Start Redis Container",
+      "description": "",
       "icons": {
         "start": "terminal-cmd",
         "end": "pass-filled"
       },
       "steps": [
         {
+          "action": "executeTerminalCommand",
+          "command": "docker start dapr_redis",
+          "terminalId": "docker"
+        }
+      ]
+    },
+    {
+      "title": "Check dapr log again",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": " ",
+          "terminalId": "dapr-run"
+        }
+      ]
+    },
+    {
+      "title": "Stop the applications",
+      "icons": {
+        "start": "terminal-cmd",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": " ",
+          "terminalId": "dapr-run"
+        },
+        {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.sendSequence",
           "args": {
             "text": "\u0003"
           }
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd ..",
+          "terminalId": "dapr-run"
         }
       ]
     },
@@ -245,14 +291,6 @@
           "action": "highlight",
           "path": "ResiliencyDemo/Resources/resiliency.yaml",
           "position": "3"
-        },
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.closeSidebar"
-        },
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.killAll"
         }
       ]
     },
@@ -266,120 +304,14 @@
         {
           "action": "openSlide",
           "path": ".demo/4-resiliency/08-resiliency-builder.md"
-        }
-      ]
-    },
-    {
-      "title": "Outbound Resiliency",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "openSlide",
-          "path": ".demo/4-resiliency/05-outbound.md",
-          "position": "3"
-        }
-      ]
-    },
-    {
-      "title": "Default StateStore policy",
-      "icons": {
-        "start": "code",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/Resources/resiliency.yaml",
-          "position": "11"
-        }
-      ]
-    },
-    {
-      "title": "Simulate a state store issue",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "markdownPreview",
-          "path": ".demo/4-resiliency/06-simulate-issue2.md",
-          "position": "3"
         },
         {
           "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.focus"
-        },
-        {
-          "action": "executeTerminalCommand",
-          "command": "cd ResiliencyDemo"
+          "command": "workbench.action.closeSidebar"
         },
         {
           "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.split"
-        }
-      ]
-    },
-    {
-      "title": "Run ResiliencyDemo 2",
-      "icons": {
-        "start": "terminal-cmd",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "executeTerminalCommand",
-          "command": "dapr run -f ."
-        }
-      ]
-    },
-    {
-      "title": "Disable the state store",
-      "icons": {
-        "start": "person",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "showInfoMessage",
-          "message": "Disable the Redis state store."
-        }
-      ]
-    },
-    {
-      "title": "Call AppA",
-      "icons": {
-        "start": "symbol-event",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "ResiliencyDemo/local.http",
-          "position": "6"
-        }
-      ]
-    },
-    {
-      "title": "Stop ResiliencyDemo 2",
-      "icons": {
-        "start": "terminal-cmd",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.terminal.sendSequence",
-          "args": {
-            "text": "\u0003"
-          }
-        },
-        {
-          "action": "showInfoMessage",
-          "message": "Stopped AppA and AppB."
+          "command": "workbench.action.terminal.killAll"
         }
       ]
     }

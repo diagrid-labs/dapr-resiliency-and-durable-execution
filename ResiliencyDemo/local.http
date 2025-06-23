@@ -1,34 +1,31 @@
-@app-a-url=http://localhost:5045
-@app-b-url=http://localhost:5047
+@validation-url=http://localhost:5045
+@profile-url=http://localhost:5047
+@id={{$guid}}
 
-### POST SocialProfileDetails
-# @name serviceInvocationResponse
-POST {{app-a-url}}/serviceinvocation
+### POST valid SocialProfileDetails
+# @name validationResponse
+POST {{validation-url}}/validate
 Content-Type: application/json
 
 {
-    "id": "{{$guid}}",
+    "id" : "{{id}}",
     "name": "Dapr",
-    "twitterHandle": "daprdev",
-    "githubHandle": "Dapr"
+    "discord": "https://bit.ly/dapr-discord",
+    "bluesky": "https://bsky.app/profile/daprdev.bsky.social",
+    "linkedin": "https://www.linkedin.com/company/daprdev"
 }
 
-### GET SocialProfileDetails
-@siProfileId={{serviceInvocationResponse.response.body.$}}
-GET {{app-b-url}}/profile/{{siProfileId}}
-
-### POST SocialProfileDetails via pubsub
-# @name pubsubResponse
-POST {{app-a-url}}/pubsub
+### POST invalid SocialProfileDetails
+POST {{validation-url}}/validate
 Content-Type: application/json
 
 {
-    "id" : "{{$guid}}",
-    "name": "Diagrid",
-    "twitterHandle": "diagridio",
-    "githubHandle": "diagridio"
+    "name": "Dapr",
+    "discord": "https://bit.ly/dapr-discord",
+    "bluesky": "https://bsky.app/profile/daprdev.bsky.social",
+    "linkedin": "https://www.linkedin.com/company/daprdev"
 }
 
 ### GET SocialProfileDetails
-@pubsubProfileId={{pubsubResponse.response.body.$}}
-GET {{app-b-url}}/profile/{{pubsubProfileId}}
+@get-url=http://{{validationResponse.response.headers.Location}}
+GET {{get-url}}

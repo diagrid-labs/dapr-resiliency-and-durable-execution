@@ -3,20 +3,22 @@ using Dapr.Client;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDaprClient();
 var app = builder.Build();
-app.UseCloudEvents();
 
 const string StateStoreComponentName = "mystatestore";
 
 app.MapPost("/profile", async (
     SocialProfileDetails profileDetails,
-    DaprClient daprClient) => {
+    DaprClient daprClient,
+    HttpContext context) => {
     await daprClient.SaveStateAsync<SocialProfileDetails>(
         StateStoreComponentName,
         profileDetails.Id,
         profileDetails);
-    Console.WriteLine($"Profile {profileDetails.Id} saved to state store.");
 
-    return Results.Created();
+    Console.WriteLine($"Profile {profileDetails.Id} saved to state store.");
+    var getUrl = $"{context.Request.Host}{context.Request.Path.Value}/{profileDetails.Id}";
+
+    return Results.Created(getUrl, value: null);
 });
 
 app.MapGet("/profile/{id}", async (
@@ -32,4 +34,4 @@ app.MapGet("/profile/{id}", async (
 
 app.Run();
 
-record SocialProfileDetails(string Id, string Name, string TwitterHandle, string GitHubHandle);
+record SocialProfileDetails(string Id, string Name, string Discord, string Bluesky, string Linkedin);

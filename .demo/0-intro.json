@@ -67,10 +67,6 @@
       },
       "steps": [
         {
-          "action": "executeVSCodeCommand",
-          "command": "workbench.action.focusSideBar"
-        },
-        {
           "action": "openSlide",
           "path": ".demo/0-intro/03-marc.md"
         }

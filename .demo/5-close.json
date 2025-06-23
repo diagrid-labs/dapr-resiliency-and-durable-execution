@@ -38,6 +38,19 @@
       ]
     },
     {
+      "title": "Dapr Workflow Composer",
+      "icons": {
+        "start": "note",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/5-close/dapr-workflow-composer.md"
+        }
+      ]
+    },
+    {
       "title": "Dapr Resources",
       "icons": {
         "start": "note",

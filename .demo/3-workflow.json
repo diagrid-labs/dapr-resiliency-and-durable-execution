@@ -689,12 +689,16 @@
       },
       "steps": [
         {
-          "action": "openSlide",
-          "path": ".demo/3-workflow/15-workflow-management-section.md"
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
         },
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.terminal.killAll"
+        },
+        {
+          "action": "openSlide",
+          "path": ".demo/3-workflow/15-workflow-management-section.md"
         }
       ]
     },

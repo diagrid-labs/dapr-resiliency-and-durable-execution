@@ -530,6 +530,20 @@
       ]
     },
     {
+      "title": "Check workflow status",
+      "icons": {
+        "start": "symbol-event",
+        "end": "pass-filled"
+      },
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "WorkflowDemo/local.http",
+          "position": "40"
+        }
+      ]
+    },
+    {
       "title": "Stop the apps 2",
       "icons": {
         "start": "terminal-cmd",
@@ -546,20 +560,6 @@
         {
           "action": "showInfoMessage",
           "message": "Apps have been stopped."
-        }
-      ]
-    },
-    {
-      "title": "Check workflow status",
-      "icons": {
-        "start": "symbol-event",
-        "end": "pass-filled"
-      },
-      "steps": [
-        {
-          "action": "highlight",
-          "path": "WorkflowDemo/local.http",
-          "position": "40"
         }
       ]
     },

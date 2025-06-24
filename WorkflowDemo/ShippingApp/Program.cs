@@ -20,7 +20,7 @@ app.MapPost("/registerShipment", (
     Thread.Sleep(2000); //😱
     RegisterShipmentResult shipmentResult = new(shipmentRequest.ShippingService, Guid.NewGuid().ToString(), IsRegistered: true);
 
-    return Results.StatusCode(500);
+    return Results.Ok(shipmentResult);
     // return Results.Ok(shipmentResult);
     // return Results.StatusCode(500);
 });

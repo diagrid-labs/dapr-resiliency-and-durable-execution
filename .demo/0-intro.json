@@ -13,7 +13,7 @@
         {
           "action": "executeVSCodeCommand",
           "command": "simpleBrowser.show",
-          "args": "https://editor.p5js.org/marcduiker/full/4OFNUMKHV"
+          "args": "https://editor.p5js.org/marcduiker/full/NEubDF5vK"
         },
         {
           "action": "executeVSCodeCommand",

@@ -50,8 +50,21 @@
         }
       ]
     },
+    // {
+    //   "title": "Dapr Resources",
+    //   "icons": {
+    //     "start": "note",
+    //     "end": "pass-filled"
+    //   },
+    //   "steps": [
+    //     {
+    //       "action": "openSlide",
+    //       "path": ".demo/5-close/dapr-resources.md"
+    //     }
+    //   ]
+    // },
     {
-      "title": "Dapr Resources",
+      "title": "Workflow & Resiliency Repo",
       "icons": {
         "start": "note",
         "end": "pass-filled"
@@ -59,7 +72,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/5-close/dapr-resources.md"
+          "path": ".demo/5-close/dapr-workflow-repo.md"
         }
       ]
     },

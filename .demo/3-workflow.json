@@ -563,7 +563,7 @@
       ]
     },
     {
-      "title": "Insert exception",
+      "title": "Insert server error",
       "icons": {
         "start": "code",
         "end": "pass-filled"
@@ -660,6 +660,12 @@
         "end": "pass-filled"
       },
       "steps": [
+        {
+          "action": "replace",
+          "path": "WorkflowDemo/ShippingApp/Program.cs",
+          "position": "23",
+          "content": "    return Results.Ok(shipmentResult);"
+        },
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.closeSidebar"

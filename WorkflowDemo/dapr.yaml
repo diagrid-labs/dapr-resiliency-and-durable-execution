@@ -4,12 +4,12 @@ common:
   appLogDestination: fileAndConsole
   daprdLogDestination: fileAndConsole
 apps:
-  - appID: workflow
+  - appID: workflow-app
     appDirPath: WorkflowApp
     appPort: 5049
     daprHTTPPort: 3504
     command: ["dotnet", "run"]
-  - appID: shipping
+  - appID: shipping-app
     appDirPath: ShippingApp
     appPort: 5051
     daprHTTPPort: 3506

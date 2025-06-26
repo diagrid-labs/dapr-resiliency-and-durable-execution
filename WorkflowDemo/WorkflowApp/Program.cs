@@ -3,7 +3,7 @@ using Dapr.Workflow;
 using WorkflowApp;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSingleton<HttpClient>(DaprClient.CreateInvokeHttpClient(appId: "shipping"));
+builder.Services.AddSingleton<HttpClient>(DaprClient.CreateInvokeHttpClient(appId: "shipping-app"));
 builder.Services.AddDaprClient();
 
 builder.Services.AddDaprWorkflow(options =>{

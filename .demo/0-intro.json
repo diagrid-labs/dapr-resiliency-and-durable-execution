@@ -67,7 +67,7 @@
       },
       "steps": [
         {
-          "action": "openSlide",
+          "action": "markdownPreview",
           "path": ".demo/0-intro/03-marc.md"
         }
       ]

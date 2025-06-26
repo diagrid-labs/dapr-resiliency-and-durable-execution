@@ -17,12 +17,10 @@ builder.Services.AddDaprWorkflow(options =>{
 var app = builder.Build();
 
 app.MapPost("/validateOrder", async (
+    DaprWorkflowClient daprWorkflowClient,
     Order order
     ) => {
         Console.WriteLine($"Validating order {order.Id} for.");
-        
-        await using var scope = app.Services.CreateAsyncScope();
-        var daprWorkflowClient = scope.ServiceProvider.GetRequiredService<DaprWorkflowClient>();
 
         var instanceId = await daprWorkflowClient.ScheduleNewWorkflowAsync(
             nameof(ValidateOrderWorkflow),

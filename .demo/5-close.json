@@ -20,7 +20,7 @@
         },
         {
           "action": "openSlide",
-          "path": ".demo/5-close/dapr-website.md"
+          "path": ".demo/slides/5-close/dapr-website.md"
         }
       ]
     },
@@ -33,7 +33,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/5-close/dapr-university.md"
+          "path": ".demo/slides/5-close/dapr-university.md"
         }
       ]
     },
@@ -46,7 +46,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/5-close/dapr-workflow-composer.md"
+          "path": ".demo/slides/5-close/dapr-workflow-composer.md"
         }
       ]
     },
@@ -59,7 +59,7 @@
     //   "steps": [
     //     {
     //       "action": "openSlide",
-    //       "path": ".demo/5-close/dapr-resources.md"
+    //       "path": ".demo/slides/5-close/dapr-resources.md"
     //     }
     //   ]
     // },
@@ -72,7 +72,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/5-close/dapr-workflow-repo.md"
+          "path": ".demo/slides/5-close/dapr-workflow-repo.md"
         }
       ]
     },
@@ -85,7 +85,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/5-close/supporter-badge.md"
+          "path": ".demo/slides/5-close/supporter-badge.md"
         }
       ]
     }

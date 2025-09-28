@@ -20,7 +20,7 @@
         },
         {
           "action": "openSlide",
-          "path": ".demo/1-failure/04-types-of-failures.md"
+          "path": ".demo/slides/1-failure/types-of-failures.md"
         }
       ]
     },
@@ -33,7 +33,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/1-failure/05-failure-approaches.md"
+          "path": ".demo/slides/1-failure/failure-approaches.md"
         }
       ]
     },
@@ -46,7 +46,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/4-resiliency/05-outbound.md"
+          "path": ".demo/slides/4-resiliency/05-outbound.md"
         }
       ]
     },
@@ -121,7 +121,7 @@
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/4-resiliency/06-simulate-issue2.md"
+          "path": ".demo/slides/4-resiliency/06-simulate-issue2.md"
         },
         {
           "action": "executeVSCodeCommand",
@@ -303,7 +303,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/4-resiliency/08-resiliency-builder.md"
+          "path": ".demo/slides/4-resiliency/08-resiliency-builder.md"
         },
         {
           "action": "executeVSCodeCommand",

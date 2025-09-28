@@ -2,13 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Workflow with Dapr",
-            "request": "launch",
-            "type": "dapr",
-            "runFile": "${workspaceFolder}/WorkflowDemo/dapr.yaml",
-            "preLaunchTask": "dapr"
-        },
-        {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
@@ -32,18 +25,6 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
-        },
-        {
-            "name": "Launch Workflow with Dapr with Dapr",
-            "request": "launch",
-            "type": "dapr",
-            "runFile": "${workspaceFolder}/WorkflowDemo/dapr.yaml",
-            "includeApps": [
-                "workflow",
-                "shipping"
-            ],
-            "preLaunchTask": "dapr-debug",
-            "postDebugTask": "daprd-down"
         }
     ]
 }

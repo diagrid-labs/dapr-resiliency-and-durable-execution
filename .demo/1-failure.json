@@ -16,7 +16,7 @@
         },
         {
           "action": "markdownPreview",
-          "path": ".demo/1-failure/01-lessons.md"
+          "path": ".demo/slides/1-failure/lessons.md"
         }
       ]
     },
@@ -29,7 +29,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/1-failure/02-distributed-apps.md"
+          "path": ".demo/slides/1-failure/distributed-apps.md"
         }
       ]
     },
@@ -42,7 +42,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/1-failure/03-fallacies.md"
+          "path": ".demo/slides/1-failure/fallacies.md"
         }
       ]
     },
@@ -55,7 +55,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/1-failure/04-types-of-failures.md"
+          "path": ".demo/slides/1-failure/types-of-failures.md"
         }
       ]
     }

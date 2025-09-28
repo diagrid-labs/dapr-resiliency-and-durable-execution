@@ -42,7 +42,7 @@
         },
         {
           "action": "openSlide",
-          "path": ".demo/0-intro/01-title.md"
+          "path": ".demo/slides/0-intro/title.md"
         }
       ]
     },
@@ -55,7 +55,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/0-intro/02-failure.md"
+          "path": ".demo/slides/0-intro/failure.md"
         }
       ]
     },
@@ -67,8 +67,8 @@
       },
       "steps": [
         {
-          "action": "markdownPreview",
-          "path": ".demo/0-intro/03-marc.md"
+          "action": "openSlide",
+          "path": ".demo/slides/0-intro/bio.md"
         }
       ]
     }

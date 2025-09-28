@@ -16,7 +16,7 @@
         },
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/01-problem.md"
+          "path": ".demo/slides/3-workflow/01-problem.md"
         }
       ]
     },
@@ -29,7 +29,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/02-durable-execution-section.md"
+          "path": ".demo/slides/3-workflow/02-durable-execution-section.md"
         }
       ]
     },
@@ -42,7 +42,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/02-durable-execution.md"
+          "path": ".demo/slides/3-workflow/02-durable-execution.md"
         }
       ]
     },
@@ -55,7 +55,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/03-workflow-engines.md"
+          "path": ".demo/slides/3-workflow/03-workflow-engines.md"
         }
       ]
     },
@@ -68,7 +68,7 @@
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/3-workflow/04-workflow-replay.md"
+          "path": ".demo/slides/3-workflow/04-workflow-replay.md"
         }
       ]
     },
@@ -81,7 +81,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/04-dapr-workflow-intro.md"
+          "path": ".demo/slides/3-workflow/04-dapr-workflow-intro.md"
         }
       ]
     },
@@ -94,7 +94,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/10-workflow-example.md"
+          "path": ".demo/slides/3-workflow/10-workflow-example.md"
         }
       ]
     },
@@ -107,7 +107,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/05-workflow-as-code.md"
+          "path": ".demo/slides/3-workflow/05-workflow-as-code.md"
         }
       ]
     },
@@ -120,7 +120,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/05-workflow-as-code-solutions.md"
+          "path": ".demo/slides/3-workflow/05-workflow-as-code-solutions.md"
         }
       ]
     },
@@ -133,7 +133,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/06-patterns.md"
+          "path": ".demo/slides/3-workflow/06-patterns.md"
         }
       ]
     },
@@ -146,7 +146,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/06-task-chaining.md"
+          "path": ".demo/slides/3-workflow/06-task-chaining.md"
         }
       ]
     },
@@ -159,7 +159,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/07-fanout-fanin.md"
+          "path": ".demo/slides/3-workflow/07-fanout-fanin.md"
         }
       ]
     },
@@ -172,7 +172,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/08-monitor.md"
+          "path": ".demo/slides/3-workflow/08-monitor.md"
         }
       ]
     },
@@ -185,7 +185,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/09-external-system.md"
+          "path": ".demo/slides/3-workflow/09-external-system.md"
         }
       ]
     },
@@ -198,7 +198,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/10-child-workflow.md"
+          "path": ".demo/slides/3-workflow/10-child-workflow.md"
         }
       ]
     },
@@ -211,7 +211,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/11-dapr-workflow-engine-section.md"
+          "path": ".demo/slides/3-workflow/11-dapr-workflow-engine-section.md"
         }
       ]
     },
@@ -224,7 +224,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/11-dapr-workflow-engine.md"
+          "path": ".demo/slides/3-workflow/11-dapr-workflow-engine.md"
         }
       ]
     },
@@ -237,7 +237,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/11-dapr-workflow-engine-actors.md"
+          "path": ".demo/slides/3-workflow/11-dapr-workflow-engine-actors.md"
         }
       ]
     },
@@ -254,7 +254,7 @@
         },
         {
           "action": "markdownPreview",
-          "path": ".demo/3-workflow/12-workflow-demo.md"
+          "path": ".demo/slides/3-workflow/12-workflow-demo.md"
         }
       ]
     },
@@ -267,7 +267,7 @@
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/3-workflow/12b-workflow-diagram.md"
+          "path": ".demo/slides/3-workflow/12b-workflow-diagram.md"
         }
       ]
     },
@@ -392,7 +392,7 @@
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/3-workflow/13-workflow-issue.md"
+          "path": ".demo/slides/3-workflow/13-workflow-issue.md"
         },
         {
           "action": "executeVSCodeCommand",
@@ -544,7 +544,7 @@
       "steps": [
         {
           "action": "markdownPreview",
-          "path": ".demo/3-workflow/14-register-issue.md"
+          "path": ".demo/slides/3-workflow/14-register-issue.md"
         }
       ]
     },
@@ -676,7 +676,7 @@
         },
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/15-workflow-management-section.md"
+          "path": ".demo/slides/3-workflow/15-workflow-management-section.md"
         }
       ]
     },
@@ -689,7 +689,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/15-workflow-management.md"
+          "path": ".demo/slides/3-workflow/15-workflow-management.md"
         }
       ]
     },
@@ -702,7 +702,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/15-workflow-management-apis.md"
+          "path": ".demo/slides/3-workflow/15-workflow-management-apis.md"
         }
       ]
     },
@@ -715,7 +715,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/16-challenges-tips-section.md"
+          "path": ".demo/slides/3-workflow/16-challenges-tips-section.md"
         },
         {
           "action": "executeVSCodeCommand",
@@ -732,7 +732,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/16-challenges-deterministic.md"
+          "path": ".demo/slides/3-workflow/16-challenges-deterministic.md"
         }
       ]
     },
@@ -759,7 +759,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/16-challenges-idempotent.md"
+          "path": ".demo/slides/3-workflow/16-challenges-idempotent.md"
         }
       ]
     },
@@ -786,7 +786,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/16-challenges-versioning.md"
+          "path": ".demo/slides/3-workflow/16-challenges-versioning.md"
         }
       ]
     },
@@ -799,7 +799,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/16-challenges-versioning-alternatives.md"
+          "path": ".demo/slides/3-workflow/16-challenges-versioning-alternatives.md"
         }
       ]
     },
@@ -826,7 +826,7 @@
       "steps": [
         {
           "action": "openSlide",
-          "path": ".demo/3-workflow/16-challenges-payloads.md"
+          "path": ".demo/slides/3-workflow/16-challenges-payloads.md"
         }
       ]
     },

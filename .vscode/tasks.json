@@ -2,11 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run Workflow",
-            "type": "dapr",
-            "runFile": "./WorkflowDemo/dapr.yaml"
-        },
-        {
             "label": "build",
             "command": "dotnet",
             "type": "process",
@@ -41,11 +36,6 @@
                 "${workspaceFolder}/dapr-resiliency-and-durable-execution.sln"
             ],
             "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "dapr",
-            "type": "dapr",
-            "runFile": "./WorkflowDemo/dapr.yaml"
         }
     ]
 }

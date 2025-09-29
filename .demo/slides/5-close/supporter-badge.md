@@ -1,1 +1,0 @@
-![community](/images/dapr-community-qr.PNG)

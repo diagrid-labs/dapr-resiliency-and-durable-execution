@@ -22,11 +22,16 @@
           "action": "openSlide",
           "path": ".demo/slides/5-close/dapr-website.md"
         }
-      ]
+      ],
+      "disabled": true
     },
     {
       "title": "Dapr University Workflow",
       "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.closeSidebar"
+        },
         {
           "action": "openSlide",
           "path": ".demo/slides/5-close/dapr-university.md"
@@ -54,7 +59,8 @@
       "title": "Feedback",
       "steps": [
         {
-          "action": "showEngageTimeSession"
+          "action": "openSlide",
+          "path": ".demo/slides/5-close/thankyou.md"
         }
       ],
       "icons": {

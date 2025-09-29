@@ -77,13 +77,14 @@
       ]
     },
     {
-      "title": "Show EngageTime",
+      "title": "Show QR",
       "steps": [
         {
-          "action": "startEngageTimeSession"
+          "action": "openSlide",
+          "path": ".demo/slides/0-intro/engagetime.md"
         },
         {
-          "action": "showEngageTimeSession"
+          "action": "startEngageTimeSession"
         }
       ],
       "icons": {

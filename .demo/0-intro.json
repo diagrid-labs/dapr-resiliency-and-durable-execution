@@ -41,6 +41,10 @@
           "command": "workbench.action.closeSidebar"
         },
         {
+          "action": "executeVSCodeCommand",
+          "command": "demo-time.startCountdown"
+        },
+        {
           "action": "openSlide",
           "path": ".demo/slides/0-intro/title.md"
         }
@@ -71,6 +75,24 @@
           "path": ".demo/slides/0-intro/bio.md"
         }
       ]
+    },
+    {
+      "title": "Show EngageTime",
+      "steps": [
+        {
+          "action": "startEngageTimeSession"
+        },
+        {
+          "action": "showEngageTimeSession"
+        }
+      ],
+      "icons": {
+        "start": "mic",
+        "end": ""
+      }
     }
-  ]
+  ],
+  "engageTime": {
+    "sessionId": "96sjyl"
+  }
 }

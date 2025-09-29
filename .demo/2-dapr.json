@@ -34,6 +34,23 @@
       ]
     },
     {
+      "title": "Dapr poll",
+      "steps": [
+        {
+          "action": "startEngageTimePoll",
+          "pollId": "0wvrc7"
+        },
+        {
+          "action": "showEngageTimePoll",
+          "pollId": "0wvrc7"
+        }
+      ],
+      "icons": {
+        "start": "question",
+        "end": ""
+      }
+    },
+    {
       "title": "Dapr University",
       "icons": {
         "start": "note",
@@ -46,5 +63,8 @@
         }
       ]
     }
-  ]
+  ],
+  "engageTime": {
+    "sessionId": "96sjyl"
+  }
 }

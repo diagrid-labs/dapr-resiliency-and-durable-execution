@@ -1,1 +1,1 @@
-![Dapr University](/images/dapr-university-tracks-qr.png)
+![Dapr University](/images/dapr-university-workflow.png)

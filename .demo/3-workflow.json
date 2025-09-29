@@ -125,6 +125,24 @@
       ]
     },
     {
+      "id": "demo-mg4z3sg2-gnk9",
+      "title": "Workflow poll",
+      "steps": [
+        {
+          "action": "startEngageTimePoll",
+          "pollId": "xcguja"
+        },
+        {
+          "action": "showEngageTimePoll",
+          "pollId": "xcguja"
+        }
+      ],
+      "icons": {
+        "start": "question",
+        "end": ""
+      }
+    },
+    {
       "title": "Workflow patterns",
       "icons": {
         "start": "note",
@@ -415,12 +433,20 @@
         {
           "action": "executeTerminalCommand",
           "command": "dotnet build ./ShippingApp",
-          "terminalId": "dapr-run"
+          "terminalId": "dapr-run",
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 50
+        },
+        {
+          "action": "waitForTimeout",
+          "timeout": 2500
         },
         {
           "action": "executeTerminalCommand",
           "command": "dotnet build ./WorkflowApp",
-          "terminalId": "dapr-run"
+          "terminalId": "dapr-run",
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 50
         }
       ]
     },
@@ -434,7 +460,9 @@
         {
           "action": "executeTerminalCommand",
           "command": "dapr run -f .",
-          "terminalId": "dapr-run"
+          "terminalId": "dapr-run",
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 150
         }
       ]
     },
@@ -497,7 +525,9 @@
         {
           "action": "executeTerminalCommand",
           "command": "dapr run -f .",
-          "terminalId": "dapr-run"
+          "terminalId": "dapr-run",
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 150
         }
       ]
     },
@@ -601,7 +631,9 @@
         {
           "action": "executeTerminalCommand",
           "command": "dapr run -f .",
-          "terminalId": "dapr-run"
+          "terminalId": "dapr-run",
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 150
         }
       ]
     },
@@ -763,20 +795,6 @@
         }
       ]
     },
-    // {
-    //   "title": "NonIdempotentActivity.cs",
-    //   "icons": {
-    //     "start": "code",
-    //     "end": "pass-filled"
-    //   },
-    //   "steps": [
-    //     {
-    //       "action": "highlight",
-    //       "path": "WorkflowDemo/WorkflowApp/BadExamples/NonIdempotentActivity.cs",
-    //       "position": "6"
-    //     }
-    //   ]
-    // },
     {
       "title": "Workflow Versioning",
       "icons": {
@@ -844,5 +862,8 @@
         }
       ]
     }
-  ]
+  ],
+  "engageTime": {
+    "sessionId": "96sjyl"
+  }
 }

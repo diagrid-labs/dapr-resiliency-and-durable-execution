@@ -25,17 +25,17 @@
       ]
     },
     {
-      "title": "Dapr University",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
+      "title": "Dapr University Workflow",
       "steps": [
         {
           "action": "openSlide",
           "path": ".demo/slides/5-close/dapr-university.md"
         }
-      ]
+      ],
+      "icons": {
+        "start": "note",
+        "end": ""
+      }
     },
     {
       "title": "Dapr Workflow Composer",
@@ -50,44 +50,33 @@
         }
       ]
     },
-    // {
-    //   "title": "Dapr Resources",
-    //   "icons": {
-    //     "start": "note",
-    //     "end": "pass-filled"
-    //   },
-    //   "steps": [
-    //     {
-    //       "action": "openSlide",
-    //       "path": ".demo/slides/5-close/dapr-resources.md"
-    //     }
-    //   ]
-    // },
     {
-      "title": "Workflow & Resiliency Repo",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
+      "title": "Feedback",
       "steps": [
         {
-          "action": "openSlide",
-          "path": ".demo/slides/5-close/dapr-workflow-repo.md"
+          "action": "showEngageTimeSession"
         }
-      ]
+      ],
+      "icons": {
+        "start": "mic",
+        "end": ""
+      }
     },
     {
-      "title": "Claim the supporter badge",
-      "icons": {
-        "start": "note",
-        "end": "pass-filled"
-      },
+      "title": "Close polls",
       "steps": [
         {
-          "action": "openSlide",
-          "path": ".demo/slides/5-close/supporter-badge.md"
+          "action": "closeEngageTimePoll",
+          "pollId": "xcguja"
+        },
+        {
+          "action": "closeEngageTimePoll",
+          "pollId": "0wvrc7"
         }
       ]
     }
-  ]
+  ],
+  "engageTime": {
+    "sessionId": "96sjyl"
+  }
 }

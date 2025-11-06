@@ -14,4 +14,4 @@ Use the QR code to:
 ![Dapr Community Supporter](/images/dapr-community-supporter-badge-anim.gif)
 
 ::right::
-![QR Code](/images/session-96sjyl-qr.png)
+![QR Code](/images/session-olkk1c-qr.png)

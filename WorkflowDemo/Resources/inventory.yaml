@@ -3,8 +3,10 @@ kind: Component
 metadata:
   name: inventory
 spec:
-  type: state.sqlite
+  type: state.redis
   version: v1
   metadata:
-  - name: connectionString
-    value: "data.db"
+  - name: redisHost
+    value: localhost:6379
+  - name: redisPassword
+    value: ""

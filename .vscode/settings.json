@@ -3,5 +3,5 @@
     "workbench.statusBar.visible": true,
     "workbench.editor.showTabs": "single",
     "workbench.activityBar.location": "default",
-    "demoTime.timer": 30
+    "demoTime.timer": 45
 }
